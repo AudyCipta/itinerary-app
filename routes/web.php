@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\SocialiteController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlaceController;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index'); // ->midd
 // Places
 Route::get('/places', [PlaceController::class, 'index'])->name('places.index');
 Route::get('/places/{id}', [PlaceController::class, 'detail'])->name('places.detail');
+
+// Blog
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{id}', [BlogController::class, 'detail'])->name('blog.detail');

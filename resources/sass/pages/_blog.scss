@@ -1,0 +1,26 @@
+#blog {
+    .section-header {
+        h2 {
+            color: #5d5a88 !important;
+            font-size: 36px !important;
+        }
+
+        p {
+            color: #9795b5 !important;
+            font-size: 18px !important;
+            line-height: 30px;
+        }
+    }
+
+    .blog-content {
+        .card {
+            h3 {
+                color: #5d5a88;
+            }
+
+            p {
+                color: #5d5a88;
+            }
+        }
+    }
+}

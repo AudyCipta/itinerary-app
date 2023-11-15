@@ -23,7 +23,8 @@
               href="{{ route('places.index') }}">Places</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link {{ request()->routeIs('blog.*') ? 'active' : '' }}"
+              href="{{ route('blog.index') }}">Blog</a>
           </li>
         </ul>
         <div class="d-lg-flex col-lg-3 justify-content-lg-end  align-items-center column-gap-3">
