@@ -1,0 +1,28 @@
+header {
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+
+        // .btn-primary {
+        //     background-color: #5d5a88 !important;
+        //     border-color: #5d5a88 !important;
+        // }
+    }
+
+    .nav-link.active {
+        font-weight: bold;
+    }
+
+    .navbar.link-dark {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(10px) !important;
+
+        .nav-link {
+            color: #767494 !important;
+        }
+
+        .nav-link.active {
+            color: #5d5a88 !important;
+        }
+    }
+}

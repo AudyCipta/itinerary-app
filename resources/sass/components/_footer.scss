@@ -1,0 +1,17 @@
+footer {
+    height: 284px;
+
+    p,
+    a {
+        color: #9795b5 !important;
+    }
+
+    .social {
+        a {
+            background-color: #f2f1fa !important;
+            color: #8d8ba7 !important;
+            font-size: 18px !important;
+            transition: 0.3s;
+        }
+    }
+}
