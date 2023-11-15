@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
@@ -33,3 +34,9 @@ Route::get('/places/{id}', [PlaceController::class, 'detail'])->name('places.det
 // Blog
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{id}', [BlogController::class, 'detail'])->name('blog.detail');
+
+// Admin
+Route::prefix('admin')->name('admin.')->group(function () {
+  // Dashboard
+  Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+});
