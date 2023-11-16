@@ -64,19 +64,19 @@
       <div class="home-content">
 
         <div class="row">
-          <div class="col-7">
+          <div class="col-12 col-md-7">
             <h1 class="text-white">Don't get lost! Plan and make a list of your trip</h1>
             <p class="text-white lead">Explore and create your itenarary for free</p>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-8">
+          <div class="col-12 col-md-8">
             <div class="card">
               <div class="card-body p-4">
                 <form action="">
                   <div class="row gx-3 column-gap-0">
-                    <div class="col">
+                    <div class="mt-3 mt-md-0 col-md">
                       <label for="destination" class="form-label">Destination</label>
                       <input class="form-control" list="datalistOptions" id="destination"
                         placeholder="Choose destination...">
@@ -86,7 +86,7 @@
                         <option value="Entertain">
                       </datalist>
                     </div>
-                    <div class="col-auto d-flex flex-column">
+                    <div class="mt-3 mt-md-0 col-md-auto d-flex flex-column">
                       <label for="btncheck1" class="form-label">Preference</label>
                       <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
                         <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
@@ -99,7 +99,7 @@
                         <label class="btn btn-outline-light" for="btncheck3">Mountain</label>
                       </div>
                     </div>
-                    <div class="col-auto">
+                    <div class="mt-3 mt-md-0 col-md-auto">
                       <button class="btn btn-primary h-100 px-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                           class="bi bi-search" viewBox="0 0 16 16">
@@ -123,7 +123,7 @@
     <div class="container">
 
       <div class="section-header row justify-content-center">
-        <div class="col-7">
+        <div class="col-12 col-md-7">
           <h2 class="text-center">Trending Destination</h2>
           <p class="text-center lead mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit semper
             dalar elementum
@@ -132,8 +132,8 @@
       </div>
 
       <div class="trending-content">
-        <div class="row">
-          <div class="col-3">
+        <div class="row gy-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <a href="#" class="card text-decoration-none">
               <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
               <div class="card-body">
@@ -142,7 +142,7 @@
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <a href="#" class="card text-decoration-none">
               <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
               <div class="card-body">
@@ -151,7 +151,7 @@
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <a href="#" class="card text-decoration-none">
               <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
               <div class="card-body">
@@ -160,7 +160,7 @@
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-3">
             <a href="#" class="card text-decoration-none">
               <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
               <div class="card-body">
@@ -180,7 +180,7 @@
       <div class="excellence-content">
 
         <div class="row g-0">
-          <div class="col-6">
+          <div class="col-12 col-md-6 order-2 order-md-1">
             <div class="excellence-body">
               <h2 class="mb-3">Boost your productivity with our to-do app</h2>
               <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus
@@ -201,7 +201,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-12 col-md-6 order-1 order-md-2">
             <div class="excellence-image">
               <img src="https://placehold.co/600x400" alt="image" class="img-fluid w-100">
             </div>

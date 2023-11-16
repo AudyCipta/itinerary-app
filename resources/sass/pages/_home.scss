@@ -64,6 +64,10 @@
     .excellence-body {
         padding: 80px 120px;
 
+        @media screen and (max-width: 768px) {
+            padding: 27px 35px;
+        }
+
         h2 {
             color: #5d5a88 !important;
         }

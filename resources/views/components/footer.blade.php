@@ -1,10 +1,10 @@
 <footer class="footer mt-auto py-3 bg-body-tertiary d-flex align-items-center">
   <div class="container">
-    <div class="row align-items-center border-bottom pb-5 mb-3">
-      <div class="col-3">
+    <div class="row border-bottom pb-5 mb-3 gy-4 gy-md-0 align-items-center justify-content-center">
+      <div class="col-12 col-md-3 text-center text-md-start">
         <img src="/img/logo.png" alt="{{ env('APP_NAME') }}" width="27">
       </div>
-      <div class="col-6">
+      <div class="col-12 col-md-6">
         <ul class="nav justify-content-center">
           <li class="nav-item"><a href="{{ route('home.index') }}" class="nav-link px-2">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2">About</a></li>
@@ -13,8 +13,8 @@
           <li class="nav-item"><a href="#" class="nav-link px-2">Contact</a></li>
         </ul>
       </div>
-      <div class="col-3">
-        <ul class="list-unstyled d-flex justify-content-end column-gap-2 social">
+      <div class="col-12 col-md-3">
+        <ul class="list-unstyled d-flex justify-content-center justify-content-md-end column-gap-2 social">
           <li>
             <a class="link-body-emphasis py-2 px-3 rounded" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
