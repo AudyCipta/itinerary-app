@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\PlaceController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,10 @@ Route::post('/auth/google/prompt', [SocialiteController::class, 'handleGooglePro
 
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('home.index'); // ->middleware('verified')
+
+// Itineraries
+Route::get('/itineraries', [ItineraryController::class, 'index'])->name('itineraries.index');
+Route::get('/itineraries/{id}', [ItineraryController::class, 'detail'])->name('itineraries.detail');
 
 // Places
 Route::get('/places', [PlaceController::class, 'index'])->name('places.index');

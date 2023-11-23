@@ -1,0 +1,40 @@
+#itineraries {
+    .section-header {
+        h2 {
+            color: #5d5a88 !important;
+            font-size: 36px !important;
+        }
+
+        p {
+            color: #9795b5 !important;
+            font-size: 18px !important;
+            line-height: 30px;
+        }
+    }
+
+    .itineraries-content {
+        .card {
+            h5 {
+                font-size: 20px !important;
+                line-height: 20px !important;
+                color: #5d5a88;
+            }
+
+            p {
+                color: #5d5a88;
+            }
+
+            .itinerary-schedule {
+                h6 {
+                    font-weight: bold;
+                    color: #6d758f !important;
+                    font-size: 17px;
+                }
+
+                span {
+                    background-color: #6d758f !important;
+                }
+            }
+        }
+    }
+}

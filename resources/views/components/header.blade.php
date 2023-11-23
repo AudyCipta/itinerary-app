@@ -16,7 +16,8 @@
               href="{{ route('home.index') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Itineraries</a>
+            <a class="nav-link {{ request()->routeIs('itineraries.*') ? 'active' : '' }}"
+              href="{{ route('itineraries.index') }}">Itineraries</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ request()->routeIs('places.*') ? 'active' : '' }}"
