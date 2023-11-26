@@ -57,6 +57,12 @@
             color: #9795b5 !important;
             font-size: 17px !important;
         }
+
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }
 

@@ -77,7 +77,7 @@
                 <form action="">
                   <div class="row gx-3 column-gap-0">
                     <div class="mt-3 mt-md-0 col-md">
-                      <label for="destination" class="form-label">Destination</label>
+                      <label for="destination" class="form-label">Type of Destination</label>
                       <input class="form-control" list="datalistOptions" id="destination"
                         placeholder="Choose destination...">
                       <datalist id="datalistOptions">
@@ -134,36 +134,36 @@
       <div class="trending-content">
         <div class="row gy-3">
           <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
+            <a href="#" class="card text-decoration-none rounded-3">
               <div class="card-body">
+                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Mobile app</h4>
                 <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
               </div>
             </a>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
+            <a href="#" class="card text-decoration-none rounded-3">
               <div class="card-body">
+                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Desktop app</h4>
                 <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
               </div>
             </a>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
+            <a href="#" class="card text-decoration-none rounded-3">
               <div class="card-body">
+                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Multiple users</h4>
                 <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
               </div>
             </a>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="destination">
+            <a href="#" class="card text-decoration-none rounded-3">
               <div class="card-body">
+                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Integrations</h4>
                 <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
               </div>
