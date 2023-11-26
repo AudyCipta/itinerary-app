@@ -37,7 +37,7 @@
               <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown"
                 aria-expanded="true">
                 <img src="{{ auth()->user()->getImageURL() }}" alt="picture" width="32" height="32"
-                  class="rounded-circle">
+                  class="rounded-circle" referrerpolicy="no-referrer">
               </a>
               <ul class="dropdown-menu dropdown-menu-end text-small shadow" data-popper-placement="top-end">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
