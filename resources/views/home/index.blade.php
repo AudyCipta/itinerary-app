@@ -138,7 +138,9 @@
               <div class="card-body">
                 <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Mobile app</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
+                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                  dolor sit amet
+                  consectetur adipisicing elit.</p>
               </div>
             </a>
           </div>
@@ -147,7 +149,9 @@
               <div class="card-body">
                 <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Desktop app</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
+                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                  dolor sit amet
+                  consectetur adipisicing elit.</p>
               </div>
             </a>
           </div>
@@ -156,7 +160,9 @@
               <div class="card-body">
                 <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Multiple users</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
+                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                  dolor sit amet
+                  consectetur adipisicing elit.</p>
               </div>
             </a>
           </div>
@@ -165,7 +171,9 @@
               <div class="card-body">
                 <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
                 <h4 class="card-title">Integrations</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte</p>
+                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                  dolor sit amet
+                  consectetur adipisicing elit.</p>
               </div>
             </a>
           </div>
