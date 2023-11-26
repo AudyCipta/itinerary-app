@@ -24,14 +24,15 @@
       <div class="auth-form position-absolute">
         <div class="card border p-5 pt-4 rounded-4 shadow">
           <div class="card-body">
-            <h2 class="mt-0 mb-0">{{ __('Login') }}</h2>
+            <h2 class="mt-0 mb-2">{{ __('Login') }}</h2>
             <p class="lead text-muted">Your journey starts here</p>
 
             <form method="POST" action="{{ route('login') }}">
               @csrf
 
               <div class="mb-2">
-                <label for="email" class="col-form-label text-md-end">{{ __('Email Address') }}</label>
+                <label for="email" class="col-form-label text-md-end">{{ __('Email Address') }}<span
+                    class="text-danger">*</span></label>
 
                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                   name="email" value="{{ old('email') }}" placeholder="Enter your email address" required
@@ -45,7 +46,8 @@
               </div>
 
               <div class="mb-3">
-                <label for="password" class="col-form-label text-md-end">{{ __('Password') }}</label>
+                <label for="password" class="col-form-label text-md-end">{{ __('Password') }}<span
+                    class="text-danger">*</span></label>
 
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
                   name="password" placeholder="Enter your password" required autocomplete="current-password">
@@ -74,8 +76,16 @@
               </div>
 
               <div class="d-grid">
-                <button type="submit" class="btn btn-primary rounded-pill py-2 text-uppercase fw-bold">
-                  {{ __('Login') }}
+                <button type="submit"
+                  class="btn btn-primary rounded-pill py-2 text-uppercase fw-bold position-relative">
+                  <span>{{ __('Continue') }}</span>
+                  <span class="position-absolute" style="right: 28px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                      class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                  </span>
                 </button>
               </div>
 

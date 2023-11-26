@@ -24,14 +24,15 @@
       <div class="auth-form position-absolute">
         <div class="card border p-5 pt-4 rounded-4 shadow">
           <div class="card-body">
-            <h2 class="mt-0 mb-0">{{ __('Register') }}</h2>
+            <h2 class="mt-0 mb-2">{{ __('Register') }}</h2>
             <p class="lead text-muted">Your journey starts here</p>
 
             <form method="POST" action="{{ route('register') }}">
               @csrf
 
               <div class="mb-2">
-                <label for="name" class="col-form-label text-md-end">{{ __('Name') }}</label>
+                <label for="name" class="col-form-label text-md-end">{{ __('Name') }}<span
+                    class="text-danger">*</span></label>
 
                 <input id="name" type="name" class="form-control @error('name') is-invalid @enderror"
                   name="name" value="{{ old('name') }}" placeholder="Enter your name" required autocomplete="name"
@@ -45,7 +46,8 @@
               </div>
 
               <div class="mb-2">
-                <label for="email" class="col-form-label text-md-end">{{ __('Email Address') }}</label>
+                <label for="email" class="col-form-label text-md-end">{{ __('Email Address') }}<span
+                    class="text-danger">*</span></label>
 
                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                   name="email" value="{{ old('email') }}" placeholder="Enter your email address" required
@@ -60,7 +62,8 @@
 
               <div class="row gx-3">
                 <div class="col-md mb-4">
-                  <label for="password" class="col-form-label text-md-end">{{ __('Password') }}</label>
+                  <label for="password" class="col-form-label text-md-end">{{ __('Password') }}<span
+                      class="text-danger">*</span></label>
 
                   <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
                     name="password" placeholder="Enter your password" required autocomplete="new-password">
@@ -73,7 +76,8 @@
                 </div>
 
                 <div class="col-md mb-4">
-                  <label for="password-confirm" class="col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                  <label for="password-confirm" class="col-form-label text-md-end">{{ __('Confirm Password') }}<span
+                      class="text-danger">*</span></label>
 
                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
                     placeholder="Enter your confirm password" required autocomplete="new-password">
@@ -81,8 +85,16 @@
               </div>
 
               <div class="d-grid">
-                <button type="submit" class="btn btn-primary rounded-pill py-2 text-uppercase fw-bold">
-                  {{ __('Register') }}
+                <button type="submit"
+                  class="btn btn-primary rounded-pill py-2 text-uppercase fw-bold position-relative">
+                  <span>{{ __('Register') }}</span>
+                  <span class="position-absolute" style="right: 28px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                      class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                  </span>
                 </button>
               </div>
 
