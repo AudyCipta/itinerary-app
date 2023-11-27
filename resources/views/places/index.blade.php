@@ -27,12 +27,12 @@
         </div>
       </div>
 
-      <div class="row mt-5 mb-5 justify-content-center">
+      <div class="row place-search mt-5 mb-5 justify-content-center">
         <div class="col-md-4">
-          <div class="input-group">
-            <input type="text" class="form-control rounded-pill" placeholder="Recipient's username"
-              aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <span class="input-group-text" id="basic-addon2">
+          <div class="position-relative">
+            <input type="text" class="form-control p-2 rounded-pill" placeholder="Search Place"
+              aria-label="Search Place">
+            <span class="position-absolute icon-search">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-search" viewBox="0 0 16 16">
                 <path
@@ -45,147 +45,165 @@
 
       <div class="places-content">
         <div class="row gy-4">
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
-          <div class="col-md-3">
-            <a href="/places/nusa-penida" class="card text-decoration-none">
-              <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
               <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Category</p>
+                <p class="card-text">Category / Category</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
+              <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Category / Category</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
+              <div class="card-body">
+                <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Category / Category</p>
               </div>
             </a>
           </div>
