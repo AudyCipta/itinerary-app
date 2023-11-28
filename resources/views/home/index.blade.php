@@ -74,33 +74,33 @@
           <div class="col-12 col-md-8">
             <div class="card">
               <div class="card-body p-4">
-                <form action="">
+                <form>
                   <div class="row gx-3 column-gap-0">
                     <div class="mt-3 mt-md-0 col-md">
                       <label for="destination" class="form-label">Type of Destination</label>
-                      <input class="form-control" list="datalistOptions" id="destination"
-                        placeholder="Choose destination...">
-                      <datalist id="datalistOptions">
-                        <option value="Nature">
-                        <option value="Cultural">
-                        <option value="Entertain">
-                      </datalist>
+                      <select name="destination" id="destination" class="form-control">
+                        <option value="">Choose your destination</option>
+                        <option value="nature">Nature</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="entertain">Entertain</option>
+                      </select>
                     </div>
                     <div class="mt-3 mt-md-0 col-md-auto d-flex flex-column">
                       <label for="btncheck1" class="form-label">Preference</label>
                       <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" disabled>
                         <label class="btn btn-outline-light" for="btncheck1">Beach</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" disabled>
                         <label class="btn btn-outline-light" for="btncheck2">Cliff</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" disabled>
                         <label class="btn btn-outline-light" for="btncheck3">Mountain</label>
                       </div>
                     </div>
                     <div class="mt-3 mt-md-0 col-md-auto">
-                      <button class="btn btn-primary h-100 px-3">
+                      <button type="button" class="btn btn-primary h-100 px-3" data-bs-toggle="modal"
+                        data-bs-target="#ahpModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                           class="bi bi-search" viewBox="0 0 16 16">
                           <path
@@ -219,6 +219,146 @@
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="ahpModal" tabindex="-1" aria-labelledby="ahpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ahpModalLabel">Nature: <span class="text-primary">Beach</span></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row gy-3">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100" aria-hidden="true">
+                <div class="card-body">
+                  <svg class="placeholder-glow card-img-top rounded-3 mb-3" width="100%" height="234"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" class="placeholder"></rect>
+                  </svg>
+                  <h4 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h4>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100" aria-hidden="true">
+                <div class="card-body">
+                  <svg class="placeholder-glow card-img-top rounded-3 mb-3" width="100%" height="234"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" class="placeholder"></rect>
+                  </svg>
+                  <h4 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h4>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100" aria-hidden="true">
+                <div class="card-body">
+                  <svg class="placeholder-glow card-img-top rounded-3 mb-3" width="100%" height="234"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" class="placeholder"></rect>
+                  </svg>
+                  <h4 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h4>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <a href="#" class="card h-100 text-decoration-none rounded-3">
+                <div class="card-body">
+                  <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
+                  <h4 class="card-title">Mobile app</h4>
+                  <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                    dolor sit amet
+                    consectetur adipisicing elit.</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <a href="#" class="card h-100 text-decoration-none rounded-3">
+                <div class="card-body">
+                  <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
+                  <h4 class="card-title">Mobile app</h4>
+                  <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                    dolor sit amet
+                    consectetur adipisicing elit.</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <a href="#" class="card h-100 text-decoration-none rounded-3">
+                <div class="card-body">
+                  <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
+                  <h4 class="card-title">Desktop app</h4>
+                  <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                    dolor sit amet
+                    consectetur adipisicing elit.</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <a href="#" class="card h-100 text-decoration-none rounded-3">
+                <div class="card-body">
+                  <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
+                  <h4 class="card-title">Multiple users</h4>
+                  <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                    dolor sit amet
+                    consectetur adipisicing elit.</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <a href="#" class="card h-100 text-decoration-none rounded-3">
+                <div class="card-body">
+                  <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
+                  <h4 class="card-title">Integrations</h4>
+                  <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
+                    dolor sit amet
+                    consectetur adipisicing elit.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   @guest
     <div id="g_id_onload" data-client_id="{{ env('GOOGLE_CLIENT_ID') }}" data-login_uri="{{ route('login') }}"
