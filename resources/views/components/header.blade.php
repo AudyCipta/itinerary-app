@@ -32,7 +32,18 @@
           @guest
             <a href="{{ route('login') }}" class="btn btn-primary rounded-pill px-3">Login</a>
           @else
-            <a href="{{ route('member.trips.index') }}" class="btn btn-primary rounded-pill px-3">My Trips</a>
+            @if (request()->routeIs('member.trips.index'))
+              <button class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#addItineraryModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-plus-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span>Add New Trip</span>
+              </button>
+            @else
+              <a href="{{ route('member.trips.index') }}" class="btn btn-second rounded-pill px-3">My Trips</a>
+            @endif
             <div class="flex-shrink-0 dropdown">
               <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown"
                 aria-expanded="true">

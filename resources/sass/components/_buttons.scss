@@ -1,0 +1,13 @@
+$second: #33718a;
+
+.btn-second {
+    @extend .btn;
+    background-color: $second;
+
+    &:focus,
+    &:active,
+    &:hover {
+        color: $light;
+        background-color: darken($second, 10%);
+    }
+}

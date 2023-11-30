@@ -51,4 +51,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
 Route::prefix('member')->name('member.')->group(function () {
   // Dashboard
   Route::get('/trips', [TripController::class, 'index'])->name('trips.index');
+  Route::get('/trips/{id}', [TripController::class, 'detail'])->name('trips.detail');
 });

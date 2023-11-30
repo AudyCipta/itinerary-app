@@ -20,7 +20,7 @@
     <div class="container">
 
       <div class="my-trip-content">
-        @if (1)
+        @if (0)
           <div class="row">
             <div class="col-12">
               <div class="my-trip-empty text-center">

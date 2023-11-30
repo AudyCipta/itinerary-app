@@ -12,4 +12,9 @@ class TripController extends Controller
     {
         return view('members.trips.index');
     }
+
+    public function detail(string $id): View
+    {
+        return view('members.trips.index', compact('id'));
+    }
 }
