@@ -32,7 +32,7 @@
           @guest
             <a href="{{ route('login') }}" class="btn btn-primary rounded-pill px-3">Login</a>
           @else
-            <a href="#" class="btn btn-primary rounded-pill px-3">My Trips</a>
+            <a href="{{ route('member.trips.index') }}" class="btn btn-primary rounded-pill px-3">My Trips</a>
             <div class="flex-shrink-0 dropdown">
               <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown"
                 aria-expanded="true">

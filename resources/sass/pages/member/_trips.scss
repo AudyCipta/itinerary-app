@@ -1,0 +1,30 @@
+.my-trip-content {
+    .my-trip-empty {
+        h2 {
+            color: #5d5a88 !important;
+        }
+    }
+
+    .my-trip-item {
+        h3 {
+            color: #6d758f;
+        }
+
+        p {
+            color: #9795b5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 17px;
+        }
+
+        .schedule {
+            h6 {
+                font-weight: bold;
+                color: #6d758f !important;
+                font-size: 17px;
+            }
+        }
+    }
+}

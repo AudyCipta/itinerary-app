@@ -9,7 +9,15 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Color
-$primary: #4a3aff;
+$primary: #fa7436;
+
+.btn-primary {
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #e2672e !important;
+}
 
 // Display
 $display-font-sizes: (
