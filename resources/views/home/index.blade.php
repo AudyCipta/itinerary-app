@@ -211,7 +211,7 @@
 
           <div class="col-12 col-md-6 order-1 order-md-2">
             <div class="excellence-image">
-              <img src="https://placehold.co/600x400" alt="image" class="img-fluid w-100">
+              <img src="/img/excellence.png" alt="image" class="img-fluid w-100">
             </div>
           </div>
         </div>
