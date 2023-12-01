@@ -37,3 +37,11 @@ $h3-font-size: 24px;
 $h4-font-size: 20px;
 $h5-font-size: 18px;
 $h6-font-size: 16px;
+
+// Link
+$link-color: #007bff !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+// Pagination
+// $pagination-active-bg: $link-color;
+// $pagination-active-border: transparent !default;

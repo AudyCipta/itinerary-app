@@ -1,4 +1,4 @@
-.my-trip-content {
+#my-trip {
     .my-trip-empty {
         h2 {
             color: #5d5a88 !important;
@@ -29,16 +29,33 @@
     }
 }
 
-#my-trip-detail-hero {
+#detail-trip-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url(/public/img/hero.jpeg);
     background-attachment: fixed;
     background-size: cover;
 }
 
-#my-trip-calendar {
+#detail-trip-calendar {
     a {
         text-decoration: none;
         color: $second !important;
+    }
+}
+
+#detail-trip-places {
+    .card-header {
+        font-size: 20px !important;
+    }
+
+    .desc {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    img {
+        height: 325px;
+        object-fit: cover;
+        object-position: center;
     }
 }

@@ -30,7 +30,7 @@
         </ul>
         <div class="d-lg-flex col-lg-3 justify-content-lg-end  align-items-center column-gap-3">
           @guest
-            <a href="{{ route('login') }}" class="btn btn-primary rounded-pill px-3">Login</a>
+            <a href="{{ route('login') }}" class="btn btn-second rounded-pill px-3">Login</a>
           @else
             @if (request()->routeIs('member.trips.index'))
               <button class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#addItineraryModal">
