@@ -15,6 +15,6 @@ class TripController extends Controller
 
     public function detail(string $id): View
     {
-        return view('members.trips.index', compact('id'));
+        return view('members.trips.detail', compact('id'));
     }
 }

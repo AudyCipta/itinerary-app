@@ -43,7 +43,7 @@
         @else
           <div class="row gy-4 my-trip-list">
             <div class="col-12 col-md-4 my-trip-item">
-              <a href="/itineraries/nusa-penida" class="card text-decoration-none">
+              <a href="{{ route('member.trips.detail', ['id' => 'my-trip-1']) }}" class="card text-decoration-none">
                 <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
                 <div class="card-body">
                   <h3 class="card-title">Trip Name</h3>
@@ -65,7 +65,7 @@
               </a>
             </div>
             <div class="col-12 col-md-4 my-trip-item">
-              <a href="/itineraries/nusa-penida" class="card text-decoration-none">
+              <a href="{{ route('member.trips.detail', ['id' => 'my-trip-1']) }}" class="card text-decoration-none">
                 <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
                 <div class="card-body">
                   <h3 class="card-title">Trip Name</h3>
@@ -87,7 +87,7 @@
               </a>
             </div>
             <div class="col-12 col-md-4 my-trip-item">
-              <a href="/itineraries/nusa-penida" class="card text-decoration-none">
+              <a href="{{ route('member.trips.detail', ['id' => 'my-trip-1']) }}" class="card text-decoration-none">
                 <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
                 <div class="card-body">
                   <h3 class="card-title">Trip Name</h3>

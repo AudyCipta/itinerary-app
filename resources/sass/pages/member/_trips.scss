@@ -28,3 +28,17 @@
         }
     }
 }
+
+#my-trip-detail-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/public/img/hero.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#my-trip-calendar {
+    a {
+        text-decoration: none;
+        color: $second !important;
+    }
+}
