@@ -13,7 +13,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/img/logo.ico" />
 
   <!-- Scripts -->
-  @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+  @vite(['resources/sass/main.scss', 'resources/js/main.js'])
 
   @stack('styles')
 </head>
@@ -21,7 +21,7 @@
 <body class="d-flex flex-column min-vh-100">
   <x-header />
 
-  <main class="flex-shrink-0">{{ $slot }}</main>
+  <main>{{ $slot }}</main>
 
   <x-footer />
 

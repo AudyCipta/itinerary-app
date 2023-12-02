@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap");
+
 @import "abstracts/variables";
 
 @import "vendors/bootstrap";
@@ -5,9 +7,10 @@
 @import "base/sections";
 @import "base/typography";
 
+@import "layouts/app";
+
 @import "components/buttons";
-@import "components/header";
-@import "components/footer";
+@import "components/navbar";
 
 @import "pages/home";
 @import "pages/auth";

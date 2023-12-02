@@ -1,4 +1,10 @@
-$second: #33718a;
+.btn-primary {
+    color: #ffffff !important;
+
+    &:hover {
+        background-color: #e2672e !important;
+    }
+}
 
 .btn-second {
     @extend .btn;
