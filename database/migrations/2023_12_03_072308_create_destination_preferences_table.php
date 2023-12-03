@@ -11,18 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('destination_preferences', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('picture')->default('default.svg');
-            $table->string('google_id')->nullable();
-            $table->enum('role', ['admin', 'member'])->default('member');
-            $table->rememberToken();
+            $table->unsignedBigInteger('destination_category_id');
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('destination_category_id')->references('id')->on('destination_categories');
         });
     }
 
@@ -31,6 +27,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::table('destination_preferences', function (Blueprint $table) {
+            $table->dropForeign('destination_category_id');
+        });
+
+        Schema::dropIfExists('destination_preferences');
     }
 };

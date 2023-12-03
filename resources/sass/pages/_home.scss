@@ -12,7 +12,7 @@
             color: white;
         }
 
-        .form-control#destination {
+        .form-select#destination {
             border-color: transparent;
             background-color: rgba(255, 255, 255, 0.7) !important;
             backdrop-filter: blur(10px) !important;
@@ -33,6 +33,18 @@
 
         .btn-check:checked + .btn {
             background-color: rgba(255, 255, 255, 0.7) !important;
+        }
+    }
+
+    #place-filter {
+        h5 {
+            font-size: 20px !important;
+            line-height: 20px !important;
+            color: #5d5a88 !important;
+        }
+
+        p {
+            color: #5d5a88 !important;
         }
     }
 }

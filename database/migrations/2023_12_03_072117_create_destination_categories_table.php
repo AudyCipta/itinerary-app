@@ -11,16 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('destination_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('picture')->default('default.svg');
-            $table->string('google_id')->nullable();
-            $table->enum('role', ['admin', 'member'])->default('member');
-            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('destination_categories');
     }
 };

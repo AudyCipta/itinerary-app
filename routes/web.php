@@ -28,6 +28,8 @@ Route::post('/auth/google/prompt', [SocialiteController::class, 'handleGooglePro
 
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('home.index'); // ->middleware('verified')
+Route::post('/preferences', [HomeController::class, 'getPreference'])->name('home.get_preference');
+Route::post('/filter', [HomeController::class, 'filter'])->name('home.filter');
 
 // Itineraries
 Route::get('/itineraries', [ItineraryController::class, 'index'])->name('itineraries.index');
