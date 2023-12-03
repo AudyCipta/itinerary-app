@@ -1,4 +1,8 @@
 #blog {
+    a {
+        color: #8d8ba7 !important;
+    }
+
     .section-header {
         h2 {
             color: #5d5a88 !important;
@@ -19,14 +23,37 @@
             }
 
             p {
-                color: #5d5a88;
+                color: #9795b5;
                 font-size: 17px !important;
                 line-height: 26px;
             }
 
             a {
                 font-size: 17px !important;
+                font-weight: 500;
             }
         }
+    }
+}
+
+#blog-detail {
+    h2,
+    h4 {
+        color: #5d5a88;
+    }
+
+    h4 {
+        font-size: 22px !important;
+    }
+
+    p {
+        color: #2e3c40;
+        font-size: 18px;
+    }
+
+    img {
+        height: 576.53px;
+        object-fit: cover;
+        object-position: center;
     }
 }

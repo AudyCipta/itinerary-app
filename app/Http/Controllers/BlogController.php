@@ -12,8 +12,8 @@ class BlogController extends Controller
         return view('blog.index');
     }
 
-    public function detail()
+    public function detail(string $id)
     {
-        //
+        return view('blog.detail', compact('id'));
     }
 }

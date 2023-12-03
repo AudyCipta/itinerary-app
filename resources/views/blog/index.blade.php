@@ -37,7 +37,7 @@
                 <p class="card-text text-auto mb-3">Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
                   dalaracc lacus vel
                   facilisis volutpat est velitolm.</p>
-                <a href="#" class="card-link text-decoration-none mt-auto">
+                <a href="{{ route('blog.detail', ['id' => 'post-1']) }}" class="card-link text-decoration-none mt-auto">
                   Learn more
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -55,7 +55,7 @@
                 <p class="card-text text-auto mb-3">Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
                   dalaracc lacus vel
                   facilisis volutpat est velitolm.</p>
-                <a href="#" class="card-link text-decoration-none mt-auto">
+                <a href="{{ route('blog.detail', ['id' => 'post-1']) }}" class="card-link text-decoration-none mt-auto">
                   Learn more
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -72,7 +72,7 @@
                 <h3 class="card-title mt-3">Lorem, ipsum.</h3>
                 <p class="card-text text-auto mb-3">Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
                   dalaracc lacus veltolm.</p>
-                <a href="#" class="card-link text-decoration-none mt-auto">
+                <a href="{{ route('blog.detail', ['id' => 'post-1']) }}" class="card-link text-decoration-none mt-auto">
                   Learn more
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -90,7 +90,7 @@
                 <p class="card-text text-auto mb-3">Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
                   dalaracc lacus vel
                   facilisis volutpat est velitolm.</p>
-                <a href="#" class="card-link text-decoration-none mt-auto">
+                <a href="{{ route('blog.detail', ['id' => 'post-1']) }}" class="card-link text-decoration-none mt-auto">
                   Learn more
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -108,7 +108,7 @@
                 <p class="card-text text-auto mb-3">Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
                   dalaracc lacus vel
                   facilisis volutpat est velitolm.</p>
-                <a href="#" class="card-link text-decoration-none mt-auto">
+                <a href="{{ route('blog.detail', ['id' => 'post-1']) }}" class="card-link text-decoration-none mt-auto">
                   Learn more
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -125,7 +125,8 @@
                 <h3 class="card-title mt-3">Lorem, ipsum.</h3>
                 <p class="card-text text-auto mb-3">Lorem ipsum dolor sit amet consecte tur adipiscing elit semper
                   dalaracc lacus veltolm.</p>
-                <a href="#" class="card-link text-decoration-none mt-auto">
+                <a href="{{ route('blog.detail', ['id' => 'post-1']) }}"
+                  class="card-link text-decoration-none mt-auto">
                   Learn more
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-right" viewBox="0 0 16 16">
