@@ -16,7 +16,7 @@ class PlaceSeeder extends Seeder
         DB::table('places')->insert([
             [
                 'name' => 'Balangan Beach',
-                'destination_preference_id' => 3,
+                'destination_preference_id' => 1,
                 'description' => 'Balangan Beach hidden between two steeply clift, Balangan Beach is one of the beautiful beaches of many beautiful beaches at the southern part of Bali Island. Its location which is close to Dreamland beaches and Uluwatu Temple so that it could be an alternative attractions you can visit.
 The entrance access to the beach in the area of Pecatu is not so difficult because stairs have been provided which are wide enough for tourist. The atmosphere is still very natural and it\'s cool, moreover it is not much visited tourist. For surfers, this beach is very famous and a favorite spot for surfing besides Dreamland beach.
 Balangan beach with coastline approximately 1 km long north facing to north, so the activity of I Gusti Ngurah Rai International Airport is visible from here in the distance. In the eastern part bounded by high cliffs with indentations underneath because eroded by waves. In the western side, the shore is bounded by high cliffs filled with plants, especially palm trees, but it also contains some sort of cottages to enjoy the beaches from the height. The Absorbing thing is when the sea condition is low tide from this beach we could lead to Dreamland Beach by walking along the west shore.',
@@ -76,6 +76,13 @@ Visitors to Sangeh Monkey Forest often combine their visit with exploring Pura B
                 'name' => 'Waterboom Bali',
                 'destination_preference_id' => 7,
                 'description' => 'Waterbom Bali is a popular water park located in Kuta, Bali, Indonesia. It is known for its extensive range of water attractions, slides, and family-friendly activities. The water park boasts a variety of water slides and attractions suitable for visitors of all ages. From thrilling slides for adrenaline seekers to more relaxed attractions, Waterbom Bali offers a diverse range of experiences. For a more leisurely experience, visitors can enjoy the lazy river, where they can float along in a tube and take in the surroundings. Waterbom Bali features a FlowRider, providing an opportunity for visitors to try their hand at bodyboarding and surfing in a controlled environment. Funtastic is an area specifically designed for younger visitors, offering a safe and enjoyable space for kids to play with interactive water features. Waterbom Bali provides dining options within the park, including cafes and snack bars. Additionally, there are facilities such as changing rooms, lockers, and sun loungers for visitors\' convenience. Waterbom Bali is known for its commitment to sustainability and environmental responsibility. The park has implemented various eco-friendly initiatives, such as using renewable energy sources and minimizing its environmental impact.',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Old\'s Man',
+                'destination_preference_id' => 6,
+                'description' => '',
                 'created_at' => now(),
                 'updated_at' => now()
             ]
