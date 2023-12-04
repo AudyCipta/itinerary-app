@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Place;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -12,8 +13,8 @@ class PlaceController extends Controller
         return view('places.index');
     }
 
-    public function detail($id): View
+    public function detail(Place $place): View
     {
-        return view('places.detail', compact('id'));
+        return view('places.detail', compact('place'));
     }
 }

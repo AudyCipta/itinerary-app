@@ -56,7 +56,7 @@
           </div>
           <div class="col-md">
             <div class="place-detail-body">
-              <h2 class="mb-4">{{ $id }}</h2>
+              <h2 class="mb-4">{{ $place->name }}</h2>
               <p>A website wireframe, also known as a page schematic or screen blueprint, is a visual guide that
                 represents the skeletal framework of a website. Wireframes are created for the purpose of arranging
                 elements to best accomplish a particular purpose.</p>
@@ -73,31 +73,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section id="excellence" class="py-0">
-    <div class="container-fluid px-0">
-      <div class="excellence-content">
-
-        <div class="row g-0">
-          <div class="col-6">
-            <div class="excellence-body">
-              <h2 class="mb-3">Lorem, ipsum.</h2>
-              <p class="lead">By creating a visual guide along the way, the designer or developer can get input from
-                the other people involved in the website such as the customer, their manager, and other members of the
-                team. </p>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="excellence-image">
-              <img src="https://placehold.co/600x400" alt="image" class="img-fluid w-100">
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 </x-layouts.app>

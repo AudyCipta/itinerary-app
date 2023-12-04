@@ -182,7 +182,7 @@
                 $.each(response.data, function(index, item) {
                   const placeItem = $(`
                   <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="#" class="card text-decoration-none rounded-4">
+                    <a href="{{ route('places.index') }}/${item.slug}" class="card text-decoration-none rounded-4">
                       <div class="card-body">
                         <img src="{{ asset('storage/places/${item.picture}') }}" class="card-img-top mb-3 rounded-4 my-img" alt="places">
                         <h5 class="card-title text-truncate text-dark">${item.name}</h5>

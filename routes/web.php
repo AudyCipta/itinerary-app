@@ -37,7 +37,7 @@ Route::get('/itineraries/{id}', [ItineraryController::class, 'detail'])->name('i
 
 // Places
 Route::get('/places', [PlaceController::class, 'index'])->name('places.index');
-Route::get('/places/{id}', [PlaceController::class, 'detail'])->name('places.detail');
+Route::get('/places/{place:slug}', [PlaceController::class, 'detail'])->name('places.detail');
 
 // Blog
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
