@@ -184,7 +184,7 @@
                   <div class="col-12 col-sm-6 col-lg-4">
                     <a href="#" class="card text-decoration-none rounded-4">
                       <div class="card-body">
-                        <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
+                        <img src="{{ asset('storage/places/${item.picture}') }}" class="card-img-top mb-3 rounded-4 my-img" alt="places">
                         <h5 class="card-title text-truncate text-dark">${item.name}</h5>
                         <p class="card-text text-secondary">${item.destination_preference.destination_category.name} / ${item.destination_preference.name}</p>
                       </div>
@@ -392,39 +392,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="row gy-3 place-list" id="place-filter">
-
-            {{-- <div class="col-12 col-sm-6 col-lg-4">
-              <div class="card h-100 rounded-4" aria-hidden="true">
-                <div class="card-body">
-                  <svg class="placeholder-glow card-img-top rounded-4 mb-2" width="100%" height="210"
-                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" class="placeholder"></rect>
-                  </svg>
-                  <h4 class="card-title placeholder-glow">
-                    <span class="placeholder col-9"></span>
-                  </h4>
-                  <p class="card-text placeholder-glow">
-                    <span class="placeholder col-3"></span>
-                    <span class="placeholder col-4"></span>
-                  </p>
-                </div>
-              </div>
-            </div> --}}
-
-            <div class="col-12 col-sm-6 col-lg-4">
-              <a href="/places/nusa-penida" class="card text-decoration-none rounded-4">
-                <div class="card-body">
-                  <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="places">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Category / Category</p>
-                </div>
-              </a>
-            </div>
-
-          </div>
+          <div class="row gy-3 place-list"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

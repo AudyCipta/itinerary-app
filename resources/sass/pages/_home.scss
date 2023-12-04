@@ -35,18 +35,6 @@
             background-color: rgba(255, 255, 255, 0.7) !important;
         }
     }
-
-    #place-filter {
-        h5 {
-            font-size: 20px !important;
-            line-height: 20px !important;
-            color: #5d5a88 !important;
-        }
-
-        p {
-            color: #5d5a88 !important;
-        }
-    }
 }
 
 #trending {
@@ -106,5 +94,13 @@
         img {
             height: 50px;
         }
+    }
+}
+
+#ahpModal {
+    img {
+        height: 210px;
+        object-fit: cover;
+        object-position: center;
     }
 }
