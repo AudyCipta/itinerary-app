@@ -10,7 +10,9 @@ class PlaceController extends Controller
 {
     public function index(): View
     {
-        return view('places.index');
+        $places = Place::with(['destinationPreference', 'destinationPreference.destinationCategory'])->get();
+
+        return view('places.index', compact('places'));
     }
 
     public function detail(Place $place): View
