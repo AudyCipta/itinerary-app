@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             DestinationCategorySeeder::class,
             DestinationPreferenceSeeder::class,
-            PlaceSeeder::class
+            PlaceSeeder::class,
+            PlaceImageSeeder::class,
         ]);
     }
 }

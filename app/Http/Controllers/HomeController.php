@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function filter(): JsonResponse
     {
         $id = request()->id;
-        $places = Place::with(['destinationPreference', 'destinationPreference.destinationCategory'])
+        $places = Place::with(['destinationPreference', 'destinationPreference.destinationCategory', 'placeImages'])
             ->where('destination_preference_id', $id)
             ->get();
 

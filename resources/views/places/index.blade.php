@@ -50,8 +50,15 @@
               <a href="{{ route('places.detail', ['place' => $place->slug]) }}"
                 class="card text-decoration-none rounded-4">
                 <div class="card-body">
-                  <img src="{{ asset('storage/places') }}/{{ $place->picture }}" class="card-img-top mb-3 rounded-4"
-                    alt="places">
+                  @if ($place->placeImages->isNotEmpty())
+                    @php
+                      $picture = $place->placeImages->first()->picture;
+                    @endphp
+                    <img src="{{ asset('storage/places') }}/{{ $picture }}" class="card-img-top mb-3 rounded-4"
+                      alt="places">
+                  @else
+                    <img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4" alt="default image">
+                  @endif
                   <h5 class="card-title">{{ $place->name }}</h5>
                   <p class="card-text">{{ $place->destinationPreference->destinationCategory->name }} /
                     {{ $place->destinationPreference->name }}</p>
