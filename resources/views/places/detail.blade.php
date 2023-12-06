@@ -16,23 +16,23 @@
 @endpush
 
 <x-layouts.app title="Place Detail">
-  <section id="place-detail" class="pt-0 mt-5">
+  <section id="place-detail" class="pt-4 mt-5">
     <div class="container">
-
       <div class="place-detail-content">
         <div class="row">
+
           <div class="col-md-12">
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://placehold.co/600x400" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://placehold.co/600x400" class="d-block w-100" alt="img">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://placehold.co/600x400" class="d-block w-100" alt="img">
-                </div>
+                @php
+                  $i = 0;
+                @endphp
+                @foreach ($place->placeImages as $item)
+                  <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                    <img src="{{ asset('storage/places') }}/{{ $item->picture }}" class="rounded-4 d-block w-100"
+                      alt="img">
+                  </div>
+                @endforeach
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                 data-bs-slide="prev">
@@ -46,6 +46,7 @@
               </button>
             </div>
           </div>
+
           <div class="col-md">
             <div class="place-detail-body">
               <h2 class="mb-4">{{ $place->name }}</h2>
@@ -62,9 +63,9 @@
               </a>
             </div>
           </div>
+
         </div>
       </div>
-
     </div>
   </section>
 </x-layouts.app>

@@ -50,23 +50,33 @@
     }
 }
 
-.place-detail-body {
-    h2 {
-        color: #5d5a88 !important;
+#place-detail {
+    .carousel {
+        img {
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 
-    p {
-        color: #9795b5 !important;
-        font-size: 18px;
-        line-height: 30px;
-    }
+    .place-detail-body {
+        h2 {
+            color: #5d5a88 !important;
+        }
 
-    .btn {
-        border-color: transparent;
-        background-color: #5d5a88 !important;
-    }
+        p {
+            color: #9795b5 !important;
+            font-size: 18px;
+            line-height: 30px;
+        }
 
-    .btn:hover {
-        background-color: #504d7a !important;
+        .btn {
+            border-color: transparent;
+            background-color: #5d5a88 !important;
+        }
+
+        .btn:hover {
+            background-color: #504d7a !important;
+        }
     }
 }
