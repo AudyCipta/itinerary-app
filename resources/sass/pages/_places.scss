@@ -57,26 +57,53 @@
             object-fit: cover;
             object-position: center;
         }
-    }
 
-    .place-detail-body {
-        h2 {
-            color: #5d5a88 !important;
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: $white !important;
+
+            &.active {
+                background-color: $primary !important;
+            }
         }
 
+        .carousel-control-prev-icon {
+            background-image: url(/public/img/button-prev.png);
+        }
+
+        .carousel-control-next-icon {
+            background-image: url(/public/img/button-next.png);
+        }
+    }
+
+    .place-detail-content {
         p {
-            color: #9795b5 !important;
+            color: #434343 !important;
             font-size: 18px;
             line-height: 30px;
         }
 
-        .btn {
-            border-color: transparent;
-            background-color: #5d5a88 !important;
+        .place-detail-body p:last-child {
+            margin-bottom: 0 !important;
         }
 
-        .btn:hover {
-            background-color: #504d7a !important;
+        .place-detail-info {
+            color: #2e3c40 !important;
+
+            .google-map {
+                padding-bottom: 50%;
+                position: relative;
+
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    position: absolute;
+                }
+            }
         }
     }
 }
