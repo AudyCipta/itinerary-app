@@ -149,37 +149,16 @@
                 <option selected disabled>Choose your trip</option>
               </select>
             </div>
-            <div class="col-auto">
-              <button type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
-                  <path
-                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
-                </svg> Add to My Trip</button>
-            </div>
-          </div>
-          <div class="row mt-3 gx-2">
-            <div class="col">
-              <input class="form-control" type="text" placeholder="Enter Name of Trip"
-                aria-label="default input example">
-            </div>
-            <div class="col-auto">
-              <button type="button" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-plus-circle me-1"
-                  viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                  <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                </svg> Create New Trip</button>
-            </div>
           </div>
         </div>
-        {{-- <div class="modal-footer">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary">Create New Trip</button>
           <button type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
               height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
               <path
                 d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
             </svg> Add to My Trip</button>
-        </div> --}}
+        </div>
       </div>
     </div>
   </div>
