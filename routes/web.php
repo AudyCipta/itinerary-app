@@ -37,6 +37,8 @@ Route::get('/itineraries/{id}', [ItineraryController::class, 'detail'])->name('i
 
 // Places
 Route::get('/places', [PlaceController::class, 'index'])->name('places.index');
+Route::get('/places/search', [PlaceController::class, 'search'])->name('places.search');
+Route::get('/places/get-all', [PlaceController::class, 'getAll'])->name('places.get_all');
 Route::get('/places/{place:slug}', [PlaceController::class, 'detail'])->name('places.detail');
 
 // Blog
