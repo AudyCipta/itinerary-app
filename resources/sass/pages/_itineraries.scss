@@ -12,28 +12,25 @@
         }
     }
 
-    .itineraries-content {
-        .card {
-            h5 {
-                font-size: 20px !important;
-                line-height: 20px !important;
-                color: #5d5a88;
-            }
+    .itineraries-item {
+        h3 {
+            color: #6d758f;
+        }
 
-            p {
-                color: #5d5a88;
-            }
+        p {
+            color: #9795b5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 17px;
+        }
 
-            .itinerary-schedule {
-                h6 {
-                    font-weight: bold;
-                    color: #6d758f !important;
-                    font-size: 17px;
-                }
-
-                span {
-                    background-color: #6d758f !important;
-                }
+        .schedule {
+            h6 {
+                font-weight: bold;
+                color: #6d758f !important;
+                font-size: 17px;
             }
         }
     }
