@@ -152,12 +152,47 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary">Create New Trip</button>
-          <button type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-              height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+          <button type="button" class="btn btn-secondary d-flex align-items-center column-gap-1"
+            data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#tripNameModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-plus-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+            </svg>
+            <span>Create New Trip</span>
+          </button>
+          <button type="button" class="btn btn-primary d-flex align-items-center column-gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-bookmark" viewBox="0 0 16 16">
               <path
                 d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
-            </svg> Add to My Trip</button>
+            </svg>
+            <span>Add to My Trip</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="tripNameModal" tabindex="-1" aria-labelledby="tripNameModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="tripNameModalLabel">Create Trip Name</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-0">
+            <label for="trip_name" class="form-label">Trip Name</label>
+            <input type="text" class="form-control" id="trip_name" placeholder="Enter trip name" autofocus>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Create</button>
         </div>
       </div>
     </div>
