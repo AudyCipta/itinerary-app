@@ -61,6 +61,14 @@
     <div class="container text-center">
       <h1 class="text-white">2 days with Summer Uluwatu Trip</h1>
       <p class="text-white lead">mm dd, yyyy - mm dd, yyyy</p>
+      <button type="button" class="btn btn-primary py-2 px-3 rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+        </svg>
+        <span>Add to My Trip</span>
+      </button>
     </div>
   </section>
 
