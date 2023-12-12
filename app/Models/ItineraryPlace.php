@@ -4,16 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Itinerary extends Model
+class ItineraryPlace extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
-    public function itineraryPlaces(): HasMany
+    public function place(): BelongsTo
     {
-        return $this->hasMany(ItineraryPlace::class);
+        return $this->belongsTo(Place::class);
     }
 }

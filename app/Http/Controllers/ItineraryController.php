@@ -17,6 +17,12 @@ class ItineraryController extends Controller
 
     public function detail(Itinerary $itinerary): View
     {
+        $itinerary->load(
+            'itineraryPlaces',
+            'itineraryPlaces.place',
+            'itineraryPlaces.place.placeImages'
+        );
+
         return view('itineraries.detail', compact('itinerary'));
     }
 }
