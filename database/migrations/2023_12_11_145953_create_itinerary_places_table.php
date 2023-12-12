@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('itinerary_id');
             $table->unsignedBigInteger('place_id');
+            $table->datetime('start');
             $table->timestamps();
 
             $table->foreign('itinerary_id')->references('id')->on('itineraries');

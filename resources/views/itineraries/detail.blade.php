@@ -17,41 +17,37 @@
 
   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.10/index.global.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.10/index.global.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@6.1.10/index.global.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        themeSystem: "bootstrap",
-        events: [{
-            title: "2 days with Summer Uluwatu Trip",
-            start: "2023-12-07",
-            end: "2023-12-09"
-          },
-          {
-            title: "Meeting",
-            url: "http://google.com/",
-            start: "2023-12-07T10:30"
-          },
-          {
-            title: "Lunch",
-            url: "http://google.com/",
-            start: "2023-12-07T12:00"
-          },
-          {
-            title: "Breakfast",
-            url: "http://google.com/",
-            start: "2023-12-08T08:00"
-          },
-          {
-            title: "Meeting",
-            url: "http://google.com/",
-            start: "2023-12-08T20:30"
-          }
-        ]
+    $(function() {
+      const currentUrl = window.location.href;
+      const slug = currentUrl.split('/').pop();
+
+      $.ajax({
+        method: "GET",
+        url: `{{ route('itineraries.index') }}/${slug}/booked`,
+        dataType: 'json',
+        success: function(response) {
+          const calendarEl = document.getElementById('calendar');
+          const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            themeSystem: "bootstrap",
+            headerToolbar: {
+              start: 'prev,next today',
+              center: 'title',
+              end: 'dayGridMonth,dayGridWeek,dayGridDay,listMonth'
+            },
+            events: response.data.events
+          });
+          calendar.render();
+        },
+        error: function(error) {
+          console.log(error);
+        }
       });
-      calendar.render();
     });
   </script>
 @endpush
@@ -60,8 +56,9 @@
   <section id="detail-trip-hero" class="py-0 min-vh-100 bg-secondary d-flex align-items-center">
     <div class="container text-center">
       <h1 class="text-white">{{ $itinerary->name }}</h1>
-      <p class="text-white lead">{{ date('m d, Y', strtotime($itinerary->start_day)) }} -
-        {{ date('m d, Y', strtotime($itinerary->start_day . ' + ' . $itinerary->total_day . ' days')) }}</p>
+      <p class="text-white lead">{{ $itinerary->total_day }} {{ $itinerary->total_day > 1 ? 'Days' : 'Day' }} Trip</p>
+      {{-- <p class="text-white lead">{{ date('m d, Y', strtotime($itinerary->start_day)) }} -
+        {{ date('m d, Y', strtotime($itinerary->start_day . ' + ' . $itinerary->total_day . ' days')) }}</p> --}}
       @auth
         <button type="button" class="btn btn-primary py-2 px-3 rounded-pill">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
