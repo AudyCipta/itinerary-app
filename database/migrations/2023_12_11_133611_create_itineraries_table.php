@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('itineraries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
             $table->tinyInteger('total_day');
             $table->date('start_day');
             $table->date('thumbnail')->nullable();

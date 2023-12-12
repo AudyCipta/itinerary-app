@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Itinerary;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -9,11 +10,13 @@ class ItineraryController extends Controller
 {
     public function index(): View
     {
-        return view('itineraries.index');
+        $itineraries = Itinerary::all();
+
+        return view('itineraries.index', compact('itineraries'));
     }
 
-    public function detail($id): View
+    public function detail(Itinerary $itinerary): View
     {
-        return view('itineraries.detail', compact('id'));
+        return view('itineraries.detail', compact('itinerary'));
     }
 }

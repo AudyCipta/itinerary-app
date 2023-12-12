@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ItinerarySeeder extends Seeder
 {
@@ -16,6 +17,7 @@ class ItinerarySeeder extends Seeder
         DB::table('itineraries')->insert([
             [
                 'name' => 'test',
+                'slug' => Str::slug('test'),
                 'total_day' => 2,
                 'start_day' => '2023-12-12',
                 'created_at' => now(),
