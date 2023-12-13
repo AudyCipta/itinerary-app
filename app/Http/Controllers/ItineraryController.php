@@ -37,7 +37,7 @@ class ItineraryController extends Controller
         $events[] = [
             "title" => $itinerary->name,
             "start" => $itinerary->start_day,
-            "end" => date('Y-m-d', strtotime($itinerary->start_day . ' + ' . ($itinerary->total_day + 1) . ' days'))
+            "end" => date('Y-m-d', strtotime($itinerary->start_day . ' + ' . $itinerary->total_day . ' days'))
         ];
 
         foreach ($itinerary->itineraryPlaces as $itineraryPlace) {
