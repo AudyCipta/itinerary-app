@@ -102,7 +102,7 @@
               type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Day 2</button>
           </li>
         </ul>
-        <button type="button" class="btn btn-secondary px-3 py-0">Add Place</button>
+
       </div>
 
       <div class="tab-content" id="pills-tabContent">
@@ -111,9 +111,8 @@
           <div class="d-flex flex-column row-gap-4">
             @foreach ($itinerary->itineraryPlaces as $item)
               <div class="card">
-                <div class="card-header d-flex justify-content-between">
+                <div class="card-header">
                   <span>{{ $item->place->name }}</span>
-                  <a href="#" class="btn btn-link btn-sm">Remove</a>
                 </div>
                 <div class="card-body">
                   <div class="row gx-3">
