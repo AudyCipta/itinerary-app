@@ -17,14 +17,24 @@ class ItineraryPlaceSeeder extends Seeder
             [
                 'itinerary_id' => 1,
                 'place_id' => 1,
-                'start' => '2023-12-15T10:30',
+                'day_to' => 1,
+                'time' => '10:30',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
                 'itinerary_id' => 1,
                 'place_id' => 2,
-                'start' => '2023-12-16T10:30',
+                'day_to' => 2,
+                'time' => '20:30',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'itinerary_id' => 1,
+                'place_id' => 3,
+                'day_to' => 2,
+                'time' => '14:30',
                 'created_at' => now(),
                 'updated_at' => now()
             ]

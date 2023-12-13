@@ -24,7 +24,21 @@ class ItineraryController extends Controller
             'itineraryPlaces.place.placeImages'
         );
 
-        return view('itineraries.detail', compact('itinerary'));
+        for ($i = 0; $i < $itinerary->total_day; $i++) {
+            $place = [];
+            for ($j = 0; $j < $itinerary->itineraryPlaces[$i]->day_to; $j++) {
+                $place[] = [
+                    'days' => $itinerary->itineraryPlaces[$j]->day_to,
+                    'title' => $itinerary->itineraryPlaces[$j]->place->name,
+                    'slug' => $itinerary->itineraryPlaces[$j]->place->slug,
+                    'picture' => $itinerary->itineraryPlaces[$j]->place->placeImages[0]->picture,
+                    'description' => $itinerary->itineraryPlaces[$j]->place->description
+                ];
+            }
+            $days[] = $place;
+        }
+
+        return view('itineraries.detail', compact('itinerary', 'days'));
     }
 
     public function booked(Itinerary $itinerary): JsonResponse
@@ -41,10 +55,12 @@ class ItineraryController extends Controller
         ];
 
         foreach ($itinerary->itineraryPlaces as $itineraryPlace) {
+            $start = date('Y-m-d', strtotime($itinerary->start_day . ' + ' . ($itineraryPlace->day_to - 1) . ' days'));
+
             $events[] = [
                 "title" => $itineraryPlace->place->name,
                 "url" => route('places.detail', ['place' => $itineraryPlace->place->slug]),
-                "start" => $itineraryPlace->start
+                "start" => $start . 'T' . $itineraryPlace->time
             ];
         }
 
