@@ -93,7 +93,7 @@
 
       <div class="d-flex justify-content-between w-100 mb-3">
         <ul class="nav nav-pills" id="pills-tab" role="tablist">
-          @for ($i = 1; $i <= count($days); $i++)
+          @for ($i = 1; $i <= $itinerary->total_day; $i++)
             <li class="nav-item" role="presentation">
               <button class="nav-link {{ $i == 1 ? 'active' : '' }}" id="pills-home-tab" data-bs-toggle="pill"
                 data-bs-target="#day-{{ $i }}" type="button" role="tab" aria-controls="pills-home"
@@ -105,25 +105,25 @@
       </div>
 
       <div class="tab-content" id="pills-tabContent">
-        @foreach ($days as $day)
-          <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="day-{{ $loop->index + 1 }}"
-            role="tabpanel" aria-labelledby="day-{{ $loop->index + 1 }}-tab" tabindex="0">
+        @for ($i = 0; $i < $itinerary->total_day; $i++)
+          <div class="tab-pane fade {{ $i == 0 ? 'show active' : '' }}" id="day-{{ $i + 1 }}" role="tabpanel"
+            aria-labelledby="day-{{ $i + 1 }}-tab" tabindex="0">
             <div class="d-flex flex-column row-gap-4">
-              @for ($i = 0; $i < count($day); $i++)
+              @foreach ($itinerary->dayPlaces($i + 1) as $item)
                 <div class="card">
                   <div class="card-header">
-                    <span>{{ $day[$i]['title'] }}</span>
+                    <span>{{ $item->place->name }}</span>
                   </div>
                   <div class="card-body">
                     <div class="row gx-3">
                       <div class="col-md-4">
-                        <img src="{{ asset('storage/places/' . $day[$i]['picture']) }}" class="img-fluid rounded-3"
-                          alt="places">
+                        <img src="{{ asset('storage/places/' . $item->place->placeImages[0]->picture) }}"
+                          class="img-fluid rounded-3" alt="places">
                       </div>
                       <div class="col-md-8 d-flex flex-column justify-content-between">
                         <div class="desc mb-4">
-                          <p class="card-text text-justify mb-0">{!! substr($day[$i]['description'], 0, 260) !!} <a
-                              href="{{ route('places.detail', ['place' => $day[$i]['slug']]) }}">More...</a></p>
+                          <p class="card-text text-justify mb-0">{!! substr($item->place->description, 0, 260) !!} <a
+                              href="{{ route('places.detail', ['place' => $item->place->slug]) }}">More...</a></p>
                         </div>
                         <div>
                           <p class="card-text lead mb-1 fw-bold">Things to do in [Places]</p>
@@ -153,10 +153,10 @@
                     </div>
                   </div>
                 </div>
-              @endfor
+              @endforeach
             </div>
           </div>
-        @endforeach
+        @endfor
       </div>
     </div>
   </section>

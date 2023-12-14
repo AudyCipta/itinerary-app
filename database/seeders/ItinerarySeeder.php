@@ -18,7 +18,7 @@ class ItinerarySeeder extends Seeder
             [
                 'name' => 'test',
                 'slug' => Str::slug('test'),
-                'total_day' => 2,
+                'total_day' => 4,
                 'start_day' => '2023-12-15',
                 'created_at' => now(),
                 'updated_at' => now()

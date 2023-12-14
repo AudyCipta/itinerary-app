@@ -24,21 +24,7 @@ class ItineraryController extends Controller
             'itineraryPlaces.place.placeImages'
         );
 
-        for ($i = 0; $i < $itinerary->total_day; $i++) {
-            $place = [];
-            for ($j = 0; $j < $itinerary->itineraryPlaces[$i]->day_to; $j++) {
-                $place[] = [
-                    'days' => $itinerary->itineraryPlaces[$j]->day_to,
-                    'title' => $itinerary->itineraryPlaces[$j]->place->name,
-                    'slug' => $itinerary->itineraryPlaces[$j]->place->slug,
-                    'picture' => $itinerary->itineraryPlaces[$j]->place->placeImages[0]->picture,
-                    'description' => $itinerary->itineraryPlaces[$j]->place->description
-                ];
-            }
-            $days[] = $place;
-        }
-
-        return view('itineraries.detail', compact('itinerary', 'days'));
+        return view('itineraries.detail', compact('itinerary'));
     }
 
     public function booked(Itinerary $itinerary): JsonResponse
