@@ -54,7 +54,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 // Member
 Route::prefix('member')->name('member.')->group(function () {
-  // Dashboard
+  // Trips
   Route::get('/trips', [TripController::class, 'index'])->name('trips.index');
-  Route::get('/trips/{id}', [TripController::class, 'detail'])->name('trips.detail');
+  Route::get('/trips/{itineraryBook}', [TripController::class, 'detail'])->name('trips.detail');
+  Route::post('/trips/{itinerary}', [TripController::class, 'store'])->name('trips.store');
 });

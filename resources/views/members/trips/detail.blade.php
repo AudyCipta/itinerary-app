@@ -59,8 +59,10 @@
 <x-layouts.app title="My Trip Detail">
   <section id="detail-trip-hero" class="py-0 min-vh-100 bg-secondary d-flex align-items-center">
     <div class="container text-center">
-      <h1 class="text-white">2 days with Summer Uluwatu Trip</h1>
-      <p class="text-white lead">mm dd, yyyy - mm dd, yyyy</p>
+      <h1 class="text-white">{{ $itineraryBook->total_day }} {{ $itineraryBook->total_day > 1 ? 'days' : 'day' }} with
+        {{ $itineraryBook->name }}</h1>
+      <p class="text-white lead">{{ date('m d, Y', strtotime($itineraryBook->start_day)) }} -
+        {{ date('m d, Y', strtotime($itineraryBook->start_day . ' + ' . $itineraryBook->total_day - 1 . ' days')) }}</p>
     </div>
   </section>
 

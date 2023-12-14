@@ -21,10 +21,25 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
   <script>
     $(function() {
+      $("input[type=date]").flatpickr({
+        minDate: "today"
+      });
+
       const currentUrl = window.location.href;
       const slug = currentUrl.split('/').pop();
+
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        cache: false
+      });
 
       $.ajax({
         method: "GET",
@@ -48,8 +63,52 @@
           console.log(error);
         }
       });
+
+      $('#addItineraryModal form').submit(function(e) {
+        e.preventDefault();
+        const slug = $('#addItineraryModal form #slug').val();
+
+        $.ajax({
+          method: "POST",
+          url: `{{ route('member.trips.index') }}/${slug}`,
+          data: {
+            'start_day': $('#start_day').val()
+          },
+          dataType: 'json',
+          beforeSend: function() {
+            $('#addItineraryModal .modal-footer button').attr('disabled', true);
+            $('#addItineraryModal .modal-footer button').attr('disabled', true);
+            $('#addItineraryModal button[type=submit]').html(`
+              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+              <span role="status">Save</span>
+            `);
+          },
+          success: function(response) {
+            setTimeout(function() {
+              if (response.status == 'success') {
+                $('#addItineraryModal .modal-footer button').removeAttr('disabled');
+                $('#addItineraryModal .modal-footer button').removeAttr('disabled');
+                $('#addItineraryModal button[type=submit]').html(`Save`);
+                $('#addItineraryModal').modal('hide');
+                var notyf = new Notyf();
+                notyf.success('Data berhasil disimpan');
+              }
+            }, 800);
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+
+      });
     });
   </script>
+@endpush
+
+@push('styles')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 @endpush
 
 <x-layouts.app title="Place Detail">
@@ -61,7 +120,8 @@
       {{-- <p class="text-white lead">{{ date('m d, Y', strtotime($itinerary->start_day)) }} -
         {{ date('m d, Y', strtotime($itinerary->start_day . ' + ' . $itinerary->total_day . ' days')) }}</p> --}}
       @auth
-        <button type="button" class="btn btn-primary py-2 px-3 mt-2 rounded-pill d-flex align-items-center mx-auto">
+        <button type="button" class="btn btn-primary py-2 px-3 mt-2 rounded-pill d-flex align-items-center mx-auto"
+          data-bs-toggle="modal" data-bs-target="#addItineraryModal">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
             viewBox="0 0 16 16">
             <path
@@ -160,4 +220,30 @@
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="addItineraryModal" tabindex="-1" aria-labelledby="addItineraryModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="addItineraryModalLabel">Add to My Trip</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="">
+          <input type="hidden" name="slug" id="slug" value="{{ $itinerary->slug }}">
+          <div class="modal-body">
+            <div class="mb-0">
+              <input type="date" placeholder="Select Start Day" class="form-control" id="start_day"
+                name="start_day" value="" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </x-layouts.app>
