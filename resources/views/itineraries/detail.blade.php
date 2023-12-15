@@ -41,28 +41,28 @@
         cache: false
       });
 
-      $.ajax({
-        method: "GET",
-        url: `{{ route('itineraries.index') }}/${slug}/booked`,
-        dataType: 'json',
-        success: function(response) {
-          const calendarEl = document.getElementById('calendar');
-          const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            themeSystem: "bootstrap",
-            headerToolbar: {
-              start: 'prev,next today',
-              center: 'title',
-              end: 'dayGridMonth,dayGridWeek,dayGridDay,listMonth'
-            },
-            events: response.data.events
-          });
-          calendar.render();
-        },
-        error: function(error) {
-          console.log(error);
-        }
-      });
+      // $.ajax({
+      //   method: "GET",
+      //   url: `{{ route('itineraries.index') }}/${slug}/booked`,
+      //   dataType: 'json',
+      //   success: function(response) {
+      //     const calendarEl = document.getElementById('calendar');
+      //     const calendar = new FullCalendar.Calendar(calendarEl, {
+      //       initialView: 'dayGridMonth',
+      //       themeSystem: "bootstrap",
+      //       headerToolbar: {
+      //         start: 'prev,next today',
+      //         center: 'title',
+      //         end: 'dayGridMonth,dayGridWeek,dayGridDay,listMonth'
+      //       },
+      //       events: response.data.events
+      //     });
+      //     calendar.render();
+      //   },
+      //   error: function(error) {
+      //     console.log(error);
+      //   }
+      // });
 
       $('#addItineraryModal form').submit(function(e) {
         e.preventDefault();
@@ -142,13 +142,13 @@
     </div>
   </section>
 
-  <section id="detail-trip-calendar">
+  {{-- <section id="detail-trip-calendar">
     <div class="container">
       <div id="calendar"></div>
     </div>
-  </section>
+  </section> --}}
 
-  <section id="detail-trip-places" class="pt-0">
+  <section id="detail-trip-places">
     <div class="container">
 
       <div class="d-flex justify-content-between w-100 mb-3">
@@ -233,8 +233,8 @@
           <input type="hidden" name="id" id="id" value="{{ $itinerary->id }}">
           <div class="modal-body">
             <div class="mb-0">
-              <input type="date" placeholder="Select Start Day" class="form-control" id="start_day"
-                name="start_day" value="" required>
+              <input type="date" placeholder="Select Start Day" class="form-control" id="start_day" name="start_day"
+                value="" required>
             </div>
           </div>
           <div class="modal-footer">
