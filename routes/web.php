@@ -58,4 +58,5 @@ Route::prefix('member')->name('member.')->group(function () {
   Route::get('/trips', [TripController::class, 'index'])->name('trips.index');
   Route::get('/trips/{itineraryBook}', [TripController::class, 'detail'])->name('trips.detail');
   Route::post('/trips/{itinerary}', [TripController::class, 'store'])->name('trips.store');
+  Route::get('/trips/{itinerary}/booked', [TripController::class, 'booked'])->name('trips.booked');
 });

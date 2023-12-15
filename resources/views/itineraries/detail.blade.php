@@ -66,11 +66,11 @@
 
       $('#addItineraryModal form').submit(function(e) {
         e.preventDefault();
-        const slug = $('#addItineraryModal form #slug').val();
+        const id = $('#addItineraryModal form #id').val();
 
         $.ajax({
           method: "POST",
-          url: `{{ route('member.trips.index') }}/${slug}`,
+          url: `{{ route('member.trips.index') }}/${id}`,
           data: {
             'start_day': $('#start_day').val()
           },
@@ -161,7 +161,6 @@
             </li>
           @endfor
         </ul>
-
       </div>
 
       <div class="tab-content" id="pills-tabContent">
@@ -231,7 +230,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form action="">
-          <input type="hidden" name="slug" id="slug" value="{{ $itinerary->slug }}">
+          <input type="hidden" name="id" id="id" value="{{ $itinerary->id }}">
           <div class="modal-body">
             <div class="mb-0">
               <input type="date" placeholder="Select Start Day" class="form-control" id="start_day"
