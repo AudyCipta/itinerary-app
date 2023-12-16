@@ -10,7 +10,7 @@
 
   <title>{{ env('APP_NAME') }} - {{ $title ?? 'Untitle' }}</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="/img/logo.ico" />
+  <link rel="shortcut icon" type="image/png" href="/img/logo.png" />
 
   <!-- Scripts -->
   @vite(['resources/sass/main.scss', 'resources/js/main.js'])

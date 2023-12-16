@@ -46,7 +46,12 @@
               <div class="col-12 col-md-4 my-trip-item">
                 <a href="{{ route('member.trips.detail', ['itineraryBook' => $itinerary->id]) }}"
                   class="card text-decoration-none">
-                  <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+                  @if ($itinerary->thumbnail)
+                    <img src="{{ asset('storage/thumbnail-itinerary-books/' . $itinerary->thumbnail) }}"
+                      class="card-img-top" alt="places">
+                  @else
+                    <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+                  @endif
                   <div class="card-body">
                     <h3 class="card-title">{{ $itinerary->name }}</h3>
                     {{-- <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus

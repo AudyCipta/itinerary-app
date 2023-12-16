@@ -1,4 +1,141 @@
+@push('scripts')
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.10/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.10/index.global.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@6.1.10/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    $(function() {
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        cache: false
+      });
+
+      $("input[type=date]").flatpickr({
+        minDate: "today"
+      });
+
+      $('#tripModal').on('shown.bs.modal', function() {
+        $.ajax({
+          method: "GET",
+          url: "{{ route('places.itinerary_book') }}",
+          dataType: 'json',
+          success: function(response) {
+            const itineraryBook = response.data.itineraryBook;
+            $('#tripModal #name').empty();
+            let tripName = '<option value="" selected disabled>Choose your trip</option>';
+            itineraryBook.forEach((item) => {
+              tripName += `<option value="${item.id}">${item.name}</option>`;
+            });
+            $('#tripModal #name').append(tripName);
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+
+        $('#tripModal form').on('submit', function(e) {
+          e.preventDefault();
+          $.ajax({
+            method: "POST",
+            url: "{{ route('places.store') }}",
+            data: $('#tripModal form').serialize(),
+            dataType: 'json',
+            success: function(response) {
+              $('#tripModal').modal('hide');
+              if (response.status == 'success') {
+                Swal.fire({
+                  title: "Place added successfully",
+                  text: "Open the 'my trip' page to see the Place that was added previously",
+                  icon: "success"
+                });
+              } else {
+                Swal.fire({
+                  title: "Place failed to add",
+                  text: "Something went wrong!",
+                  icon: "error"
+                });
+              }
+            },
+            error: function(error) {
+              console.log(error);
+            }
+          });
+        });
+      });
+
+      $('#createTripModal').on('shown.bs.modal', function() {
+        $('#createTripModal form').on('submit', function(e) {
+          e.preventDefault();
+          $.ajax({
+            method: "POST",
+            url: "{{ route('places.create_trip') }}",
+            // data: $('#createTripModal form').serialize(),
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            dataType: 'json',
+            success: function(response) {
+              $('#createTripModal').modal('hide');
+              if (response.status == 'success') {
+                Swal.fire({
+                  title: "Trip added successfully",
+                  text: "Open the 'my trip' page to see the Trip that was added previously",
+                  icon: "success"
+                });
+              } else {
+                Swal.fire({
+                  title: "Trip failed to add",
+                  text: "Something went wrong!",
+                  icon: "error"
+                });
+              }
+            },
+            error: function(error) {
+              console.log(error);
+            }
+          });
+        });
+      });
+
+      $('#tripModal #name').on('input', function() {
+        $.ajax({
+          method: "GET",
+          url: `{{ route('places.itinerary_book') }}/${$('#tripModal #name').val()}`,
+          dataType: 'json',
+          success: function(response) {
+            const tanggalDiberikan = new Date(response.data.itineraryBook.start_day);
+            $('#tripModal #day_to').empty();
+            let dayTo = '<option value="" selected disabled>Choose date</option>';
+
+            for (let index = 0; index < response.data.itineraryBook.total_day; index++) {
+              let tanggalBaru = new Date(tanggalDiberikan);
+              tanggalBaru.setDate(tanggalBaru.getDate() + index);
+              let tanggalFormatted = tanggalBaru.toISOString().split('T')[0];
+
+              dayTo += `<option value="${index+1}">${tanggalFormatted}</option>`;
+            }
+
+            $('#tripModal #day_to').append(dayTo);
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
+    });
+  </script>
+@endpush
+
 @push('styles')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <style>
     header .navbar {
       background-color: rgba(255, 255, 255, 0.9) !important;
@@ -71,15 +208,26 @@
                 <div class="col-md-4">
                   <div class="place-detail-info">
                     <h5 class="mb-3">Create a full itinerary - for free!</h5>
-                    <a href="#" class="btn btn-primary rounded-pill px-4 py-2" data-bs-toggle="modal"
-                      data-bs-target="#tripModal">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-plus" viewBox="0 0 16 16">
-                        <path
-                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                      </svg>
-                      Add to Itineraries
-                    </a>
+                    @guest
+                      <a href="{{ route('login') }}" class="btn btn-primary rounded-pill px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-plus" viewBox="0 0 16 16">
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        Add to Itineraries
+                      </a>
+                    @else
+                      <a href="#" class="btn btn-primary rounded-pill px-4 py-2" data-bs-toggle="modal"
+                        data-bs-target="#tripModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-plus" viewBox="0 0 16 16">
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        Add to Itineraries
+                      </a>
+                    @endguest
 
                     <div class="google-map mt-4">
                       <iframe
@@ -139,61 +287,92 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="tripModalLabel">Your Trip</h1>
+          <h1 class="modal-title fs-5" id="tripModalLabel">Add Your Trip</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <div class="row gx-2">
-            <div class="col">
-              <select class="form-select" aria-label="Default select example">
-                <option selected disabled>Choose your trip</option>
+        <form action="">
+          <input type="hidden" name="place_id" id="place_id" value="{{ $place->id }}">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="name" class="form-label">Trip Name</label>
+              <select class="form-select" id="name" name="name">
+                <option value="" selected disabled>Choose your trip</option>
               </select>
             </div>
+            <div class="row gx-3">
+              <div class="col">
+                <label for="day_to" class="form-label">Date</label>
+                <select class="form-select" name="day_to" id="day_to">
+                  <option value="" selected disabled>Choose date</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" name="time">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary d-flex align-items-center column-gap-1"
-            data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#tripNameModal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-plus-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-              <path
-                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-            </svg>
-            <span>Create New Trip</span>
-          </button>
-          <button type="button" class="btn btn-primary d-flex align-items-center column-gap-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-bookmark" viewBox="0 0 16 16">
-              <path
-                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
-            </svg>
-            <span>Add to My Trip</span>
-          </button>
-        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary d-flex align-items-center column-gap-1"
+              data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createTripModal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+              </svg>
+              <span>Create New Trip</span>
+            </button>
+            <button type="submit" class="btn btn-primary d-flex align-items-center column-gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bookmark" viewBox="0 0 16 16">
+                <path
+                  d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
+              </svg>
+              <span>Add to My Trip</span>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="tripNameModal" tabindex="-1" aria-labelledby="tripNameModalLabel"
+  <div class="modal fade" id="createTripModal" tabindex="-1" aria-labelledby="createTripModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="tripNameModalLabel">Create Trip Name</h1>
+          <h1 class="modal-title fs-5" id="createTripModalLabel">Create Trip Name</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <div class="mb-0">
-            <label for="trip_name" class="form-label">Trip Name</label>
-            <input type="text" class="form-control" id="trip_name" placeholder="Enter trip name" autofocus>
+        <form action="">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name Trip<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" name="name" id="name"
+                placeholder="Create Your Name Trip" required>
+            </div>
+            <div class="mb-3">
+              <label for="total_day" class="form-label">Total Day<span class="text-danger">*</span></label>
+              <input type="number" class="form-control" name="total_day" id="total_day"
+                placeholder="Enter how many days your itinerary is">
+            </div>
+            <div class="mb-3">
+              <label for="start_day" class="form-label">Start date<span class="text-danger">*</span></label>
+              <input type="date" class="form-control" name="start_day" id="start_day"
+                placeholder="Select start date">
+            </div>
+            <div class="mb-0">
+              <label for="thumbnail" class="form-label">Thumbnail</label>
+              <input class="form-control" type="file" name="thumbnail" id="thumbnail">
+            </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Create</button>
-        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
