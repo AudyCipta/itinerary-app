@@ -23,7 +23,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
     $(function() {
@@ -90,8 +90,17 @@
                 $('#addItineraryModal .modal-footer button').removeAttr('disabled');
                 $('#addItineraryModal button[type=submit]').html(`Save`);
                 $('#addItineraryModal').modal('hide');
-                var notyf = new Notyf();
-                notyf.success('Data berhasil disimpan');
+                Swal.fire({
+                  title: "Itinerary added successfully",
+                  text: "Open the 'my trip' page to see the Itinerary that was added previously",
+                  icon: "success"
+                });
+              } else {
+                Swal.fire({
+                  title: "Itinerary failed to add",
+                  text: "Something went wrong!",
+                  icon: "error"
+                });
               }
             }, 800);
           },
