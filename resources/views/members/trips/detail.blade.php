@@ -20,11 +20,19 @@
   <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@6.1.10/index.global.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
     $(function() {
       const currentUrl = window.location.href;
       const id = currentUrl.split('/').pop();
+
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        cache: false
+      });
 
       $.ajax({
         method: "GET",
@@ -48,7 +56,60 @@
           console.log(error);
         }
       });
+
+      $('.edit-place-btn').on('click', function(e) {
+        e.preventDefault();
+        const id = $(this).data('id');
+
+        $.ajax({
+          method: "GET",
+          url: `{{ route('member.trips.index') }}/${id}/edit`,
+          dataType: 'json',
+          success: function(response) {
+            const itineraryBookPlace = response.data.itineraryBookPlace;
+            $('#editPlaceModal #id').val(itineraryBookPlace.id);
+            $('#editPlaceModal #day_to').val(itineraryBookPlace.day_to);
+            $('#editPlaceModal #time').val(itineraryBookPlace.time);
+            $('#editPlaceModal form').attr('action', `{{ route('member.trips.index') }}/${id}/update`);
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
+
+      $('#editPlaceModal form').on('submit', function(e) {
+        e.preventDefault();
+        const id = $('#editPlaceModal #id').val();
+
+        $.ajax({
+          method: "PUT",
+          url: `{{ route('member.trips.index') }}/${id}/update`,
+          data: $(this).serialize(),
+          dataType: 'json',
+          success: function(response) {
+            if (response.status == 'success') {
+              location.href = '{{ url()->current() }}'
+            } else {
+              alert('error');
+            }
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
     });
+  </script>
+
+  <script>
+    @if (session()->has('success'))
+      Swal.fire({
+        title: "Success",
+        text: "{{ session()->get('success') }}",
+        icon: "success"
+      });
+    @endif
   </script>
 @endpush
 
@@ -58,7 +119,8 @@
       <h1 class="text-white">{{ $itineraryBook->total_day }} {{ $itineraryBook->total_day > 1 ? 'days' : 'day' }} with
         {{ $itineraryBook->name }}</h1>
       <p class="text-white lead">{{ date('m d, Y', strtotime($itineraryBook->start_day)) }} -
-        {{ date('m d, Y', strtotime($itineraryBook->start_day . ' + ' . $itineraryBook->total_day - 1 . ' days')) }}</p>
+        {{ date('m d, Y', strtotime($itineraryBook->start_day . ' + ' . $itineraryBook->total_day - 1 . ' days')) }}
+      </p>
     </div>
   </section>
 
@@ -93,10 +155,11 @@
                   <div class="card-header d-flex justify-content-between">
                     <span>{{ $item->place->name }} - {{ $item->time }}</span>
                     <div>
-                      <a href="#" class="btn btn-sm btn-outline-secondary" data-id="{{ $item->id }}"
-                        data-bs-toggle="modal" data-bs-target="#editPlaceModal">Edit</a>
-                      <a href="#" class="btn btn-sm btn-outline-secondary" data-id="{{ $item->id }}"
-                        data-bs-toggle="modal" data-bs-target="#deletePlaceModal">Delete</a>
+                      <a href="#" class="btn btn-sm btn-outline-secondary edit-place-btn"
+                        data-id="{{ $item->id }}" data-bs-toggle="modal" data-bs-target="#editPlaceModal">Edit</a>
+                      <a href="#" class="btn btn-sm btn-outline-secondary delete-place-btn"
+                        data-id="{{ $item->id }}" data-bs-toggle="modal"
+                        data-bs-target="#deletePlaceModal">Delete</a>
                     </div>
                   </div>
                   <div class="card-body">
@@ -147,15 +210,21 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form action="" method="post">
+          @method('PUT')
+          <input type="hidden" name="id" id="id">
           <div class="modal-body">
             <div class="row gx-3">
               <div class="col mb-0">
-                <label for="time" class="form-label">Day</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <label for="day_to" class="form-label">Day</label>
+                <select class="form-select" id="day_to" name="day_to">
+                  <option value="" selected disabled>Choose day</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
                 </select>
               </div>
               <div class="col-auto mb-0">
@@ -166,7 +235,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary">Update</button>
           </div>
         </form>
       </div>

@@ -85,4 +85,25 @@ class TripController extends Controller
             ]
         ]);
     }
+
+    public function edit(ItineraryBookPlace $itineraryBookPlace): JsonResponse
+    {
+        return response()->json([
+            'data' => [
+                'itineraryBookPlace' => $itineraryBookPlace
+            ]
+        ]);
+    }
+
+    public function update(Request $request, ItineraryBookPlace $itineraryBookPlace): JsonResponse
+    {
+        $itineraryBookPlace->update([
+            'day_to' => $request->day_to,
+            'time' => $request->time,
+        ]);
+
+        session()->flash('success', 'Data successfuly updated!');
+
+        return response()->json(['status' => 'success']);
+    }
 }
