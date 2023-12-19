@@ -25,6 +25,25 @@
 
   <x-footer />
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    @if (session()->has('success'))
+      Swal.fire({
+        title: "Success",
+        text: "{{ session()->get('success') }}",
+        icon: "success"
+      });
+    @endif
+
+    @if (session()->has('error'))
+      Swal.fire({
+        title: "Failed",
+        text: "{{ session()->get('error') }}",
+        icon: "error"
+      });
+    @endif
+  </script>
+
   @stack('scripts')
 </body>
 

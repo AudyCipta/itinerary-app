@@ -1,4 +1,16 @@
+@push('scripts')
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    $("input[type=date]").flatpickr({
+      minDate: "today"
+    });
+  </script>
+@endpush
+
 @push('styles')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <style>
     header .navbar {
       background-color: rgba(255, 255, 255, 0.9) !important;
@@ -89,38 +101,32 @@
           <h1 class="modal-title fs-5" id="addItineraryModalLabel">Add New Trip</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="" enctype="multipart/form-data">
+        <form action="{{ route('member.trips.create') }}" method="POST" enctype="multipart/form-data">
+          @csrf
           <div class="modal-body">
             <div class="mb-3">
-              <label for="trip_name" class="form-label">Name Trip<span class="text-danger">*</span></label>
-              <input type="text" class="form-control" name="trip_name" id="trip_name"
-                placeholder="Create Your Name Trip">
+              <label for="name" class="form-label">Name Trip<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" name="name" id="name"
+                placeholder="Create Your Name Trip" required>
             </div>
             <div class="mb-3">
-              <label for="days" class="form-label">Days<span class="text-danger">*</span></label>
-              <input type="number" class="form-control" name="days" id="days"
+              <label for="total_day" class="form-label">Total Day<span class="text-danger">*</span></label>
+              <input type="number" class="form-control" name="total_day" id="total_day"
                 placeholder="Enter how many days your itinerary is">
             </div>
             <div class="mb-3">
-              <label for="start_date" class="form-label">Start Date<span class="text-danger">*</span></label>
-              <input type="date" class="form-control" name="start_date" id="start_date"
-                placeholder="Enter how many days your itinerary is">
+              <label for="start_day" class="form-label">Start date<span class="text-danger">*</span></label>
+              <input type="date" class="form-control" name="start_day" id="start_day"
+                placeholder="Select start date">
             </div>
-            <div class="mb-3">
+            <div class="mb-0">
               <label for="thumbnail" class="form-label">Thumbnail</label>
               <input class="form-control" type="file" name="thumbnail" id="thumbnail">
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary rounded-pill px-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-plus-lg" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
-              </svg>
-              <span>Add My Trip</span>
-            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create</button>
           </div>
         </form>
       </div>

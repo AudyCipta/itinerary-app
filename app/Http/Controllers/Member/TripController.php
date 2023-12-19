@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Str;
 
 class TripController extends Controller
 {
@@ -121,6 +122,27 @@ class TripController extends Controller
     {
         $itineraryBook->delete();
 
-        return to_route('member.trips.index');
+        return to_route('member.trips.index')->with('success', 'Data deleted successfuly');
+    }
+
+    public function create(Request $request)
+    {
+        $data = [
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'total_day' => $request->total_day,
+            'start_day' => $request->start_day,
+            'user_id' => auth()->user()->id,
+        ];
+
+        if ($request->hasFile('thumbnail')) {
+            $thumbnail = $request->file('thumbnail');
+            $thumbnail->storeAs('public/thumbnail-itinerary-books', $thumbnail->hashName());
+            $data['thumbnail'] = $thumbnail->hashName();
+        }
+
+        ItineraryBook::create($data);
+
+        return back()->with('success', 'Data created successfuly');
     }
 }

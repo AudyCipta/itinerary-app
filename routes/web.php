@@ -67,4 +67,5 @@ Route::prefix('member')->name('member.')->group(function () {
   Route::put('/trips/{itineraryBookPlace}/update', [TripController::class, 'update'])->name('trips.update');
   Route::delete('/trips/{itineraryBookPlace}/delete', [TripController::class, 'delete'])->name('trips.delete');
   Route::delete('/trips/{itineraryBook}/delete-itinerary', [TripController::class, 'deleteItinerary'])->name('trips.delete_itinerary');
+  Route::post('/trips', [TripController::class, 'create'])->name('trips.create');
 });
