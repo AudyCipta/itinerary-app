@@ -106,4 +106,13 @@ class TripController extends Controller
 
         return response()->json(['status' => 'success']);
     }
+
+    public function delete(ItineraryBookPlace $itineraryBookPlace): JsonResponse
+    {
+        $itineraryBookPlace->delete();
+
+        session()->flash('success', 'Data successfuly deleted!');
+
+        return response()->json(['status' => 'success']);
+    }
 }

@@ -78,6 +78,13 @@
         });
       });
 
+      $('.delete-place-btn').on('click', function(e) {
+        e.preventDefault();
+        const id = $(this).data('id');
+        $('#deletePlaceModal form').attr('action', `{{ route('member.trips.index') }}/${id}/delete`);
+        $('#deletePlaceModal #id').val(id);
+      });
+
       $('#editPlaceModal form').on('submit', function(e) {
         e.preventDefault();
         const id = $('#editPlaceModal #id').val();
@@ -86,6 +93,27 @@
           method: "PUT",
           url: `{{ route('member.trips.index') }}/${id}/update`,
           data: $(this).serialize(),
+          dataType: 'json',
+          success: function(response) {
+            if (response.status == 'success') {
+              location.href = '{{ url()->current() }}'
+            } else {
+              alert('error');
+            }
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
+
+      $('#deletePlaceModal form').on('submit', function(e) {
+        e.preventDefault();
+        const id = $('#deletePlaceModal #id').val();
+
+        $.ajax({
+          method: "DELETE",
+          url: `{{ route('member.trips.index') }}/${id}/delete`,
           dataType: 'json',
           success: function(response) {
             if (response.status == 'success') {
@@ -256,7 +284,11 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger">Delete</button>
+          <form action="">
+            @method('DELETE')
+            <input type="hidden" name="id" id="id">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
         </div>
       </div>
     </div>
