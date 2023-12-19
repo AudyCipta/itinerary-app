@@ -142,13 +142,24 @@
 @endpush
 
 <x-layouts.app title="My Trip Detail">
-  <section id="detail-trip-hero" class="py-0 min-vh-100 bg-secondary d-flex align-items-center">
+  <section id="detail-trip-hero" class="py-0 min-vh-100 bg-secondary d-flex align-items-center"
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url({{ $itineraryBook->thumbnail ? asset('storage/thumbnail-itinerary-books/' . $itineraryBook->thumbnail) : '/img/hero.jpeg' }})">
     <div class="container text-center">
       <h1 class="text-white">{{ $itineraryBook->total_day }} {{ $itineraryBook->total_day > 1 ? 'days' : 'day' }} with
         {{ $itineraryBook->name }}</h1>
       <p class="text-white lead">{{ date('m d, Y', strtotime($itineraryBook->start_day)) }} -
         {{ date('m d, Y', strtotime($itineraryBook->start_day . ' + ' . $itineraryBook->total_day - 1 . ' days')) }}
       </p>
+      <button class="btn btn-primary py-2 px-3 mt-2 rounded-pill d-flex align-items-center mx-auto" data-bs-toggle="modal"
+        data-bs-target="#deleteItineraryModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-trash-fill" viewBox="0 0 16 16">
+          <path
+            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+        </svg>
+        <span class="ms-2">Delete</span>
+      </button>
     </div>
   </section>
 
@@ -287,6 +298,31 @@
           <form action="">
             @method('DELETE')
             <input type="hidden" name="id" id="id">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Itinerary Modal -->
+  <div class="modal fade" id="deleteItineraryModal" tabindex="-1" aria-labelledby="deleteItineraryModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteItineraryModalLabel">Delete Itinerary?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0 text-muted">Click button "delete" if you want to delete this itinerary.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <form action="{{ route('member.trips.delete_itinerary', ['itineraryBook' => $itineraryBook->id]) }}"
+            method="POST">
+            @csrf
+            @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>
           </form>
         </div>

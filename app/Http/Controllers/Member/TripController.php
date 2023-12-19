@@ -10,6 +10,7 @@ use App\Models\ItineraryPlace;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 
 class TripController extends Controller
 {
@@ -114,5 +115,12 @@ class TripController extends Controller
         session()->flash('success', 'Data successfuly deleted!');
 
         return response()->json(['status' => 'success']);
+    }
+
+    public function deleteItinerary(ItineraryBook $itineraryBook): RedirectResponse
+    {
+        $itineraryBook->delete();
+
+        return to_route('member.trips.index');
     }
 }

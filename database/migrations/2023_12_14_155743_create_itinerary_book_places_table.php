@@ -19,8 +19,12 @@ return new class extends Migration
             $table->time('time');
             $table->timestamps();
 
-            $table->foreign('itinerary_book_id')->references('id')->on('itinerary_books');
-            $table->foreign('place_id')->references('id')->on('places');
+            $table->foreign('itinerary_book_id')->references('id')->on('itinerary_books')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+            $table->foreign('place_id')->references('id')->on('places')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

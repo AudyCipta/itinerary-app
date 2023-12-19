@@ -122,7 +122,8 @@
 @endpush
 
 <x-layouts.app title="Place Detail">
-  <section id="detail-trip-hero" class="py-0 min-vh-100 bg-secondary d-flex align-items-center">
+  <section id="detail-trip-hero" class="py-0 min-vh-100 bg-secondary d-flex align-items-center"
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/hero.jpeg')">
     <div class="container text-center">
       <h1 class="text-white">{{ $itinerary->total_day }} {{ $itinerary->total_day > 1 ? 'days' : 'day' }} with
         {{ $itinerary->name }}</h1>
@@ -243,8 +244,8 @@
           <input type="hidden" name="id" id="id" value="{{ $itinerary->id }}">
           <div class="modal-body">
             <div class="mb-0">
-              <input type="date" placeholder="Select Start Day" class="form-control" id="start_day" name="start_day"
-                value="" required>
+              <input type="date" placeholder="Select Start Day" class="form-control" id="start_day"
+                name="start_day" value="" required>
             </div>
           </div>
           <div class="modal-footer">
