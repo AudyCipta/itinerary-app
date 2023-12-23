@@ -16,9 +16,9 @@ class ItinerarySeeder extends Seeder
     {
         DB::table('itineraries')->insert([
             [
-                'name' => 'test',
-                'slug' => Str::slug('test'),
-                'total_day' => 4,
+                'name' => 'Beach Bliss and Cultural Exploration',
+                'slug' => Str::slug('Beach Bliss and Cultural Exploration'),
+                'total_day' => 3,
                 'start_day' => '2023-12-15',
                 'created_at' => now(),
                 'updated_at' => now()

@@ -176,6 +176,7 @@
             placeList.append(skeletonHTML);
           },
           success: function(response) {
+            console.log(response);
             setTimeout(function() {
               placeList.empty();
               if (response.data.length) {
