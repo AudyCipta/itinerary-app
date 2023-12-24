@@ -8,6 +8,8 @@ use App\Models\Place;
 use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
 
+use function PHPUnit\Framework\isEmpty;
+
 class HomeController extends Controller
 {
     public function index(): View
@@ -31,6 +33,10 @@ class HomeController extends Controller
         $places = Place::with(['destinationPreference', 'destinationPreference.destinationCategory', 'placeImages'])
             ->where('destination_preference_id', $id)
             ->get();
+
+        if (isEmpty($places)) {
+            return response()->json(['data' => []]);
+        }
 
         // Ambil semua tempat wisata dan preferensi destinasi
         // $places = Place::all();
