@@ -53,6 +53,6 @@
         </ul>
       </div>
     </div>
-    <p class="text-center">Copyright &copy; 2023 BRIX Templates | All Rights Reserved</p>
+    <p class="text-center">Copyright &copy; 2023 TA | All Rights Reserved</p>
   </div>
 </footer>
