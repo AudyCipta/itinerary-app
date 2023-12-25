@@ -8,7 +8,6 @@
         <ul class="nav justify-content-center">
           <li class="nav-item"><a href="{{ route('home.index') }}" class="nav-link px-2">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2">Pricing</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2">Blog</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2">Contact</a></li>
         </ul>
