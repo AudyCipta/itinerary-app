@@ -51,7 +51,7 @@
           $.each(data, function(index, item) {
             const itineraryItem = $(`
               <div class="col-12 col-md-4 itineraries-item">
-                <a href="{{ route('itineraries.index') }}" class="card text-decoration-none">
+                <a href="{{ route('itineraries.index') }}/${item.slug}" class="card text-decoration-none">
                   ${item.thumbnail ? `<img src="{{ asset('storage/thumbnail-itineraries/${item.thumbnail}') }}" class="img-fluid" alt="img">` : '<img src="https://placehold.co/600x400" class="img-fluid" alt="img">'}
                   <div class="card-body">
                     <h3 class="card-title text-truncate">${item.name}</h3>
