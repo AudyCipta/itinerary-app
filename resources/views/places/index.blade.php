@@ -45,7 +45,7 @@
               <div class="col-12 col-sm-6 col-lg-4">
                 <a href="{{ route('places.index') }}/${item.slug}" class="card text-decoration-none rounded-4">
                   <div class="card-body">
-                    <img src="{{ asset('storage/places/${item.place_images[0].picture}') }}" class="card-img-top mb-3 rounded-4 my-img" alt="places">
+                    ${item.place_images.length ? `<img src="{{ asset('storage/places/${item.place_images[0].picture}') }}" class="card-img-top mb-3 rounded-4 my-img" alt="places">`: `<img src="https://placehold.co/600x400" class="card-img-top mb-3 rounded-4 my-img" alt="places">`}
                     <h5 class="card-title text-truncate">${item.name}</h5>
                     <p class="card-text">${item.destination_preference.destination_category.name} / ${item.destination_preference.name}</p>
                   </div>

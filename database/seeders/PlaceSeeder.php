@@ -91,7 +91,208 @@ class PlaceSeeder extends Seeder
                 'name' => 'Old\'s Man',
                 'slug' => Str::slug("Old's Man"),
                 'destination_preference_id' => 6,
+                'description' => '<p>Old Man\'s Canggu is a trendy beer garden near the dark sandy beach of Batu Bolong Beach. The bar is right in front of the lava reef right, so you can go down any time before or after surfing. The bar\'s main thatched pavilion is perfect for hanging out with friends and relaxing during the day. You are free to choose where to sit which ranges from benches under Balinese style umbrellas. Supporting facilities such as colorful beanbags can be used to relax on the green lawn. During the day, relax with a cold Bintang beer and some simple food like burgers, fries and salad. Food prices are set at around IDR 54,000 to IDR 110,000.</p><p>Apart from beer, there are several drink menu choices such as fruit juice, wine, smoothies, cocktails, tea and coffee. You can also find heavy food here, ranging from seafood, meat, pizza and vegetarian menus. The fun and friendly atmosphere takes on a wilder party scene after sunset. Especially on Wednesday nights, Dirty Ol\' Old Man\'s Bar always has drinking games. The crowd at Old Man\'s Bar consists of a good mix of locals, visitors and expats - most in their 20s. Live bands from reggae, rock to DJs spinning music make anyone want to join in the bustling crowd with a regular evening highlight.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Warung Damar',
+                'slug' => Str::slug("Warung Damar"),
+                'destination_preference_id' => 6,
+                'description' => '<p>Combining classic Indonesian Street Food flavours with the elegance of an upmarket eatery, Warung Damar delivers an enticing menu featuring a modern take on traditional favourites to suit every palate. Offering a family-friendly culinary experience, diners get to experience the excitement of a Kuta hotel streetscape as well as exotic Asian flavours from the plate.<p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Ulu Garden',
+                'slug' => Str::slug("Ulu Garden"),
+                'destination_preference_id' => 6,
+                'description' => '<p>Ulu Garden is an oasis of togetherness in the heart of Uluwatu. It is a multidisciplinary hospitality space where one can discover multiple areas with different functions, all centered around the tropical garden. Founded by Virginie, Belgian food entrepreneur, and Armi, multiskilled local artist, Ulu Garden is marked by its authentic Balinese character and its raw contemporary look and feel. Intended to be a meeting place, evolving around the wellbeing of body, mind and soul in the heart of one of Bali\'s most beautiful spots.</p>
+<p>The main pillar of Ulu Garden is its restaurant and bar where pure, sane and vibrant food and drinks are served. Eating is a soul-calling moment for us, our restaurants menu consists of contemporary balanced flavour bombs, inspired by local seasonal products. Also offering different activities, the garden shifts with the rise and fall of the sun, with a relax working space and workshops during the day; and a more festive atmosphere with live music and concerts at night.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Seminyak Beach',
+                'slug' => Str::slug("Seminyak Beach"),
+                'destination_preference_id' => 7,
+                'description' => '<p>Seminyak Beach, nestled along Bali\'s western coast, is a sublime fusion of tropical allure and cosmopolitan sophistication. This enchanting stretch of shoreline, adorned with powdery golden sand, invites visitors to bask in the warmth of the Indonesian sun and revel in the gentle embrace of the Indian Ocean. Luxurious resorts and private villas, seamlessly blending contemporary comfort with Balinese elegance, line the coast, offering discerning travelers an exclusive retreat with direct access to the beach. Seminyak\'s reputation as a high-end destination is further accentuated by its trendy beach clubs, where chic infinity pools, stylish lounges, and vibrant atmospheres create an ambiance of relaxation and indulgence. As the sun gracefully dips below the horizon, Seminyak transforms into a captivating stage for breathtaking sunsets, casting hues of orange and pink across the sky. The area\'s boutique shopping, art galleries, and a diverse culinary scene add to its allure, providing visitors with an immersive experience that seamlessly combines upscale elegance with the laid-back charm of Balinese coastal living. Come nightfall, Seminyak comes alive with a vibrant nightlife, making it an enticing destination for those seeking a perfect blend of luxury, natural beauty, and entertainment on the captivating island of Bali.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Nasi Pedas Bu Andika ',
+                'slug' => Str::slug("Nasi Pedas Bu Andika "),
+                'destination_preference_id' => 6,
+                'description' => '<p>Nasi Pedas Bu Andika, a famous culinary delight in Bali, which tourists must try. Even though there is a nickname, going to Bali won\'t be complete if you don\'t try Bu Andika\'s Spicy Rice. Starting from chicken skin, intestines, chicken satay, shredded chicken, crispy fried fish, sweet tempeh, and many more. Meanwhile for vegetables, you can choose lawar vegetables, cassava vegetables. Not only that, there are lodeh vegetables and stir-fried chayote. What\'s special about Bu Andika\'s Spicy Rice is of course the nampol spicy rice. Chicken skin here is one of the customers\' favorite menu items. This menu, which runs out quickly, crispy chicken skin can be combined with chili sauce and vegetables, is guaranteed to be delicious. Even though the mainstay of the menu is spicy rice, travelers who can\'t eat spicy food can still enjoy the menu here. Just request that the menu be without chili sauce.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Taman Ayun Temple',
+                'slug' => Str::slug("Taman Ayun Temple"),
+                'destination_preference_id' => 5,
+                'description' => '<p>Taman Ayun Temple, nestled in the village of Mengwi in Bali, Indonesia, stands as a testament to the island\'s rich cultural and spiritual heritage. Dating back to the 17th century, this Hindu temple is a masterpiece of traditional Balinese architecture, celebrated for its intricate carvings, majestic pagoda towers, and serene garden setting. The name "Taman Ayun," meaning "Beautiful Garden," perfectly encapsulates the temple\'s allure. Surrounded by a wide, elegant moat, the complex unfolds in a series of concentric terraces adorned with lush greenery, lotus ponds, and manicured lawns. The main temple, elevated on a higher terrace, showcases multi-tiered roofs, symbolic stone guardians, and elaborately carved wooden gates. Taman Ayun Temple holds profound cultural significance as the former main temple of the Mengwi Kingdom and is now recognized as a UNESCO Cultural Heritage Site. Visitors are not only captivated by the architectural splendor but also immersed in the spiritual ambiance, making it a must-visit destination for those seeking to explore the cultural richness of Bali.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Casa Tua Canggu',
+                'slug' => Str::slug("Casa Tua Canggu"),
+                'destination_preference_id' => 6,
+                'description' => '<p>Enjoy typical Indonesian dishes at Casa Tua Canggu. Located on Jl. Batu Bolong Beach No.10, Canggu. With a vintage restaurant design and surrounded by green plants, the atmosphere becomes more comfortable when visiting here. Plus, the antique decorations that decorate this restaurant are a special attraction and are often used as photo spots. Casa Tua Canggu serves typical Indonesian food presented in a unique way.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Canggu',
+                'slug' => Str::slug("Canggu"),
+                'destination_preference_id' => 4,
+                'description' => '<p>Strolling along the vibrant streets of Canggu in Bali, Indonesia, is an immersive experience that encapsulates the eclectic charm of this coastal village. As you navigate the bustling thoroughfares, a kaleidoscope of sights, sounds, and scents unfolds, creating a dynamic tapestry of modernity and tradition. Canggu Street, lined with a mix of quaint cafes, hip boutiques, and surf shops, invites leisurely exploration. The rhythmic sounds of distant waves meld with the cheerful chatter of locals and the occasional purr of motorbikes weaving through the narrow lanes. Cafes adorned with colorful murals and bohemian décor beckon with the aroma of freshly brewed coffee, offering inviting spaces to pause and savor the moment. Surfers with sandy feet saunter by, boards in tow, embodying the laid-back surf culture that defines Canggu. Fashion boutiques showcase a fusion of beach-inspired attire and bohemian chic, reflecting the village\'s evolving style. The streets are alive with the energy of locals and travelers alike, creating a melting pot of cultures. Street vendors peddle local delicacies, from grilled satay skewers to traditional Balinese sweets, adding a tantalizing dimension to the sensory journey. Artisan markets periodically grace the streets, displaying handcrafted goods, jewelry, and vibrant textiles, providing opportunities to discover unique treasures.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Livingstone Cafe & Bakery',
+                'slug' => Str::slug("Livingstone Cafe & Bakery"),
+                'destination_preference_id' => 6,
+                'description' => '<p>Livingstone is all about passion, love, creativity, awesome croissants, and a cup of divine coffee. As innocent as it sounds, our aim is to inspire people through what we do. This cafe has a casual dining concept with a comfortable and calm impression. This classic-modern concept is carried forward for room decoration. Every interior of Livingstone Cafe & Bakery has a wooden feel. This cafe covers an area of around two acres and is divided into two rooms, namely indoor and outdoor. These two rooms are separated by glass doors, this is so that the room can get sunlight into the inside of the room.</p>
+<p>All food and drinks served at Livingstone are made from quality ingredients and without any preservatives at all. Around 60 percent of visitors are foreign tourists and expatriates, and the rest are domestic, which proves that the dishes here are suitable for both tourist and domestic palates. Livingstone Cafe & Bakery menu prices start from IDR 18,000 - IDR 175,000.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Love Anchor Canggu',
+                'slug' => Str::slug("Love Anchor Canggu"),
+                'destination_preference_id' => 8,
                 'description' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'KU DE TA',
+                'slug' => Str::slug("KU DE TA"),
+                'destination_preference_id' => 6,
+                'description' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Alas Kedaton Monkey Forest',
+                'slug' => Str::slug("Alas Kedaton Monkey Forest"),
+                'destination_preference_id' => 5,
+                'description' => '<p>Alas Kedaton Monkey Forest is a captivating destination. This lush and sacred forest is home to a thriving community of long-tailed macaques and is distinguished by its ancient temple, providing visitors with a unique blend of natural beauty and cultural significance. The forest, surrounded by tall trees and thick foliage, creates a serene and mystical atmosphere. As visitors explore the pathways, they are greeted by the playful antics of the resident macaques. These monkeys, accustomed to human presence, often interact with visitors, adding an element of joy and spontaneity to the experience.</p>
+<p>Visitors are encouraged to explore the temple grounds, where they can witness ceremonies and rituals conducted by the local Balinese community. The temple plays a crucial role in the religious practices of the area, and its unique setting within a monkey-filled forest adds an extra layer of cultural intrigue. Alas Kedaton Monkey Forest provides a peaceful retreat where visitors can connect with nature, observe wildlife, and gain insights into the spiritual practices of Bali. The coexistence of monkeys, temple, and flying foxes creates a harmonious blend of biodiversity and cultural heritage, making it a must-visit destination for those seeking a well-rounded and enriching experience on the island of Bali.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Puri Lumbung',
+                'slug' => Str::slug("Puri Lumbung"),
+                'destination_preference_id' => 6,
+                'description' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Cemagi Beach',
+                'slug' => Str::slug("Cemagi Beach"),
+                'destination_preference_id' => 1,
+                'description' => 'Cemagi Beach, nestled on the southwestern coast of Bali, is a pristine haven that embodies the essence of tranquility and natural beauty. Renowned for its unique black volcanic sand, the beach offers a serene escape from the more bustling tourist hotspots, allowing visitors to immerse themselves in a peaceful coastal retreat. The absence of large crowds creates an intimate atmosphere, enhanced by the rhythmic sounds of the waves and the gentle sea breeze. At the heart of the Cemagi experience stands Pura Gede Luhur Batungaus, a sacred sea temple perched on rocky cliffs, offering not only spiritual significance but also breathtaking panoramic views of the coastline. Surrounding the beach are traditional Balinese villages and verdant rice terraces, providing glimpses into the island\'s rich cultural tapestry. Cemagi Beach, with its unspoiled beauty and proximity to the bustling areas of Seminyak and Canggu, beckons to those seeking a quieter and more contemplative beach experience. As the sun sets over the Indian Ocean, casting vibrant hues across the sky, Cemagi unfolds its magical allure, inviting visitors to savor the simple yet profound pleasures of Bali\'s southwestern coastal charm.',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Tanjung Benoa Watersport',
+                'slug' => Str::slug("Tanjung Benoa Watersport"),
+                'destination_preference_id' => 7,
+                'description' => '<p>Tanjung Benoa, located on the southeastern coast of Bali, Indonesia, is renowned as a hub for thrilling water sports adventures. The calm and clear waters of Tanjung Benoa provide an ideal playground for a variety of water-based activities, catering to both adrenaline enthusiasts and those seeking a more relaxed aquatic experience. Tanjung Benoa is synonymous with an array of exciting water sports that cater to different levels of thrill-seekers. From high-speed jet skiing and parasailing, where participants soar high above the ocean, to the more leisurely banana boat rides and glass-bottom boat tours, visitors can choose from a plethora of activities that suit their preferences. The crystal-clear waters surrounding Tanjung Benoa offer excellent conditions for snorkeling and diving. The vibrant underwater world is teeming with colorful coral reefs and diverse marine life, making it an attractive destination for those eager to explore Bali\'s rich biodiversity beneath the surface. For the more adventurous, Tanjung Benoa offers innovative water sports experiences like flyboarding and water jetpacking. These activities allow participants to hover above the water\'s surface, propelled by powerful water jets, creating a sensation of weightlessness and excitement.</p>
+
+<p>Tanjung Benoa is equipped with numerous water sports centers featuring professional instructors and guides. Whether you\'re a seasoned water sports enthusiast or a first-timer, the experienced instructors ensure a safe and enjoyable experience, providing guidance and ensuring proper equipment usage. The beach at Tanjung Benoa has a family-friendly atmosphere, making it suitable for visitors of all ages. Many water sports activities can be enjoyed by families, creating opportunities for shared adventures and lasting memories. Situated near popular tourist areas like Nusa Dua, Tanjung Benoa is easily accessible from various parts of Bali. The beach\'s proximity to major resorts and hotels makes it a convenient destination for those looking to add a dose of adventure to their beach holiday.</p>
+
+<p>Tanjung Benoa\'s reputation as a water sports haven makes it a go-to destination for those seeking an adrenaline rush or a more laid-back aquatic experience. With its range of activities, professional facilities, and stunning coastal scenery, Tanjung Benoa stands as a dynamic and inviting coastal playground on the island of Bali.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Ikan Restaurant & Bar',
+                'slug' => Str::slug("Ikan Restaurant & Bar"),
+                'destination_preference_id' => 6,
+                'description' => '',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Seawalker Bali at Grand Mirage Resort',
+                'slug' => Str::slug("Seawalker Bali at Grand Mirage Resort"),
+                'destination_preference_id' => 7,
+                'description' => '<p>Seawalker Bali at Grand Mirage Resort offers a unique underwater experience for visitors to Bali, Indonesia. Seawalker is a water-based activity that allows participants to explore the ocean floor without the need for scuba diving certification. It\'s a great option for those who want to experience the underwater world but may not be comfortable with traditional scuba diving. Seawalker involves participants wearing a special helmet with a transparent visor, which allows them to breathe normally while walking on the ocean floor. The helmet is connected to an air supply on the surface, providing a continuous flow of fresh air. This enables participants to enjoy a close-up view of marine life and underwater scenery without the need for diving equipment. Seawalker is designed to be a safe and accessible underwater activity. Participants typically receive a brief training session before the experience, ensuring they are comfortable with the equipment and procedures. The presence of experienced guides and safety measures helps ensure a secure and enjoyable experience. During the Seawalker experience, participants can expect to encounter various marine life, colorful coral formations, and other underwater attractions. The calm waters around Nusa Dua make it an ideal location for this type of activity.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Bali Buda Bukit',
+                'slug' => Str::slug("Bali Buda Bukit"),
+                'destination_preference_id' => 6,
+                'description' => 'The Bali Buda restaurant and store is began in 1994 with passion of bringing the best quality,organic food we could find to people looking for healthy ways to feed themselves and their families. we are switching over to using biodegradable packaging.',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Bhava Spa Kuta',
+                'slug' => Str::slug("Bhava Spa Kuta"),
+                'destination_preference_id' => 6,
+                'description' => '<p>Staying in Kuta has its own advantages. Even though it is busy with tourists, this area has many facilities, from accommodation, bars and restaurants, to shopping centers. After activities, a row of spas await those who want to unwind and rest their feet. One of the best spa places in this area is Bhava Spa which is located at Amnaya Resort Kuta, Jalan Kartika Plaza, Gang Puspa Ayu No. 99. This place has six treatment rooms, each decorated with classic furniture and lighting that can make the body more relaxed.</p> 
+<p>Here, guests can enjoy a variety of spa treatments rooted in holistic health traditions in Indonesia, China, Japan, Thailand and India. The aim is for the therapy to heal and refresh the body, mind and soul. One of the flagship spa packages is the Royal Palace Ceremony which is inspired by the traditional body care recipes of Javanese palace princesses. The ritual starts with a foot bath, then continues with a traditional Javanese massage, body scrub, body polish, and ends with a milk bath.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Sanje Restaurant',
+                'slug' => Str::slug("Sanje Restaurant"),
+                'destination_preference_id' => 6,
+                'description' => '<p>Sanje Restaurant: Opening to panoramic views of the beautiful Indian Ocean, this carefree alfresco restaurant sits above Seminyak Beach on one side, while spilling lazily onto the edge of a reflective pool on the other, all of which lends a comfortable, relaxed feel to your dining experience. The menu features delicious and healthy Mediterranean dishes, combined with local flavors that are as exciting as the culture. Sometimes all you want from life is a beautiful view, a delicious cocktail, and a lover to enjoy it with. Connected to the restaurant by twin humpback bridges, Sanje\'s breezy cocktail lounge at The Seminyak Resorts is the perfect place to stretch out on a rattan chair while enjoying a mojito or coconut martini with a backdrop of the Indian Ocean and another of Seminyak\'s legendary sunsets.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Dream Land Beach',
+                'slug' => Str::slug("Dream Land Beach"),
+                'destination_preference_id' => 2,
+                'description' => '<p>Nestled on the southern coast of Bali, Dreamland Beach beckons with its breathtaking blend of natural beauty and vibrant energy. The golden sands stretch along the shoreline, embraced by rugged cliffs and lush greenery, creating an enchanting backdrop for beachgoers. As a haven for surf enthusiasts, Dreamland delivers consistent waves that attract both seasoned surfers and those eager to ride their first swell. The atmosphere here is relaxed, inviting visitors to bask in the warmth of the sun and absorb the rhythmic melody of the Indian Ocean. Numerous beach clubs and cafes dot the shoreline, offering not only refreshing beverages but also a front-row seat to the captivating coastal panorama. For those seeking elevated views, the clifftop paths provide a vantage point for capturing the essence of Dreamland\'s coastal charm. Easily accessible from popular hubs like Kuta and Seminyak, Dreamland Beach stands as a quintessential Bali destination, where the surf\'s energy meets the tranquility of the sea, creating an idyllic haven for sun-seekers and adventurers alike.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Suluban Beach',
+                'slug' => Str::slug("Suluban Beach"),
+                'destination_preference_id' => 2,
+                'description' => '<p>Suluban Beach, also known as Blue Point Beach, is a hidden gem tucked away beneath towering cliffs on the Bukit Peninsula of Bali, Indonesia. Known for its dramatic landscape and vibrant surf scene, Suluban Beach has become a popular destination for surfers, beach lovers, and those seeking a more secluded coastal experience. Suluban Beach is accessed through a narrow gap in the cliffside, creating a sense of discovery as visitors make their way down to the shore. The towering limestone cliffs that envelop the beach offer stunning panoramic views of the Indian Ocean, making the descent a scenic adventure in itself. Renowned for its challenging waves, Suluban Beach is a paradise for surfers. The consistent swells and powerful waves attract surf enthusiasts from around the world. The reef break creates barreling waves that provide an exhilarating surfing experience for both advanced surfers and those looking to catch their first wave. The beach is characterized by its unique caves and tide-dependent formations. During low tide, visitors can explore the intricate cave systems and marvel at the natural rock formations. The caves add an element of exploration and intrigue to Suluban Beach, creating opportunities for unique photographs.<p>
+<p>While popular among surfers, Suluban Beach offers a more relaxed atmosphere compared to some of Bali\'s more crowded beaches. Visitors can unwind on the soft golden sand, listen to the rhythmic crashing of the waves, and enjoy the peaceful ambiance created by the surrounding cliffs. A row of charming beachfront warungs (small local eateries) line the shore, offering a variety of local and international cuisines. Visitors can enjoy a meal with a view, watching the surfers ride the waves while savoring fresh seafood or traditional Balinese dishes. Suluban Beach is a popular spot to witness spectacular sunsets. As the sun descends over the horizon, the cliffs and the expanse of the ocean are bathed in warm hues, creating a magical backdrop for those gathered on the beach. Suluban Beach\'s unique charm, with its cliff-enclosed beauty and dynamic surf scene, makes it a must-visit destination for those seeking a blend of adventure, natural splendor, and artistic vibes on the island of Bali.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Sungai Ayung',
+                'slug' => Str::slug("Sungai Ayung"),
+                'destination_preference_id' => 3,
+                'description' => '<p>Sungai Ayung, Bali\'s longest river, flows gracefully through the heart of the island, originating in the northern mountains and journeying southward to meet the Badung Strait near Sanur. Celebrated for its breathtaking landscapes, Ayung River has become a premier destination for white-water rafting enthusiasts. The river\'s course unveils a mesmerizing tapestry of tropical beauty — dense jungles, terraced rice paddies, and towering canyon walls. White-water rafting on Ayung offers an exhilarating adventure, with rapids suitable for both beginners and experienced rafters. Beyond its adventurous appeal, the riverbanks showcase Bali\'s rich biodiversity, adorned with vibrant flora and occasional wildlife sightings. Sungai Ayung is not only a playground for thrill-seekers but also holds cultural significance, intertwined with Balinese traditions and marked by temples dotting its surroundings. As conservation efforts gain momentum, there\'s a growing commitment to preserving Ayung River\'s ecosystem, ensuring that the unique blend of adventure and natural splendor remains accessible to future generations. Easily reachable from popular tourist hubs like Ubud, Sungai Ayung stands as a testament to Bali\'s diverse beauty, inviting travelers to embark on an unforgettable journey through its cascading waters and scenic</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Finns Beach Club',
+                'slug' => Str::slug("Finns Beach Club"),
+                'destination_preference_id' => 6,
+                'description' => '<p>Finns Beach Club Bali is a hangout place that offers the charm of Berawa Beach from the Semara Luxury Villa Resort complex. This place is dominated by bamboo buildings, giving it a traditional feel but with a more modern concept. There are many activities you can do while at Finn\'s Beach Club Bali. Starting from sunbathing on the beach, playing volleyball or bocce (a typical Italian ball game) with friends. Coming in the morning or afternoon is not a problem. But if you come in the afternoon, don\'t miss the beautiful sunset at Finn\'s Beach Club. This moment felt even more amazing when the lights started to be turned on, giving an exotic feel. Visitors can satisfy their desire to take photos or be satisfied just by enjoying the cool breeze in a romantic atmosphere. You are free to choose a seat that has a variety of different viewing angles for dusk hunting. The Sunset Lounge on the second floor of Finns Beach Club has one of the best views.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Grand Zero Kuta',
+                'slug' => Str::slug("Grand Zero Kuta"),
+                'destination_preference_id' => 4,
+                'description' => '<p>Nestled in the heart of the vibrant Kuta district in Bali, the Grand Zero monument stands as a poignant symbol, commemorating a tragic event in Bali\'s history. This unassuming memorial, often overlooked by the hustle and bustle of modern life, tells a somber tale that is integral to the island\'s resilience and spirit. The Grand Zero monument marks the site of the tragic Kuta bombings that occurred on October 12, 2002. This devastating event claimed the lives of many innocent people and left an indelible mark on Bali\'s history. The monument serves as a solemn reminder of the need for unity, resilience, and remembrance.</p>',
                 'created_at' => now(),
                 'updated_at' => now()
             ]
