@@ -151,16 +151,16 @@
               <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card h-100 rounded-4" aria-hidden="true">
                   <div class="card-body">
-                    <svg class="placeholder-glow card-img-top rounded-4 mb-2" width="100%" height="210"
+                    <svg class="placeholder-wave card-img-top rounded-4 mb-2" width="100%" height="210"
                       xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
                       preserveAspectRatio="xMidYMid slice" focusable="false">
                       <title>Placeholder</title>
                       <rect width="100%" height="100%" class="placeholder"></rect>
                     </svg>
-                    <h4 class="card-title placeholder-glow">
+                    <h4 class="card-title placeholder-wave">
                       <span class="placeholder col-9"></span>
                     </h4>
-                    <p class="card-text placeholder-glow">
+                    <p class="card-text placeholder-wave">
                       <span class="placeholder col-3"></span>
                       <span class="placeholder col-4"></span>
                     </p>
