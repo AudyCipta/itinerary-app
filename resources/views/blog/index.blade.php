@@ -92,7 +92,7 @@
           success: function(response) {
             setTimeout(function() {
               renderPosts(response.data.posts);
-            }, 600);
+            }, 800);
           },
           error: function(error) {
             console.log(error);
