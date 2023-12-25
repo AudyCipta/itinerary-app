@@ -285,7 +285,7 @@
 
       <div class="section-header row justify-content-center">
         <div class="col-12 col-md-7">
-          <h2 class="text-center">Trending Destination</h2>
+          <h2 class="text-center text-capitalize">places you may have never visited</h2>
           <p class="text-center lead mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit semper
             dalar elementum
             tempus hac tellus libero accumsan. </p>
