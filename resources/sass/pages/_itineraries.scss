@@ -12,6 +12,11 @@
         }
     }
 
+    .itineraries-list {
+        --bs-gutter-x: 2.5rem !important;
+        --bs-gutter-y: 2.5rem !important;
+    }
+
     .itineraries-item {
         img {
             object-fit: cover;
