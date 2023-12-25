@@ -351,22 +351,19 @@
         <div class="row g-0">
           <div class="col-12 col-md-6 order-2 order-md-1">
             <div class="excellence-body">
-              <h2 class="mb-3">Boost your productivity with our to-do app</h2>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus
-                mollis
-                sit
-                aliquam sit nullam.</p>
-
-              <div class="feature-list d-flex flex-column row-gap-2">
-                <div class="feature-item d-flex align-items-center column-gap-3">
-                  <img src="/img/image-placeholder.png" alt="img" class="img-fluid border rounded-circle">
-                  <p class="lead mb-0">Lorem ipsum dolor sit</p>
-                </div>
-                <div class="feature-item d-flex align-items-center column-gap-3">
-                  <img src="/img/image-placeholder.png" alt="img" class="img-fluid border rounded-circle">
-                  <p class="lead mb-0">Lorem ipsum dolor sit amet </p>
-                </div>
-              </div>
+              <h2 class="mb-3">Explore Badung with Travaa!</h2>
+              <p class="lead">Your Ultimate Travel Companion for Effortless Itinerary Planning in Badung!</p>
+              <ul class="ps-4">
+                <li>
+                  <p class="lead mb-0">Online travel itinerary planner</p>
+                </li>
+                <li>
+                  <p class="lead mb-0">Start your own itinerary or use an itinerary from the Travaa</p>
+                </li>
+                <li>
+                  <p class="lead mb-0">Drag in the Badung's place to visit or add to your Trip</p>
+                </li>
+              </ul>
             </div>
           </div>
 
