@@ -121,7 +121,8 @@
 
 <x-layouts.app title="Place Detail">
   <section id="detail-trip-hero" class="py-0 min-vh-100 bg-secondary d-flex align-items-center"
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/hero.jpeg')">
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url({{ $itinerary->thumbnail ? asset('storage/thumbnail-itineraries/' . $itinerary->thumbnail) : '/img/hero.jpeg' }})">
     <div class="container text-center">
       <h1 class="text-white">{{ $itinerary->total_day }} {{ $itinerary->total_day > 1 ? 'days' : 'day' }} with
         {{ $itinerary->name }}</h1>
