@@ -18,6 +18,12 @@
 
     .blog-content {
         .card {
+            img {
+                object-fit: cover;
+                object-position: center;
+                height: 220px;
+            }
+
             h3 {
                 color: #5d5a88;
             }
@@ -31,6 +37,14 @@
             a {
                 font-size: 17px !important;
                 font-weight: 500;
+            }
+
+            .post-title,
+            .post-desc {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
         }
     }

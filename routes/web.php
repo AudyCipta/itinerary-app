@@ -48,7 +48,8 @@ Route::post('/places/create-trip', [PlaceController::class, 'storeTrip'])->name(
 
 // Blog
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/{id}', [BlogController::class, 'detail'])->name('blog.detail');
+Route::get('/blog/get-all', [BlogController::class, 'getAll'])->name('blog.get_all');
+Route::get('/blog/{post:slug}', [BlogController::class, 'detail'])->name('blog.detail');
 
 // Admin
 Route::prefix('admin')->name('admin.')->group(function () {
