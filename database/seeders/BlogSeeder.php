@@ -19,6 +19,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Discovering Tranquility: A Journey to Nungnung Waterfall, Bali',
                 'slug' => Str::slug('Discovering Tranquility: A Journey to Nungnung Waterfall, Bali'),
                 'subtitle' => 'Bali, with its lush landscapes and hidden treasures, unfolds yet another gem for those seeking nature\'s tranquility - Nungnung Waterfall. This breathtaking cascade, tucked away in the heart of Bali, promises a journey that combines adventure, serenity, and the raw beauty of the island\'s hinterlands.',
+                'picture' => 'nungnung.jpg',
                 'description' => '               
                 <h4 class="mt-5">Off the Beaten Path:</h4><p> Nungnung Waterfall remains a relatively untouched paradise, offering an escape from the bustling tourist hotspots. Located in the Petang Village, this waterfall provides an opportunity to venture off the beaten path and immerse yourself in the authentic beauty of Bali.</p>
                 
@@ -43,6 +44,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Spellbinding Cultural Extravaganza: Watching Kecak at Uluwatu, Bali',
                 'slug' => Str::slug('Spellbinding Cultural Extravaganza: Watching Kecak at Uluwatu, Bali'),
                 'subtitle' => 'Bali\'s cultural richness comes to life in a captivating dance-drama known as Kecak, and there\'s no better setting to experience this enchanting performance than at Uluwatu. Here\'s a guide to immerse yourself in the mesmerizing world of Kecak at this iconic Balinese temple.',
+                'picture' => 'kecakuluwatu.jpeg',
                 'description' => '
 <h4 class="mt-5">The Setting:</h4> <p>Uluwatu Temple, perched on towering cliffs overlooking the Indian Ocean, provides a breathtaking backdrop for the Kecak performance. Arrive early to explore the temple grounds and witness the panoramic sunset views.</p>
 
@@ -70,6 +72,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Discovering Paradise: The Allure of Balangan Beach, Bali',
                 'slug' => Str::slug('Discovering Paradise: The Allure of Balangan Beach, Bali'),
                 'subtitle' => 'Bali, known for its enchanting landscapes and vibrant culture, harbors a hidden gem along its southwestern coast—Balangan Beach. Nestled between Jimbaran and Uluwatu, this secluded haven stands as a testament to Bali\'s natural beauty, offering visitors a unique blend of tranquility and adventure.',
+                'picture' => 'surfbalangan.jpeg',
                 'description' => '
 <h4 class="mt-5">Golden Sands and Turquoise Waters:</h4> <p>Balangan Beach is celebrated for its pristine golden sands, kissed by the gentle waves of the Indian Ocean. The beach\'s allure lies in its untouched beauty, providing a serene escape from the bustling crowds of more popular destinations. The crystal-clear turquoise waters create a mesmerizing contrast against the rugged cliffs that line the shore, forming a picturesque backdrop for a day of relaxation.</p>
 
@@ -91,6 +94,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Unveiling Treasures: A Souvenir Hunt in Kuta\'s Traditional Market',
                 'slug' => Str::slug('Unveiling Treasures: A Souvenir Hunt in Kuta\'s Traditional Market'),
                 'subtitle' => 'Bali, with its rich cultural tapestry, offers a treasure trove of unique and meaningful souvenirs. Kuta\'s Traditional Market, nestled in the heart of the bustling tourist district, is the perfect destination for a memorable and authentic shopping experience. Join us on a journey to discover the hidden gems awaiting you in this vibrant marketplace.',
+                'picture' => 'kutamarket.jpeg',
                 'description' => '
 <h4 class="mt-5">A Kaleidoscope of Colors:</h4> <p>As you step into Kuta\'s Traditional Market, you\'re immediately immersed in a world of vibrant colors. Stalls brim with Balinese textiles, sarongs, and batiks, each telling a story through intricate patterns and lively hues.</p>
 
@@ -118,6 +122,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Grand Zero Kuta Bali: Unveiling the Historical Tapestry',
                 'slug' => Str::slug('Grand Zero Kuta Bali: Unveiling the Historical Tapestry'),
                 'subtitle' => 'Nestled in the heart of the vibrant Kuta district in Bali, the Grand Zero monument stands as a poignant symbol, commemorating a tragic event in Bali\'s history. This unassuming memorial, often overlooked by the hustle and bustle of modern life, tells a somber tale that is integral to the island\'s resilience and spirit.',
+                'picture' => 'grandzero.jpg',
                 'description' => '
 <h4 class="mt-5">Origin and Significance:</h4> <p>The Grand Zero monument marks the site of the tragic Kuta bombings that occurred on October 12, 2002. This devastating event claimed the lives of many innocent people and left an indelible mark on Bali\'s history. The monument serves as a solemn reminder of the need for unity, resilience, and remembrance.</p>
 
@@ -145,6 +150,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Chasing the Sun: Expert Tips for Capturing the Perfect Sunset at Nyang Nyang Beach, Bali',
                 'slug' => Str::slug('Chasing the Sun: Expert Tips for Capturing the Perfect Sunset at Nyang Nyang Beach, Bali'),
                 'subtitle' => 'Nyang Nyang Beach in Bali is more than just a pristine stretch of sand and surf; it\'s a canvas for nature\'s daily masterpiece—the sunset. Here are some expert tips to enhance your sunset-hunting experience at Nyang Nyang Beach.',
+                'picture' => 'nyangnyang.jpg',
                 'description' => '
 <h4 class="mt-5">Early Arrival for the Perfect Spot:</h4> <p>To secure the best vantage point, arrive at Nyang Nyang Beach well before the sun begins its descent. Whether perched on the cliffs or nestled in the soft sands, choosing your spot early ensures an unobstructed view of the horizon.</p>
 
@@ -172,6 +178,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Keraban Langit Temple: A Tranquil Oasis of Blessings and Meditation',
                 'slug' => Str::slug('Keraban Langit Temple: A Tranquil Oasis of Blessings and Meditation'),
                 'subtitle' => 'Nestled in the serene landscapes of Sading Village, Mengwi Sub-District, Badung Regency, Keraban Langit Temple stands as a hidden gem, offering both spiritual solace and breathtaking natural beauty. As you embark on the journey to this sacred site, located approximately 22 km from I Gusti Ngurah Rai International Airport, you\'ll discover a place where the divine meets the earthly, and where the air is infused with a sense of peace.',
+                'picture' => 'keraban.jpeg',
                 'description' => '
 <h4 class="mt-5">A Riverside Sanctuary:</h4> <p>Situated on the bank of a river and surrounded by lush rice fields, Keraban Langit Temple invites visitors into a realm of tranquility and spirituality. The soothing sounds of flowing water and the gentle rustle of leaves create a harmonious atmosphere, making it an ideal setting for meditation and introspection.</p>
 
@@ -197,6 +204,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Pura Pucak Mangu Pelaga: A Spiritual Haven and Mountain Retreat',
                 'slug' => Str::slug('Pura Pucak Mangu Pelaga: A Spiritual Haven and Mountain Retreat'),
                 'subtitle' => 'Bali, the island of a thousand temples, hides within its misty mountains a sacred sanctuary that beckons both spiritual devotees and adventure seekers alike. Pura Pucak Mangu in Pelaga, nestled on the summit of Mount Catur, emerges as a unique and enchanting destination, offering not only spiritual solace but also a breathtaking natural haven.',
+                'picture' => 'pucakbangu.jpeg',
                 'description' => '
 <h4 class="mt-5">A Spiritual Oasis in the Mountains:</h4> <p>Pura Pucak Mangu Pelaga is among the Kahyangan Jagat temples of Bali, situated in the high mountainous terrain, far away from the bustling crowds. Found on the fourth-highest peak in Bali, Mount Catur (2,096 meters above sea level), this sacred temple resides in the Banjar Tinggan area of Pelaga Village, Petang District, Badung Regency.</p>
 
@@ -224,6 +232,7 @@ class BlogSeeder extends Seeder
                 'title' => 'Pura Taman Beji Griya Manuaba: Embracing Tranquility and Spiritual Cleansing in the Hidden Canyon',
                 'slug' => Str::slug('Pura Taman Beji Griya Manuaba: Embracing Tranquility and Spiritual Cleansing in the Hidden Canyon'),
                 'subtitle' => 'Amidst the cultural treasures of Bali, Pura Taman Beji Griya Manuaba has recently gained popularity, particularly on social media, as a revered place of purification. Located in Banjar Trinadi, Desa Punggul, Kecamatan Abiansemal, this temple stands as a testament to the island\'s spiritual richness and has become a sought-after destination for those seeking solace and spiritual cleansing.',
+                'picture' => 'tamanbeji.jpg',
                 'description' => '
 <h4 class="mt-5">Unique Rituals in a Hidden Canyon:</h4> <p>What sets Pura Taman Beji Griya Manuaba apart is its unique purification rituals conducted in a hidden canyon. The source of water lies within a cave, nestled among the cliffs, creating an extraordinary setting for the sacred practice of melukat, or spiritual cleansing.</p>
 
