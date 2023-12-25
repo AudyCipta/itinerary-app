@@ -286,6 +286,7 @@
       <div class="section-header row justify-content-center">
         <div class="col-12 col-md-7">
           <h2 class="text-center text-capitalize">places you may have never visited</h2>
+          <p class="text-center lead mb-0">Explore the beauty of Badung that you may have never visited.</p>
         </div>
       </div>
 
