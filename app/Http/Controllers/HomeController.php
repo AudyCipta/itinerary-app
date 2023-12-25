@@ -16,7 +16,9 @@ class HomeController extends Controller
     {
         $destinationCategories = DestinationCategory::all();
 
-        return view('home.index', compact('destinationCategories'));
+        $places = Place::with('placeImages')->limit(4)->get();
+
+        return view('home.index', compact('destinationCategories', 'places'));
     }
 
     public function getPreference(): JsonResponse

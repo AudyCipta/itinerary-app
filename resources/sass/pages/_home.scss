@@ -53,22 +53,22 @@
             color: #5d5a88 !important;
         }
 
-        .lead {
-            color: #9795b5 !important;
-            font-size: 17px !important;
-        }
-
         .card-img-top {
             height: 220px;
             object-fit: cover;
             object-position: center;
         }
 
-        p {
+        .description {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+
+            p {
+                color: #9795b5 !important;
+                font-size: 17px !important;
+            }
         }
     }
 }

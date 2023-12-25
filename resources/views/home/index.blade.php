@@ -294,50 +294,25 @@
 
       <div class="trending-content">
         <div class="row gy-3">
-          <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none rounded-3">
-              <div class="card-body">
-                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
-                <h4 class="card-title">Mobile app</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
-                  dolor sit amet
-                  consectetur adipisicing elit.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none rounded-3">
-              <div class="card-body">
-                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
-                <h4 class="card-title">Desktop app</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
-                  dolor sit amet
-                  consectetur adipisicing elit.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none rounded-3">
-              <div class="card-body">
-                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
-                <h4 class="card-title">Multiple users</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
-                  dolor sit amet
-                  consectetur adipisicing elit.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <a href="#" class="card text-decoration-none rounded-3">
-              <div class="card-body">
-                <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
-                <h4 class="card-title">Integrations</h4>
-                <p class="card-text text-muted lead">Lorem ipsum dolor sit amet consecte. Lorem ipsum
-                  dolor sit amet
-                  consectetur adipisicing elit.</p>
-              </div>
-            </a>
-          </div>
+
+          @foreach ($places as $place)
+            <div class="col-12 col-sm-6 col-md-3">
+              <a href="{{ route('places.detail', ['place' => $place->slug]) }}"
+                class="card text-decoration-none rounded-3">
+                <div class="card-body">
+                  @if ($place->placeImages->isNotEmpty())
+                    <img src="{{ asset('storage/places/' . $place->placeImages[0]->picture) }}"
+                      class="card-img-top mb-3 rounded-3" alt="destination">
+                  @else
+                    <img src="https://placehold.co/800x600" class="card-img-top mb-3 rounded-3" alt="destination">
+                  @endif
+                  <h4 class="card-title text-truncate">{{ $place->name }}</h4>
+                  <div class="description">{!! $place->description !!}</div>
+                </div>
+              </a>
+            </div>
+          @endforeach
+
         </div>
       </div>
 
