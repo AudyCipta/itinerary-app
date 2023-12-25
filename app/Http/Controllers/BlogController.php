@@ -14,9 +14,9 @@ class BlogController extends Controller
         return view('blog.index');
     }
 
-    public function detail(string $id)
+    public function detail(Blog $post)
     {
-        return view('blog.detail', compact('id'));
+        return view('blog.detail', compact('post'));
     }
 
     public function getAll(): JsonResponse

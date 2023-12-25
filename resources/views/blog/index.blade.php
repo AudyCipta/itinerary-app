@@ -53,7 +53,7 @@
                   <div class="card-body w-100 d-flex flex-column">
                     ${item.picture ? `<img src="{{ asset('storage/posts/${item.picture}') }}" class="img-fluid rounded-4" alt="img">` : '<img src="https://placehold.co/600x400" class="img-fluid rounded-4" alt="img">'}
                     <h3 class="card-title mt-3 post-title">${item.title}</h3>
-                    <div class="post-desc mb-3">${item.description}</div>
+                    <div class="post-desc mb-3"><p>${item.subtitle}</p></div>
                     <a href="{{ route('blog.index') }}/${item.slug}"
                       class="card-link text-decoration-none mt-auto">
                       Learn more
