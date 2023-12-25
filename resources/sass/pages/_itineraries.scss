@@ -13,6 +13,12 @@
     }
 
     .itineraries-item {
+        img {
+            object-fit: cover;
+            object-position: center;
+            height: 220px;
+        }
+
         h3 {
             color: #6d758f;
         }

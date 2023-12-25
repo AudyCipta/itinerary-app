@@ -11,9 +11,7 @@ class ItineraryController extends Controller
 {
     public function index(): View
     {
-        $itineraries = Itinerary::all();
-
-        return view('itineraries.index', compact('itineraries'));
+        return view('itineraries.index');
     }
 
     public function detail(Itinerary $itinerary): View
@@ -53,6 +51,18 @@ class ItineraryController extends Controller
         return response()->json([
             'data' => [
                 'events' => $events
+            ]
+        ]);
+    }
+
+    public function getAll(): JsonResponse
+    {
+        $itineraries = Itinerary::all();
+
+        return response()->json([
+            'status' => 'success',
+            'data' => [
+                'itineraries' => $itineraries
             ]
         ]);
     }

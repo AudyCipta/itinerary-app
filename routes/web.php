@@ -33,6 +33,7 @@ Route::post('/filter', [HomeController::class, 'filter'])->name('home.filter');
 
 // Itineraries
 Route::get('/itineraries', [ItineraryController::class, 'index'])->name('itineraries.index');
+Route::get('/itineraries/get-all', [ItineraryController::class, 'getAll'])->name('itineraries.get_all');
 Route::get('/itineraries/{itinerary:slug}', [ItineraryController::class, 'detail'])->name('itineraries.detail');
 Route::get('/itineraries/{itinerary:slug}/booked', [ItineraryController::class, 'booked'])->name('itineraries.booked');
 
