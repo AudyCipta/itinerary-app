@@ -58,7 +58,7 @@
                     <h3 class="card-title mt-3 post-title">${item.title}</h3>
                     <div class="post-desc mb-3"><p>${item.subtitle}</p></div>
                     <a href="{{ route('blog.index') }}/${item.slug}"
-                      class="card-link text-decoration-none mt-auto">
+                      class="card-link text-decoration-none mt-auto text-primary">
                       Learn more
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-arrow-right" viewBox="0 0 16 16">
