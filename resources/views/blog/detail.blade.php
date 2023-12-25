@@ -25,7 +25,8 @@
           <p>{{ $post->subtitle }}</p>
         </div>
 
-        <img src="https://placehold.co/600x400" alt="img" class="img-fluid w-100 rounded-3">
+        <img src="{{ $post->picture ? asset('storage/posts/' . $post->picture) : 'https://placehold.co/600x400' }}"
+          alt="img" class="img-fluid w-100 rounded-3">
 
         {!! $post->description !!}
       </div>
