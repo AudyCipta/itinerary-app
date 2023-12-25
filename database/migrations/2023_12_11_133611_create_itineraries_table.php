@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->tinyInteger('total_day');
-            $table->date('start_day');
             $table->string('thumbnail')->nullable();
             $table->timestamps();
         });
