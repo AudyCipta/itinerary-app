@@ -25,6 +25,9 @@
                 </svg>
                 <h3 class="card-title placeholder-wave">
                   <span class="placeholder col-9"></span>
+                  <span class="placeholder col-2"></span>
+                  <span class="placeholder col-3"></span>
+                  <span class="placeholder col-7"></span>
                 </h3>
                 <p class="card-text placeholder-wave mb-3">
                   <span class="placeholder col-12"></span>

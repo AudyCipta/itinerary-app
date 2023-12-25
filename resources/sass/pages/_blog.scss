@@ -46,6 +46,10 @@
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
+
+            .post-title {
+                -webkit-line-clamp: 2 !important;
+            }
         }
     }
 }
