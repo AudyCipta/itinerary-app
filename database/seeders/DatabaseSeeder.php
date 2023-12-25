@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             PlaceImageSeeder::class,
             ItinerarySeeder::class,
             ItineraryPlaceSeeder::class,
+            BlogSeeder::class,
         ]);
     }
 }

@@ -20,10 +20,10 @@
     <div class="container">
 
       <div class="section-header row justify-content-center">
-        <div class="col-7">
-          <h2 class="text-center">Browse our set of features</h2>
-          <p class="text-center lead mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum
-            tempus hac tellus libero accumsan.</p>
+        <div class="col-9">
+          <h2 class="text-center">Unlock the best of Badung - dive in today!</h2>
+          <p class="text-center lead mb-0">Embark on a virtual odyssey with our Badung Blog! Uncover captivating stories,
+            essential tips, and exciting adventures, guiding you through the heart of this enchanting destination.</p>
         </div>
       </div>
 
