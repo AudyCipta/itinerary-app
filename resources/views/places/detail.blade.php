@@ -227,10 +227,7 @@
                     @endguest
 
                     <div class="google-map mt-4">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86062.5882882403!2d115.08356524492159!3d-8.809811681991151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24ffc20cb8191%3A0xcb98d1ba7db0495!2sUluwatu%20Temple!5e0!3m2!1sen!2sid!4v1702019739623!5m2!1sen!2sid"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      {{ $place->map }}
                     </div>
 
                     <div class="address mt-4">
@@ -242,7 +239,7 @@
                               d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                           </svg></span>
-                        <span>Balangan, Kuta 80361 Indonesia</span>
+                        <span>{{ $place->address }}</span>
                       </p>
                     </div>
 
@@ -257,17 +254,17 @@
                               d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5z" />
                           </svg></span>
                         <span class="ms-1" style="color: #5D5A88">Entrance tickets <span
-                            class="fw-medium">Rp15.000</span></span>
+                            class="fw-medium">-</span></span>
                       </p>
                     </div>
 
-                    <div class="hour mt-3">
+                    {{-- <div class="hour mt-3">
                       <p class="mb-0 fw-bold">Hour</p>
                       <div class="d-flex justify-content-between">
                         <p>Sunday-Monday</p>
                         <p>00.00am - 11.15pm</p>
                       </div>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
               </div>
