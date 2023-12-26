@@ -398,8 +398,8 @@ class PlaceSeeder extends Seeder
                 'name' => 'Kuta Traditional Market',
                 'slug' => Str::slug("Kuta Traditional Market"),
                 'destination_preference_id' => 8,
-                'address' => '',
-                'map' => '',
+                'address' => 'Jl.kuta art market no.18, kuta, Badung Kuta Kuta, Kuta, Badung, Kabupaten Badung, Bali 80361',
+                'map' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63098.42042985715!2d115.09852422167965!3d-8.724624999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246a52778381f%3A0x6f18d5699e3c33db!2sPasar%20Seni%20Kuta!5e0!3m2!1sid!2sid!4v1703580176935!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
                 'description' => '<p>Kuta Traditional Market is a great place to explore and shop for traditional Balinese crafts and souvenirs. Items such as batik fabrics, wood carvings, sarongs, handmade jewelry, and traditional Balinese masks are commonly found here. Some traditional markets also feature local food stalls or warungs where visitors can sample authentic Balinese cuisine. This provides an opportunity to taste local flavors and experience the culinary delights of Bali. Traditional markets are not only places for shopping but also hubs of cultural exchange. Visitors can interact with local vendors, observe traditional Balinese craftsmanship, and get a glimpse into the daily life of the community. Kuta Traditional Market is often conveniently located, making it accessible for tourists exploring the popular attractions in the Kuta area. It\'s a place where visitors can take a break from the beach and commercial areas to immerse themselves in the local culture.</p>',
                 'created_at' => now(),
                 'updated_at' => now()
