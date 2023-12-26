@@ -613,6 +613,12 @@ class PlaceImageSeeder extends Seeder
                 'place_id' => 33,
                 'created_at' => now(),
                 'updated_at' => now()
+            ],
+            [
+                'picture' => 'kutabeach.jpg',
+                'place_id' => 34,
+                'created_at' => now(),
+                'updated_at' => now()
             ]
         ]);
     }
