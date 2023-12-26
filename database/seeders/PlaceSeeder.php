@@ -165,7 +165,9 @@ class PlaceSeeder extends Seeder
                 'name' => 'Love Anchor Canggu',
                 'slug' => Str::slug("Love Anchor Canggu"),
                 'destination_preference_id' => 8,
-                'description' => '',
+                'description' => '<p>Love Anchors Boutique Complex is Canggu\'s iconic, shopping and restaurant village. Surrounded by rice paddies, merely 1 kilometre from the beach, and built in a classic wooden Joglo style, the Love Anchors complex is simply breathtaking. Delivering a modern mix of food, entertainment and retail within a traditionally designed setting, Love Anchors Boutique Complex is at the epicenter of Canggu \'s emerging popularity as a destination for tourists, expats and locals alike.</p>
+
+<p>There are many styles of clothing on sale here. There are sweatshirts, shirts, dresses, swimwear, and so on. In addition, there are also clothes with a unique vintage style in this place. What is more interesting, the clothes sold are the work of local Balinese people. In addition to clothing, this modern bazaar also sells various unique items. Some of them are necklaces and bracelets from shells, earrings, rattan woven bags, and others. There are also other souvenirs such as key chains, barong masks, and so on.</p>',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -173,7 +175,11 @@ class PlaceSeeder extends Seeder
                 'name' => 'KU DE TA',
                 'slug' => Str::slug("KU DE TA"),
                 'destination_preference_id' => 6,
-                'description' => '',
+                'description' => '<p>Ku De Ta has been known as one of the tourist destinations in Bali that is mandatory and often visited by tourists. Combining the concept of exotic Balinese culture with the luxury of international class service makes KUDETA a destination that is always the center of attention. In addition to the luxurious and exotic place, there are also various classy dishes from several countries such as Asia, Europe, and Australia such as sushi, pizza, burger, spaghetti, Balinese rice and others. KUDETA Seminyak also provides a healthy gluten-free menu for vegans who visit.</p>
+
+<p>Visiting KUDETA is most appropriate in the time before the afternoon starting at 05:00 PM WITA because the sun is not too hot. The more night the atmosphere at KUDETA Seminyak, the more lively because there is live music entertainment and bars hosted by an international DJ team. For visitors who want to pamper themselves in the morning or afternoon, there is no need to worry, because at KUDETA Bali there is also a swimming pool with sea views so that visitors are like swimming in the open sea. In addition, there are also various choices of juices, champagne, wine, mocktails, and smoothies that are healthy and refresh visitors on a sunny day.</p> 
+
+<p>An important tip when visiting KUDETA is to make a reservation in advance so you don\'t run out of seats and get the view you want.</p>',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -190,7 +196,15 @@ class PlaceSeeder extends Seeder
                 'name' => 'Puri Lumbung',
                 'slug' => Str::slug("Puri Lumbung"),
                 'destination_preference_id' => 6,
-                'description' => '',
+                'description' => '<p>Puri Lumbung Restaurant, Cottage & Waterpark Mengwi is an accommodation in a good location, precisely in Mengwi.</p>
+
+<p>In addition to its strategic location, Puri Lumbung Restaurant, Cottage & Waterpark Mengwi is also an accommodation near Komune Beach Club about 15.75 km away and Sanur Port is about 15.97 km away.</p>
+
+<p>Puri Lumbung Restaurant, Cottage & Waterpark Mengwi is a recommended accommodation for you, a backpacker who not only prioritizes budget, but also comfort when resting after a full day\'s adventure.</p>
+
+<p>This accommodation is a great choice for you and a couple who want to enjoy a romantic holiday. Get an impressive experience with a couple by staying at Puri Lumbung Restaurant, Cottage & Waterpark Mengwi.</p>
+
+<p>Puri Lumbung Restaurant, Cottage & Waterpark Mengwi is the perfect overnight place for those of you who are on vacation with the family. Enjoy all entertainment facilities for you and your family.</p>',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -218,7 +232,15 @@ class PlaceSeeder extends Seeder
                 'name' => 'Ikan Restaurant & Bar',
                 'slug' => Str::slug("Ikan Restaurant & Bar"),
                 'destination_preference_id' => 6,
-                'description' => '',
+                'description' => '<p>Nusa Dua might not be the first destination foodies are thinking about but this might change. Ikan Restaurant & Bar at The Westin Resort Nusa Dua Bali has recently changed to become a more upscale place to eat. The restaurant is right on the beach, making it a perfect place to go for a casual meal during the day or a nicer dinner at night.</p>
+
+<p>Ikan Restaurant offers a variety of fresh seafood and Indonesian-inspired dishes, all masterfully created by Bali-born Chef Fajar Kurniawan Putra. Drawing from his experience with Indonesian, Chinese, and Western cuisine, Chef Fajar has created a casual, delicious, and refreshing easy-to-share menu that features seasonal and local ingredients.</p>
+
+<p>The Bulung, a refreshing seaweed salad with seared tuna and kuah pindang (seasoned fish broth) scented dressing. This wonderful combination flawlessly demonstrates the oceanic identity of Bali. The briny sea fish and umami-packed seaweed salad with a melt-in-the-mouth slightly cooked tuna is a must-try. Since we are in Bali do not avoid the Jimbaran-style, freshly-caught Ikan Bakar, served with sayur urap and sambals. The grilled fish, marinated in Balinese spice paste, was a little crispy on the outside but not overdone in the middle. Perfect!</p>
+
+<p>Satisfy your craving for something special by indulging in one of Ikan Bar\'s signature cocktails, created by Head Mixologist Marlon Hermanto. The Gunung Agung, inspired by the island\'s mighty volcano, is made with Nusa Cana Rum, Falernum and rosella soda. Another concoction to experience is the Italian Job, a refreshing mix of house-made limoncello, prosecco, green apple soda, and dill.</p>
+
+<p>The recent revamp has set a new standard for Nusa Dua\'s venues. Ikan Restaurant & Bar at The Westin Resort Nusa Dua, Bali has become a destination where you can spend a day relaxing with friends and family. With its chill vibes, beautiful view of the ocean and fresh and authentic cuisine, it\'s easy to see why!</p>',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -234,7 +256,7 @@ class PlaceSeeder extends Seeder
                 'name' => 'Bali Buda Bukit',
                 'slug' => Str::slug("Bali Buda Bukit"),
                 'destination_preference_id' => 6,
-                'description' => 'The Bali Buda restaurant and store is began in 1994 with passion of bringing the best quality,organic food we could find to people looking for healthy ways to feed themselves and their families. we are switching over to using biodegradable packaging.',
+                'description' => '<p>The Bali Buda restaurant and store is began in 1994 with passion of bringing the best quality,organic food we could find to people looking for healthy ways to feed themselves and their families. we are switching over to using biodegradable packaging.</p>',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -293,6 +315,14 @@ class PlaceSeeder extends Seeder
                 'slug' => Str::slug("Grand Zero Kuta"),
                 'destination_preference_id' => 4,
                 'description' => '<p>Nestled in the heart of the vibrant Kuta district in Bali, the Grand Zero monument stands as a poignant symbol, commemorating a tragic event in Bali\'s history. This unassuming memorial, often overlooked by the hustle and bustle of modern life, tells a somber tale that is integral to the island\'s resilience and spirit. The Grand Zero monument marks the site of the tragic Kuta bombings that occurred on October 12, 2002. This devastating event claimed the lives of many innocent people and left an indelible mark on Bali\'s history. The monument serves as a solemn reminder of the need for unity, resilience, and remembrance.</p>',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Kuta Beach',
+                'slug' => Str::slug("Kuta Beach"),
+                'destination_preference_id' => 1,
+                'description' => '<p>Kuta Beach is a world-renowned tropical paradise situated on the southern coast of Bali, Indonesia. Known for its stunning natural beauty, vibrant atmosphere, and world-class surf, Kuta Beach has long been a favorite destination for travelers seeking sun, sand, and excitement. The beach stretches for approximately 2.5 kilometers along the Indian Ocean, featuring golden sands that gently slope into the azure waters. Palm trees sway in the warm breeze, providing a picturesque backdrop to the breathtaking sunsets that paint the sky with a myriad of colors. One of the key attractions of Kuta Beach is its legendary surf breaks, making it a haven for surf enthusiasts from around the globe. Whether you\'re a seasoned surfer or a beginner eager to catch your first wave, the consistent and reliable surf conditions make Kuta Beach an ideal spot to ride the waves. Beyond the surf, Kuta Beach offers a lively and eclectic atmosphere. The shoreline is dotted with vibrant beach bars, cafes, and restaurants where visitors can indulge in delicious local cuisine or sip on refreshing tropical beverages. As the sun sets, the beach comes alive with a lively nightlife scene, offering a mix of beach parties, live music, and cultural performances. For those seeking relaxation, Kuta Beach provides ample opportunities to unwind. Visitors can bask in the sun, take leisurely walks along the shoreline, or indulge in rejuvenating spa treatments offered by beachside resorts. The beach is also a popular spot for traditional Balinese massages, allowing visitors to experience the therapeutic touch of the island\'s rich cultural heritage. Kuta Beach is not just a place; it\'s an experience that seamlessly blends natural beauty, water sports, vibrant culture, and a laid-back lifestyle. Whether you\'re seeking adventure, relaxation, or a bit of both, Kuta Beach invites you to immerse yourself in the enchanting charm of this tropical paradise.</p>',
                 'created_at' => now(),
                 'updated_at' => now()
             ]
