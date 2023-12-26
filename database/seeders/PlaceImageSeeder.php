@@ -249,7 +249,7 @@ class PlaceImageSeeder extends Seeder
                 'updated_at' => now()
             ],
             [
-                'picture' => 'nasipedas3.jpg',
+                'picture' => 'nasipedas3.jpeg',
                 'place_id' => 13,
                 'created_at' => now(),
                 'updated_at' => now()
