@@ -16,9 +16,9 @@ class ItineraryPlaceSeeder extends Seeder
         DB::table('itinerary_places')->insert([
             [
                 'itinerary_id' => 1,
-                'place_id' => 1,
+                'place_id' => 34,
                 'day_to' => 1,
-                'time' => '10:30',
+                'time' => '13:00',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
