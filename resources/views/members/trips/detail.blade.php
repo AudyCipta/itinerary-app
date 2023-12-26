@@ -185,7 +185,7 @@
                     <div>
                       <a href="#" class="btn btn-sm btn-outline-secondary edit-place-btn"
                         data-id="{{ $item->id }}" data-bs-toggle="modal" data-bs-target="#editPlaceModal">Edit</a>
-                      <a href="#" class="btn btn-sm btn-outline-secondary delete-place-btn"
+                      <a href="#" class="btn btn-sm btn-outline-danger delete-place-btn"
                         data-id="{{ $item->id }}" data-bs-toggle="modal"
                         data-bs-target="#deletePlaceModal">Delete</a>
                     </div>
@@ -204,7 +204,7 @@
 
                         <div class="mb-4">
                           <h5>Address</h5>
-                          <p class="card-text">{{ $item->place->name }}</p>
+                          <p class="card-text">{{ $item->place->address }}</p>
                         </div>
 
                         <div>
