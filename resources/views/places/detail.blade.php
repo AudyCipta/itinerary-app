@@ -160,12 +160,11 @@
             <div class="position-relative">
               <div id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                  @foreach ($place->placeImages as $item)
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="{{ $loop->index }}"
+                      class="{{ $loop->first ? 'active' : '' }}" aria-current="true"
+                      aria-label="Slide {{ $loop->index + 1 }}"></button>
+                  @endforeach
                 </div>
                 <div class="carousel-inner">
                   @php
