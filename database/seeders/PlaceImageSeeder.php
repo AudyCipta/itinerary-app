@@ -411,7 +411,7 @@ class PlaceImageSeeder extends Seeder
                 'updated_at' => now()
             ],
             [
-                'picture' => 'cemagibeach.3jpg',
+                'picture' => 'cemagibeach3.jpg',
                 'place_id' => 22,
                 'created_at' => now(),
                 'updated_at' => now()
