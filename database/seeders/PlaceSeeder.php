@@ -19,8 +19,8 @@ class PlaceSeeder extends Seeder
                 'name' => 'Balangan Beach',
                 'slug' => Str::slug('Balangan Beach'),
                 'destination_preference_id' => 1,
-                'address' => '',
-                'map' => '',
+                'address' => 'South Kuta, Badung Regency, Bali',
+                'map' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.934057309158!2d115.12083632416179!3d-8.792265991259903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd245140b1ef427%3A0xe2467e776335e53e!2sBalangan%20Beach!5e0!3m2!1sen!2sid!4v1703572916305!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
                 'description' => '<p>Balangan Beach hidden between two steeply clift, Balangan Beach is one of the beautiful beaches of many beautiful beaches at the southern part of Bali Island. Its location which is close to Dreamland beaches and Uluwatu Temple so that it could be an alternative attractions you can visit.
                 <p>The entrance access to the beach in the area of Pecatu is not so difficult because stairs have been provided which are wide enough for tourist. The atmosphere is still very natural and it\'s cool, moreover it is not much visited tourist. For surfers, this beach is very famous and a favorite spot for surfing besides Dreamland beach.</p>
                 <p>Balangan beach with coastline approximately 1 km long north facing to north, so the activity of I Gusti Ngurah Rai International Airport is visible from here in the distance. In the eastern part bounded by high cliffs with indentations underneath because eroded by waves. In the western side, the shore is bounded by high cliffs filled with plants, especially palm trees, but it also contains some sort of cottages to enjoy the beaches from the height. The Absorbing thing is when the sea condition is low tide from this beach we could lead to Dreamland Beach by walking along the west shore.</p>',
@@ -31,8 +31,8 @@ class PlaceSeeder extends Seeder
                 'name' => 'Garuda Kencana Wisnu',
                 'slug' => Str::slug('Garuda Kencana Wisnu'),
                 'destination_preference_id' => 4,
-                'address' => '',
-                'map' => '',
+                'address' => 'Uluwatu St, Ungasan, South Kuta, Badung Regency, Bali 80364',
+                'map' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.740599243754!2d115.16502367416193!3d-8.810422791242404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd244cf54e1dec7%3A0x1988663e064f5a51!2sGaruda%20Wisnu%20Kencana%20Cultural%20Park!5e0!3m2!1sen!2sid!4v1703572980413!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
                 'description' => '<p>Garuda Wisnu Kencana (GWK) is a cultural park located on the southern part of the island of Bali, Indonesia. The park is situated on a limestone hill in the southern part of Bali, near the town of Ungasan. The main attraction of GWK is the ongoing construction of a gigantic statue depicting the Hindu god Vishnu riding on the mythical bird Garuda. In addition to the statue, Garuda Wisnu Kencana also features a cultural park that showcases traditional Balinese dance performances, exhibitions, and various cultural activities. The park aims to promote and preserve Indonesian arts and culture.</p>
                 <p>GWK often hosts events, concerts, and cultural performances, making it a popular destination for both tourists and locals. The spacious area and beautiful surroundings make it a unique venue for various activities. Due to its elevated location, GWK offers stunning panoramic views of the surrounding area, including the Indian Ocean. Visitors can enjoy these views while exploring the park.</p>',
                 'created_at' => now(),

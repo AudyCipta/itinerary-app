@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('slug');
             $table->unsignedBigInteger('destination_preference_id');
             $table->text('description');
+            $table->string('address')->nullable();
+            $table->text('map')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
