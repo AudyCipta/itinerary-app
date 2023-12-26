@@ -227,7 +227,7 @@
                     @endguest
 
                     <div class="google-map mt-4">
-                      {{ $place->map }}
+                      {!! $place->map !!}
                     </div>
 
                     <div class="address mt-4">
