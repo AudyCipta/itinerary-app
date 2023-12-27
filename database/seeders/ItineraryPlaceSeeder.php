@@ -366,10 +366,11 @@ class ItineraryPlaceSeeder extends Seeder
 
 
             // Itinerary 6
+            // day 1
             [
                 'itinerary_id' => 6,
                 'place_id' => 29,
-                'day_to' => 3,
+                'day_to' => 1,
                 'time' => '09:00',
                 'created_at' => now(),
                 'updated_at' => now()
@@ -377,7 +378,7 @@ class ItineraryPlaceSeeder extends Seeder
             [
                 'itinerary_id' => 6,
                 'place_id' => 1,
-                'day_to' => 3,
+                'day_to' => 1,
                 'time' => '12:00',
                 'created_at' => now(),
                 'updated_at' => now()
@@ -385,12 +386,13 @@ class ItineraryPlaceSeeder extends Seeder
             [
                 'itinerary_id' => 6,
                 'place_id' => 30,
-                'day_to' => 3,
+                'day_to' => 1,
                 'time' => '16:00',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            //day 2
+
+            // day 2
             [
                 'itinerary_id' => 6,
                 'place_id' => 6,
@@ -400,7 +402,7 @@ class ItineraryPlaceSeeder extends Seeder
                 'updated_at' => now()
             ],
 
-            //day 3
+            // day 3
             [
                 'itinerary_id' => 6,
                 'place_id' => 31,
