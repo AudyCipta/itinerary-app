@@ -129,7 +129,7 @@ class TripController extends Controller
     {
         $itineraryBook->delete();
 
-        return to_route('member.trips.index')->with('success', 'Data deleted successfuly');
+        return to_route('trips.index')->with('success', 'Data deleted successfuly');
     }
 
     public function editItinerary(ItineraryBook $itineraryBook): JsonResponse
@@ -142,11 +142,26 @@ class TripController extends Controller
         ]);
     }
 
-    public function updateItinerary(ItineraryBook $itineraryBook): RedirectResponse
+    public function updateItinerary(Request $request, ItineraryBook $itineraryBook): RedirectResponse
     {
-        $itineraryBook->update();
+        $slug = Str::slug($request->name);
+        $data = [
+            'name' => $request->name,
+            'slug' => $slug,
+            'total_day' => $request->total_day,
+            'start_day' => $request->start_day,
+        ];
 
-        return back()->with('success', 'Data updated successfuly');
+        if ($request->hasFile('thumbnail')) {
+            $thumbnail = $request->file('thumbnail');
+            $thumbnail->storeAs('public/thumbnail-itinerary-books', $thumbnail->hashName());
+            $data['thumbnail'] = $thumbnail->hashName();
+        }
+
+        $itineraryBook->update($data);
+
+        return to_route('trips.detail', ['itineraryBook' => $slug])
+            ->with('success', 'Data updated successfuly');
     }
 
     public function create(Request $request): RedirectResponse

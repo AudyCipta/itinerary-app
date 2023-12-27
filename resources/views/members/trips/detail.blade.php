@@ -20,6 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@6.1.10/index.global.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <script>
     $(function() {
@@ -31,6 +32,10 @@
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         cache: false
+      });
+
+      $("input[type=date]").flatpickr({
+        minDate: "today"
       });
 
       $.ajax({
@@ -126,8 +131,50 @@
           }
         });
       });
+
+      $('#editItineraryModal').on('shown.bs.modal', function() {
+        const id = $('button[data-bs-target="#editItineraryModal"]').data('id');
+
+        /*
+        data: new FormData(this),
+          contentType: false,
+          cache: false,
+          processData: false,
+        */
+
+        $.ajax({
+          method: "GET",
+          url: `{{ route('trips.index') }}/${id}/edit-itinerary`,
+          dataType: 'json',
+          success: function(response) {
+            const {
+              name,
+              total_day,
+              start_day
+            } = response.data.itineraryBook;
+            $('#editItineraryModal #name').val(name);
+            $('#editItineraryModal #start_day').val(start_day);
+
+            $('#editItineraryModal #total_day').empty();
+            let tripName =
+              '<option value="" selected disabled>Enter how many days your itinerary is</option>';
+            [...Array(7)].forEach((_, index) => {
+              tripName +=
+                `<option ${index === 0 ? 'selected' : ''} value="${index + total_day}">${index + total_day}</option>`;
+            });
+            $('#editItineraryModal #total_day').append(tripName);
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
     });
   </script>
+@endpush
+
+@push('styles')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endpush
 
 <x-layouts.app title="My Trip Detail">
@@ -343,18 +390,35 @@
           <h1 class="modal-title fs-5" id="editItineraryModalLabel">Edit Itinerary</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <form action="{{ route('trips.update_itinerary', ['itineraryBook' => $itineraryBook->id]) }}"
-            method="POST">
-            @csrf
-            @method('PUT')
+        <form action="{{ route('trips.update_itinerary', ['itineraryBook' => $itineraryBook->id]) }}" method="POST"
+          enctype="multipart/form-data">
+          @csrf
+          @method('PUT')
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name Trip<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" name="name" id="name"
+                placeholder="Create Your Name Trip" required>
+            </div>
+            <div class="mb-3">
+              <label for="total_day" class="form-label">Total Day<span class="text-danger">*</span></label>
+              <select name="total_day" id="total_day" class="form-control"></select>
+            </div>
+            <div class="mb-3">
+              <label for="start_day" class="form-label">Start date<span class="text-danger">*</span></label>
+              <input type="date" class="form-control" name="start_day" id="start_day"
+                placeholder="Select start date">
+            </div>
+            <div class="mb-0">
+              <label for="thumbnail" class="form-label">Thumbnail</label>
+              <input class="form-control" type="file" name="thumbnail" id="thumbnail">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Update</button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
