@@ -65,26 +65,26 @@ class TripController extends Controller
         return response()->json(['status' => 'success']);
     }
 
-    public function booked(ItineraryBook $itinerary): JsonResponse
+    public function booked(ItineraryBook $itineraryBook): JsonResponse
     {
-        $itinerary->load(
+        $itineraryBook->load(
             'itineraryBookPlaces',
             'itineraryBookPlaces.place'
         );
 
         $events[] = [
-            "title" => $itinerary->name,
-            "start" => $itinerary->start_day,
-            "end" => date('Y-m-d', strtotime($itinerary->start_day . ' + ' . $itinerary->total_day . ' days'))
+            "title" => $itineraryBook->name,
+            "start" => $itineraryBook->start_day,
+            "end" => date('Y-m-d', strtotime($itineraryBook->start_day . ' + ' . $itineraryBook->total_day . ' days'))
         ];
 
-        foreach ($itinerary->itineraryBookPlaces as $itineraryPlace) {
-            $start = date('Y-m-d', strtotime($itinerary->start_day . ' + ' . ($itineraryPlace->day_to - 1) . ' days'));
+        foreach ($itineraryBook->itineraryBookPlaces as $itineraryBookPlace) {
+            $start = date('Y-m-d', strtotime($itineraryBook->start_day . ' + ' . ($itineraryBookPlace->day_to - 1) . ' days'));
 
             $events[] = [
-                "title" => $itineraryPlace->place->name,
-                "url" => route('places.detail', ['place' => $itineraryPlace->place->slug]),
-                "start" => $start . 'T' . $itineraryPlace->time
+                "title" => $itineraryBookPlace->place->name,
+                "url" => route('places.detail', ['place' => $itineraryBookPlace->place->slug]),
+                "start" => $start . 'T' . $itineraryBookPlace->time
             ];
         }
 
@@ -132,7 +132,24 @@ class TripController extends Controller
         return to_route('member.trips.index')->with('success', 'Data deleted successfuly');
     }
 
-    public function create(Request $request)
+    public function editItinerary(ItineraryBook $itineraryBook): JsonResponse
+    {
+        return response()->json([
+            'status' => 'success',
+            'data' => [
+                'itineraryBook' => $itineraryBook
+            ]
+        ]);
+    }
+
+    public function updateItinerary(ItineraryBook $itineraryBook): RedirectResponse
+    {
+        $itineraryBook->update();
+
+        return back()->with('success', 'Data updated successfuly');
+    }
+
+    public function create(Request $request): RedirectResponse
     {
         $data = [
             'name' => $request->name,

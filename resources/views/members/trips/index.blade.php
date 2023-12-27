@@ -56,7 +56,7 @@
           <div class="row gy-4 my-trip-list">
             @foreach ($itineraryBook as $itinerary)
               <div class="col-12 col-md-4 my-trip-item">
-                <a href="{{ route('member.trips.detail', ['itineraryBook' => $itinerary->id]) }}"
+                <a href="{{ route('trips.detail', ['itineraryBook' => $itinerary->slug]) }}"
                   class="card text-decoration-none">
                   @if ($itinerary->thumbnail)
                     <img src="{{ asset('storage/thumbnail-itinerary-books/' . $itinerary->thumbnail) }}"
@@ -101,7 +101,7 @@
           <h1 class="modal-title fs-5" id="addItineraryModalLabel">Add New Trip</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="{{ route('member.trips.create') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('trips.create') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="modal-body">
             <div class="mb-3">

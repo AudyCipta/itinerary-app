@@ -58,16 +58,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
   Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 });
 
-// Member
-Route::prefix('member')->middleware('auth')->name('member.')->group(function () {
-  // Trips
-  Route::get('/trips', [TripController::class, 'index'])->name('trips.index');
-  Route::get('/trips/{itineraryBook}', [TripController::class, 'detail'])->name('trips.detail');
-  Route::post('/trips/{itinerary}', [TripController::class, 'store'])->name('trips.store');
-  Route::get('/trips/{itinerary}/booked', [TripController::class, 'booked'])->name('trips.booked');
-  Route::get('/trips/{itineraryBookPlace}/edit', [TripController::class, 'edit'])->name('trips.edit');
-  Route::put('/trips/{itineraryBookPlace}/update', [TripController::class, 'update'])->name('trips.update');
-  Route::delete('/trips/{itineraryBookPlace}/delete', [TripController::class, 'delete'])->name('trips.delete');
-  Route::delete('/trips/{itineraryBook}/delete-itinerary', [TripController::class, 'deleteItinerary'])->name('trips.delete_itinerary');
-  Route::post('/trips', [TripController::class, 'create'])->name('trips.create');
+// Trips
+Route::prefix('trips')->middleware('auth')->name('trips.')->group(function () {
+  Route::get('/', [TripController::class, 'index'])->name('index');
+  Route::get('/{itineraryBook:slug}', [TripController::class, 'detail'])->name('detail');
+  Route::post('/{itinerary}', [TripController::class, 'store'])->name('store');
+  Route::get('/{itineraryBook:slug}/booked', [TripController::class, 'booked'])->name('booked');
+  Route::get('/{itineraryBookPlace}/edit', [TripController::class, 'edit'])->name('edit');
+  Route::put('/{itineraryBookPlace}/update', [TripController::class, 'update'])->name('update');
+  Route::delete('/{itineraryBookPlace}/delete', [TripController::class, 'delete'])->name('delete');
+  Route::delete('/{itineraryBook}/delete-itinerary', [TripController::class, 'deleteItinerary'])->name('delete_itinerary');
+  Route::get('/{itineraryBook}/edit-itinerary', [TripController::class, 'editItinerary'])->name('edit_itinerary');
+  Route::put('/{itineraryBook}/update-itinerary', [TripController::class, 'updateItinerary'])->name('update_itinerary');
+  Route::post('/', [TripController::class, 'create'])->name('create');
 });

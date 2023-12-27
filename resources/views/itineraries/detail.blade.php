@@ -69,7 +69,7 @@
 
         $.ajax({
           method: "POST",
-          url: `{{ route('member.trips.index') }}/${id}`,
+          url: `{{ route('trips.index') }}/${id}`,
           data: {
             'start_day': $('#start_day').val()
           },

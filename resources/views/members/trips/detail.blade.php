@@ -24,7 +24,7 @@
   <script>
     $(function() {
       const currentUrl = window.location.href;
-      const id = currentUrl.split('/').pop();
+      const slug = currentUrl.split('/').pop();
 
       $.ajaxSetup({
         headers: {
@@ -35,7 +35,7 @@
 
       $.ajax({
         method: "GET",
-        url: `{{ route('member.trips.index') }}/${id}/booked`,
+        url: `{{ route('trips.index') }}/${slug}/booked`,
         dataType: 'json',
         success: function(response) {
           const calendarEl = document.getElementById('calendar');
@@ -62,14 +62,14 @@
 
         $.ajax({
           method: "GET",
-          url: `{{ route('member.trips.index') }}/${id}/edit`,
+          url: `{{ route('trips.index') }}/${id}/edit`,
           dataType: 'json',
           success: function(response) {
             const itineraryBookPlace = response.data.itineraryBookPlace;
             $('#editPlaceModal #id').val(itineraryBookPlace.id);
             $('#editPlaceModal #day_to').val(itineraryBookPlace.day_to);
             $('#editPlaceModal #time').val(itineraryBookPlace.time);
-            $('#editPlaceModal form').attr('action', `{{ route('member.trips.index') }}/${id}/update`);
+            $('#editPlaceModal form').attr('action', `{{ route('trips.index') }}/${id}/update`);
           },
           error: function(error) {
             console.log(error);
@@ -80,7 +80,7 @@
       $('.delete-place-btn').on('click', function(e) {
         e.preventDefault();
         const id = $(this).data('id');
-        $('#deletePlaceModal form').attr('action', `{{ route('member.trips.index') }}/${id}/delete`);
+        $('#deletePlaceModal form').attr('action', `{{ route('trips.index') }}/${id}/delete`);
         $('#deletePlaceModal #id').val(id);
       });
 
@@ -90,7 +90,7 @@
 
         $.ajax({
           method: "PUT",
-          url: `{{ route('member.trips.index') }}/${id}/update`,
+          url: `{{ route('trips.index') }}/${id}/update`,
           data: $(this).serialize(),
           dataType: 'json',
           success: function(response) {
@@ -112,7 +112,7 @@
 
         $.ajax({
           method: "DELETE",
-          url: `{{ route('member.trips.index') }}/${id}/delete`,
+          url: `{{ route('trips.index') }}/${id}/delete`,
           dataType: 'json',
           success: function(response) {
             if (response.status == 'success') {
@@ -152,7 +152,7 @@
           <span class="ms-2">Delete This Trip</span>
         </button>
         <button class="btn btn-primary py-2 px-3 mt-2 rounded-pill" data-bs-toggle="modal"
-          data-bs-target="#deleteItineraryModal">
+          data-bs-target="#editItineraryModal" data-id="{{ $itineraryBook->id }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-pencil-square" viewBox="0 0 16 16">
             <path
@@ -323,11 +323,36 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <form action="{{ route('member.trips.delete_itinerary', ['itineraryBook' => $itineraryBook->id]) }}"
+          <form action="{{ route('trips.delete_itinerary', ['itineraryBook' => $itineraryBook->id]) }}"
             method="POST">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Itinerary Modal -->
+  <div class="modal fade" id="editItineraryModal" tabindex="-1" aria-labelledby="editItineraryModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editItineraryModalLabel">Edit Itinerary</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <form action="{{ route('trips.update_itinerary', ['itineraryBook' => $itineraryBook->id]) }}"
+            method="POST">
+            @csrf
+            @method('PUT')
+            <button type="submit" class="btn btn-primary">Update</button>
           </form>
         </div>
       </div>

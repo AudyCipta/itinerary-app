@@ -42,7 +42,7 @@
                 <span>Add New Trip</span>
               </button>
             @else
-              <a href="{{ route('member.trips.index') }}" class="btn btn-second rounded-pill px-3">My Trips</a>
+              <a href="{{ route('trips.index') }}" class="btn btn-second rounded-pill px-3">My Trips</a>
             @endif
             <div class="flex-shrink-0 dropdown">
               <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown"
@@ -51,11 +51,11 @@
                   class="rounded-circle" referrerpolicy="no-referrer">
               </a>
               <ul class="dropdown-menu dropdown-menu-end text-small shadow" data-popper-placement="top-end">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
+                {{-- <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><a class="dropdown-item" href="#">Settings</a></li>
                 <li>
                   <hr class="dropdown-divider">
-                </li>
+                </li> --}}
                 <li><a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
