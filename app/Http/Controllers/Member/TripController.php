@@ -12,6 +12,7 @@ use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class TripController extends Controller
 {
@@ -43,6 +44,12 @@ class TripController extends Controller
             'thumbnail' => $itinerary->thumbnail,
             'user_id' => auth()->user()->id,
         ]);
+
+        $sourcePath = 'thumbnail-itineraries/' . $itinerary->thumbnail;
+        if (Storage::disk('public')->exists($sourcePath)) {
+            $destinationPath = 'thumbnail-itinerary-books/' . $itinerary->thumbnail;
+            Storage::disk('public')->copy($sourcePath, $destinationPath);
+        }
 
         $itineraryPlaces = ItineraryPlace::where('itinerary_id', $itinerary->id)->get();
 
