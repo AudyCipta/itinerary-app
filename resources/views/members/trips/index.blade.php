@@ -58,7 +58,7 @@
             @foreach ($itineraryBook as $itinerary)
               <div class="col-12 col-md-4 my-trip-item">
                 <a href="{{ route('trips.detail', ['itineraryBook' => $itinerary->slug]) }}"
-                  class="card text-decoration-none">
+                  class="card text-decoration-none h-100">
                   @if ($itinerary->thumbnail)
                     <img src="{{ asset('storage/thumbnail-itinerary-books/' . $itinerary->thumbnail) }}"
                       class="card-img-top" alt="places">
@@ -66,7 +66,7 @@
                     <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
                   @endif
                   <div class="card-body">
-                    <h3 class="card-title">{{ $itinerary->name }}</h3>
+                    <h3 class="card-title text-truncate">{{ $itinerary->name }}</h3>
                     {{-- <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
                       praesentium,
                       debitis harum suscipit repellendus, beatae corporis voluptatem, quaerat libero dolore minima
