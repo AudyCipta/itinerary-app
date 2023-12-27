@@ -195,7 +195,7 @@
 
                         <div class="mb-4">
                           <h5>Address</h5>
-                          <p class="card-text">{{ $item->place->name }}</p>
+                          <p class="card-text">{{ $item->place->address }}</p>
                         </div>
 
                         <div>
