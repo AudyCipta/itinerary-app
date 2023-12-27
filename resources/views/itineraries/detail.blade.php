@@ -184,8 +184,12 @@
                   <div class="card-body">
                     <div class="row gx-3">
                       <div class="col-md-4">
-                        <img src="{{ asset('storage/places/' . $item->place->placeImages[0]->picture) }}"
-                          class="img-fluid rounded-3" alt="places">
+                        @if (count($item->place->placeImages))
+                          <img src="{{ asset('storage/places/' . $item->place->placeImages[0]->picture) }}"
+                            class="img-fluid rounded-3" alt="places">
+                        @else
+                          <img src="https://placehold.co/600x400" class="img-fluid rounded-3" alt="img">
+                        @endif
                       </div>
                       <div class="col-md-8 d-flex flex-column justify-content-between">
                         <div class="desc">
@@ -233,8 +237,8 @@
           <input type="hidden" name="id" id="id" value="{{ $itinerary->id }}">
           <div class="modal-body">
             <div class="mb-0">
-              <input type="date" placeholder="Select Start Day" class="form-control" id="start_day" name="start_day"
-                value="" required>
+              <input type="date" placeholder="Select Start Day" class="form-control" id="start_day"
+                name="start_day" value="" required>
             </div>
           </div>
           <div class="modal-footer">

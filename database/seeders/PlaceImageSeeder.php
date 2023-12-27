@@ -619,6 +619,24 @@ class PlaceImageSeeder extends Seeder
                 'place_id' => 34,
                 'created_at' => now(),
                 'updated_at' => now()
+            ],
+            [
+                'picture' => 'kutamarket.jpeg',
+                'place_id' => 35,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'picture' => 'kutamarket2.jpeg',
+                'place_id' => 35,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'picture' => 'kutamarket3.jpeg',
+                'place_id' => 35,
+                'created_at' => now(),
+                'updated_at' => now()
             ]
         ]);
     }
