@@ -43,9 +43,9 @@ Route::get('/places/search', [PlaceController::class, 'search'])->name('places.s
 Route::get('/places/get-all', [PlaceController::class, 'getAll'])->name('places.get_all');
 Route::get('/places/itinerary-book', [PlaceController::class, 'itineraryBook'])->name('places.itinerary_book');
 Route::get('/places/itinerary-book/{itineraryBook}', [PlaceController::class, 'itineraryBookDetail'])->name('places.itinerary_book_detail');
-Route::get('/places/{place:slug}', [PlaceController::class, 'detail'])->name('places.detail');
 Route::post('/places', [PlaceController::class, 'store'])->name('places.store');
 Route::post('/places/create-trip', [PlaceController::class, 'storeTrip'])->name('places.create_trip');
+Route::get('/places/{place:slug}', [PlaceController::class, 'detail'])->name('places.detail');
 
 // Blog
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

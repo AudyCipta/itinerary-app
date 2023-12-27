@@ -308,7 +308,7 @@
             <div class="row gx-3">
               <div class="col mb-0">
                 <label for="day_to" class="form-label">Day</label>
-                <select class="form-select" id="day_to" name="day_to">
+                <select class="form-select" id="day_to" name="day_to" required>
                   <option value="" selected disabled>Choose day</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -321,7 +321,7 @@
               </div>
               <div class="col-auto mb-0">
                 <label for="time" class="form-label">Time</label>
-                <input type="time" class="form-control" id="time" name="time">
+                <input type="time" class="form-control" id="time" name="time" required>
               </div>
             </div>
           </div>

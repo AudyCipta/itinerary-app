@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
 
 class PlaceController extends Controller
 {
@@ -87,6 +88,20 @@ class PlaceController extends Controller
 
     public function storeTrip(Request $request): JsonResponse
     {
+        $rules = [
+            'name' => 'required|unique:itinerary_books,name',
+        ];
+
+        $messages = [
+            'name.unique' => 'Name already exists.',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return response()->json(['status' => 'failed', 'message' => 'Name already exists.']);
+        }
+
         $data = [
             'name' => $request->name,
             'slug' => Str::slug($request->name),

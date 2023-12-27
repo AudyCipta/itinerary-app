@@ -4,7 +4,8 @@
 
   <script>
     $("input[type=date]").flatpickr({
-      minDate: "today"
+      minDate: "today",
+      allowInput: true,
     });
   </script>
 @endpush
@@ -112,12 +113,12 @@
             <div class="mb-3">
               <label for="total_day" class="form-label">Total Day<span class="text-danger">*</span></label>
               <input type="number" class="form-control" name="total_day" id="total_day"
-                placeholder="Enter how many days your itinerary is">
+                placeholder="Enter how many days your itinerary is" required>
             </div>
             <div class="mb-3">
               <label for="start_day" class="form-label">Start date<span class="text-danger">*</span></label>
-              <input type="date" class="form-control" name="start_day" id="start_day"
-                placeholder="Select start date">
+              <input type="date" class="form-control" name="start_day" id="start_day" placeholder="Select start date"
+                required>
             </div>
             <div class="mb-0">
               <label for="thumbnail" class="form-label">Thumbnail</label>

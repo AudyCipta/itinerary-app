@@ -27,7 +27,8 @@
   <script>
     $(function() {
       $("input[type=date]").flatpickr({
-        minDate: "today"
+        minDate: "today",
+        allowInput: true
       });
 
       const currentUrl = window.location.href;
@@ -238,7 +239,7 @@
           <div class="modal-body">
             <div class="mb-0">
               <input type="date" placeholder="Select Start Day" class="form-control" id="start_day"
-                name="start_day" value="" required>
+                name="start_day" required>
             </div>
           </div>
           <div class="modal-footer">

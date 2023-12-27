@@ -14,6 +14,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class TripController extends Controller
 {
@@ -147,6 +148,20 @@ class TripController extends Controller
 
     public function updateItinerary(Request $request, ItineraryBook $itineraryBook): RedirectResponse
     {
+        $rules = [
+            'name' => 'required|unique:itinerary_books,name,' . $itineraryBook->id,
+        ];
+
+        $messages = [
+            'name.unique' => 'Name already exists.',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return back()->with('error', 'Name already exists.');
+        }
+
         $slug = Str::slug($request->name);
         $data = [
             'name' => $request->name,
@@ -169,6 +184,20 @@ class TripController extends Controller
 
     public function create(Request $request): RedirectResponse
     {
+        $rules = [
+            'name' => 'required|unique:itinerary_books,name',
+        ];
+
+        $messages = [
+            'name.unique' => 'Name already exists.',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return back()->with('error', 'Name already exists.');
+        }
+
         $data = [
             'name' => $request->name,
             'slug' => Str::slug($request->name),

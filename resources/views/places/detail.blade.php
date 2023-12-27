@@ -16,7 +16,8 @@
       });
 
       $("input[type=date]").flatpickr({
-        minDate: "today"
+        minDate: "today",
+        allowInput: true,
       });
 
       $('#tripModal').on('shown.bs.modal', function() {
@@ -91,7 +92,7 @@
               } else {
                 Swal.fire({
                   title: "Trip failed to add",
-                  text: "Something went wrong!",
+                  text: response.message,
                   icon: "error"
                 });
               }
@@ -288,21 +289,21 @@
           <input type="hidden" name="place_id" id="place_id" value="{{ $place->id }}">
           <div class="modal-body">
             <div class="mb-3">
-              <label for="name" class="form-label">Trip Name</label>
-              <select class="form-select" id="name" name="name">
+              <label for="name" class="form-label">Trip Name<span class="text-danger">*</span></label>
+              <select class="form-select" id="name" name="name" required>
                 <option value="" selected disabled>Choose your trip</option>
               </select>
             </div>
             <div class="row gx-3">
               <div class="col">
-                <label for="day_to" class="form-label">Date</label>
-                <select class="form-select" name="day_to" id="day_to">
+                <label for="day_to" class="form-label">Date<span class="text-danger">*</span></label>
+                <select class="form-select" name="day_to" id="day_to" required>
                   <option value="" selected disabled>Choose date</option>
                 </select>
               </div>
               <div class="col-auto">
-                <label for="time" class="form-label">Time</label>
-                <input type="time" class="form-control" id="time" name="time">
+                <label for="time" class="form-label">Time<span class="text-danger">*</span></label>
+                <input type="time" class="form-control" id="time" name="time" required>
               </div>
             </div>
           </div>
@@ -350,12 +351,12 @@
             <div class="mb-3">
               <label for="total_day" class="form-label">Total Day<span class="text-danger">*</span></label>
               <input type="number" class="form-control" name="total_day" id="total_day"
-                placeholder="Enter how many days your itinerary is">
+                placeholder="Enter how many days your itinerary is" required>
             </div>
             <div class="mb-3">
               <label for="start_day" class="form-label">Start date<span class="text-danger">*</span></label>
               <input type="date" class="form-control" name="start_day" id="start_day"
-                placeholder="Select start date">
+                placeholder="Select start date" required>
             </div>
             <div class="mb-0">
               <label for="thumbnail" class="form-label">Thumbnail</label>
