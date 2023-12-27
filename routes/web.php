@@ -61,6 +61,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 // Trips
 Route::prefix('trips')->middleware('auth')->name('trips.')->group(function () {
   Route::get('/', [TripController::class, 'index'])->name('index');
+  Route::post('/add-place', [TripController::class, 'addPlace'])->name('add_place');
   Route::get('/{itineraryBook:slug}', [TripController::class, 'detail'])->name('detail');
   Route::post('/{itinerary}', [TripController::class, 'store'])->name('store');
   Route::get('/{itineraryBook:slug}/booked', [TripController::class, 'booked'])->name('booked');

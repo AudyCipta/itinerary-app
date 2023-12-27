@@ -233,6 +233,8 @@
             </li>
           @endfor
         </ul>
+        <button class="btn btn-second text-light" data-bs-toggle="modal" data-bs-target="#addPlaceModal">Add
+          Place</button>
       </div>
 
       <div class="tab-content" id="pills-tabContent">
@@ -417,6 +419,52 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Place Modal -->
+  <div class="modal fade" id="addPlaceModal" tabindex="-1" aria-labelledby="addPlaceModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="addPlaceModalLabel">Add Place</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="{{ route('trips.add_place') }}" method="post">
+          @csrf
+          <input type="hidden" name="itinerary_book_id" id="itinerary_book_id" value="{{ $itineraryBook->id }}">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="place_id" class="form-label">Place<span class="text-danger">*</span></label>
+              <select name="place_id" id="place_id" class="form-control" required>
+                <option value="" disabled selected>Choose place</option>
+                @foreach ($places as $place)
+                  <option value="{{ $place->id }}">{{ $place->name }}</option>
+                @endforeach
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="day_to" class="form-label">Day To<span class="text-danger">*</span></label>
+              <select name="day_to" id="day_to" class="form-control" required>
+                <option value="" disabled selected>Choose Day To</option>
+                @for ($i = 1; $i <= $itineraryBook->total_day; $i++)
+                  <option value="{{ $i }}">{{ $i }}</option>
+                @endfor
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="time" class="form-label">Time<span class="text-danger">*</span></label>
+              <input type="time" class="form-control" name="time" id="time" placeholder="Enter time"
+                required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
           </div>
         </form>
       </div>

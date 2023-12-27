@@ -7,6 +7,7 @@ use App\Models\Itinerary;
 use App\Models\ItineraryBook;
 use App\Models\ItineraryBookPlace;
 use App\Models\ItineraryPlace;
+use App\Models\Place;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
@@ -31,7 +32,9 @@ class TripController extends Controller
             'itineraryBookPlaces.place.placeImages'
         );
 
-        return view('members.trips.detail', compact('itineraryBook'));
+        $places = Place::all();
+
+        return view('members.trips.detail', compact('itineraryBook', 'places'));
     }
 
     public function store(Request $request, Itinerary $itinerary): JsonResponse
@@ -183,5 +186,12 @@ class TripController extends Controller
         ItineraryBook::create($data);
 
         return back()->with('success', 'Data created successfuly');
+    }
+
+    public function addPlace(Request $request): RedirectResponse
+    {
+        ItineraryBookPlace::create($request->all());
+
+        return back()->with('success', 'Place saved successfuly');
     }
 }
