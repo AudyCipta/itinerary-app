@@ -18,10 +18,13 @@
   @stack('styles')
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body>
   <x-header />
 
-  <main class="flex-shrink-0">{{ $slot }}</main>
+  <div class="auth">
+    <div class="auth-image"></div>
+    {{ $slot }}
+  </div>
 
   @stack('scripts')
 </body>

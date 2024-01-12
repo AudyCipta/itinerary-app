@@ -1,24 +1,39 @@
-.auth-content {
-    .auth-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 65%;
-        background-size: cover;
-        background-position: center;
-        background-image: linear-gradient(
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)
-            ),
-            url(/public/img/hero.jpeg);
-    }
+body.auth {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
+.auth-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @media screen and (min-width: 576px) {
+        width: 65%;
+    }
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(/public/img/hero.jpeg);
+}
+
+.auth-content {
     .auth-form {
-        width: 570px;
-        right: 15%;
-        top: 54%;
-        transform: translateY(-50%);
+        max-width: 570px;
+        top: 80px;
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+
+        @media screen and (min-width: 576px) {
+            top: 43%;
+            left: 42%;
+            transform: translateY(-50%);
+        }
 
         h2 {
             color: #5d5a88;
