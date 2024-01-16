@@ -183,11 +183,11 @@
                 <div class="card">
                   <div class="card-header">{{ $item->place->name }}</div>
                   <div class="card-body">
-                    <div class="row gx-3">
+                    <div class="row g-3">
                       <div class="col-md-4">
                         @if (count($item->place->placeImages))
                           <img src="{{ asset('storage/places/' . $item->place->placeImages[0]->picture) }}"
-                            class="img-fluid rounded-3" alt="places">
+                            class="img-fluid w-full rounded-3" alt="places">
                         @else
                           <img src="https://placehold.co/600x400" class="img-fluid rounded-3" alt="img">
                         @endif

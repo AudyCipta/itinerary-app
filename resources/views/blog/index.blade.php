@@ -51,7 +51,7 @@
         if (data.length) {
           $.each(data, function(index, item) {
             const placeItem = $(`
-              <div class="col-4 post-item">
+              <div class="col-md-4 post-item">
                 <div class="card h-100 rounded-4">
                   <div class="card-body w-100 d-flex flex-column">
                     ${item.picture ? `<img src="{{ asset('storage/posts/${item.picture}') }}" class="img-fluid rounded-4" alt="img">` : '<img src="https://placehold.co/600x400" class="img-fluid rounded-4" alt="img">'}
@@ -122,6 +122,14 @@
     .nav-link.active {
       color: #5d5a88 !important;
     }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    .navbar-toggler {
+      border-color: #ccc !important;
+    }
   </style>
 @endpush
 
@@ -130,9 +138,10 @@
     <div class="container">
 
       <div class="section-header row justify-content-center">
-        <div class="col-9">
+        <div class="col-md-9">
           <h2 class="text-center">Unlock the best of Badung - dive in today!</h2>
-          <p class="text-center lead mb-0">Embark on a virtual odyssey with our Badung Blog! Uncover captivating stories,
+          <p class="text-center lead mb-0">Embark on a virtual odyssey with our Badung Blog! Uncover captivating
+            stories,
             essential tips, and exciting adventures, guiding you through the heart of this enchanting destination.</p>
         </div>
       </div>

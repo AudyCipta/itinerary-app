@@ -132,6 +132,14 @@
     .nav-link.active {
       color: #5d5a88 !important;
     }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    .navbar-toggler {
+      border-color: #ccc !important;
+    }
   </style>
 @endpush
 
@@ -140,9 +148,9 @@
     <div class="container">
 
       <div class="row section-header justify-content-center">
-        <div class="col-9">
+        <div class="col-md-9">
           <h2 class="text-center">Your Best Place for Unforgettable Experiences!</h2>
-          <p class="text-center mb-0">Explore perfection in Badung, epic bucket list to <br> add your to next itinerary
+          <p class="text-center mb-0">Explore perfection in Badung, epic bucket list to add your to next itinerary
           </p>
         </div>
       </div>

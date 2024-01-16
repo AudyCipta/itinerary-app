@@ -46,3 +46,15 @@
         }
     }
 }
+
+#detail-trip-hero {
+    h1 {
+        margin-bottom: 1rem;
+        line-height: 1.3;
+
+        @media screen and (min-width: 576px) {
+            line-height: inherit;
+            margin-bottom: inherit;
+        }
+    }
+}

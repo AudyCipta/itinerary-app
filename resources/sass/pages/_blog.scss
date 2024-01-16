@@ -2,7 +2,14 @@
     .section-header {
         h2 {
             color: #5d5a88 !important;
-            font-size: 36px !important;
+            font-size: 32px !important;
+            line-height: 1.3;
+
+            @media screen and (min-width: 576px) {
+                font-size: 36px !important;
+                line-height: inherit;
+                margin-bottom: inherit;
+            }
         }
 
         p {
