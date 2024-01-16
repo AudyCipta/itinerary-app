@@ -217,7 +217,7 @@
   </script>
 @endpush
 
-<x-layouts.app title="Home Page">
+<x-layouts.app title="Home">
   <section id="home" class="py-0 min-vh-100 bg-secondary d-flex align-items-center">
     <div class="container">
       <div class="home-content">
@@ -234,7 +234,7 @@
             <div class="card">
               <div class="card-body p-4">
                 <form id="filterPlace">
-                  <div class="row gx-3 row-gap-3 column-gap-0">
+                  <div class="row gx-3 row-gap-2 row-gap-md-3 column-gap-0">
                     <div class="mt-3 mt-md-0 col-lg">
                       <label for="destination" class="form-label">Type of Destination</label>
                       <select name="destination" id="destination" class="form-select">

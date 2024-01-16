@@ -15,7 +15,7 @@
   </style>
 @endpush
 
-<x-layouts.auth title="Register Page">
+<x-layouts.auth title="Register">
   <section id="auth" class="py-0">
     <div class="auth-content vh-100 position-relative">
 

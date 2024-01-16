@@ -125,7 +125,7 @@
   </style>
 @endpush
 
-<x-layouts.app title="Blog Page">
+<x-layouts.app title="Blog">
   <section id="blog">
     <div class="container">
 

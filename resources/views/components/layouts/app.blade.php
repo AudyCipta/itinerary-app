@@ -8,7 +8,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ env('APP_NAME') }} - {{ $title ?? 'Untitle' }}</title>
+  <title>{{ env('APP_NAME') }} &middot; {{ $title ?? 'Untitle' }}</title>
 
   <link rel="shortcut icon" type="image/png" href="/img/logo.png" />
 

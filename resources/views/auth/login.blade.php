@@ -23,7 +23,7 @@
   </style>
 @endpush
 
-<x-layouts.auth title="Login Page">
+<x-layouts.auth title="Login">
   <section id="auth" class="py-0">
     <div class="auth-content min-vh-100">
 

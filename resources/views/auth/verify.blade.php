@@ -15,7 +15,7 @@
   </style>
 @endpush
 
-<x-layouts.auth title="Verify Page">
+<x-layouts.auth title="Verify">
   <section id="auth" class="py-0">
     <div class="auth-content vh-100 position-relative">
 

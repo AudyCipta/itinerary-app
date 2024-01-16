@@ -4,6 +4,14 @@
     background-attachment: fixed;
     background-size: cover;
 
+    h1 {
+        line-height: 1.3;
+
+        @media screen and (min-width: 576px) {
+            line-height: inherit;
+        }
+    }
+
     .card {
         background-color: rgba(255, 255, 255, 0.1) !important;
         backdrop-filter: blur(10px) !important;
@@ -41,6 +49,11 @@
     .section-header {
         h2 {
             color: #5d5a88 !important;
+            line-height: 1.3;
+
+            @media screen and (min-width: 576px) {
+                line-height: inherit;
+            }
         }
 
         p {
@@ -83,6 +96,11 @@
 
         h2 {
             color: #5d5a88 !important;
+            line-height: 1.3;
+
+            @media screen and (min-width: 576px) {
+                line-height: inherit;
+            }
         }
 
         p {

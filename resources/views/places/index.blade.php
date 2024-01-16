@@ -135,7 +135,7 @@
   </style>
 @endpush
 
-<x-layouts.app title="Places Page">
+<x-layouts.app title="Places">
   <section id="places">
     <div class="container">
 

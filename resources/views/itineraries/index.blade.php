@@ -125,7 +125,7 @@
   </style>
 @endpush
 
-<x-layouts.app title="Itineraries Page">
+<x-layouts.app title="Itineraries">
   <section id="itineraries">
     <div class="container">
 

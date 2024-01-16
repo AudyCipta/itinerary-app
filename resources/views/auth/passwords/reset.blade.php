@@ -15,7 +15,7 @@
   </style>
 @endpush
 
-<x-layouts.auth title="Reset Password Page">
+<x-layouts.auth title="Reset Password">
   <section id="auth" class="py-0">
     <div class="auth-content vh-100 position-relative">
 
