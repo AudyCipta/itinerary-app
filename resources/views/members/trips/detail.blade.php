@@ -255,7 +255,7 @@
                     </div>
                   </div>
                   <div class="card-body">
-                    <div class="row gx-3">
+                    <div class="row g-3">
                       <div class="col-md-4">
                         <img src="{{ asset('storage/places/' . $item->place->placeImages[0]->picture) }}"
                           class="img-fluid rounded-3" alt="places">

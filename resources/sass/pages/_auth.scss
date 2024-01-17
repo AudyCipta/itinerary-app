@@ -24,14 +24,14 @@ body.auth {
 .auth-content {
     .auth-form {
         max-width: 570px;
-        top: 85px;
+        top: 75px;
         right: 15px;
         left: 15px;
         bottom: 15px;
 
         @media screen and (min-width: 576px) {
-            top: 43%;
-            left: 42%;
+            top: 41%;
+            left: 45%;
             transform: translateY(-50%);
         }
 

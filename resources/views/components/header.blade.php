@@ -8,7 +8,9 @@
       <div class="d-flex column-gap-2">
         <div class="d-flex d-lg-none column-gap-2">
           @guest
-            <a href="{{ route('login') }}" class="btn btn-second rounded-pill px-3">Login</a>
+            @if (!request()->routeIs('login'))
+              <a href="{{ route('login') }}" class="btn btn-second rounded-pill px-3">Login</a>
+            @endif
           @else
             @if (request()->routeIs('trips.index'))
               <button class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#addItineraryModal">
@@ -77,7 +79,9 @@
         </ul>
         <div class="d-none d-lg-flex col-lg-3 justify-content-lg-end align-items-center column-gap-3">
           @guest
-            <a href="{{ route('login') }}" class="btn btn-second rounded-pill px-3">Login</a>
+            @if (!request()->routeIs('login'))
+              <a href="{{ route('login') }}" class="btn btn-second rounded-pill px-3">Login</a>
+            @endif
           @else
             @if (request()->routeIs('trips.index'))
               <button class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#addItineraryModal">

@@ -156,7 +156,7 @@
       </div>
 
       <div class="row place-search mt-5 mb-5 justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <div class="position-relative">
             <input type="text" id="keyword" class="form-control p-2 rounded-pill" placeholder="Search Place"
               aria-label="Search Place">

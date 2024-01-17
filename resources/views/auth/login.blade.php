@@ -6,11 +6,11 @@
     }
 
     .nav-link {
-      color: #767494 !important;
+      color: #686688 !important;
     }
 
     .nav-link.active {
-      color: #5d5a88 !important;
+      color: #333148 !important;
     }
 
     .navbar-toggler-icon {

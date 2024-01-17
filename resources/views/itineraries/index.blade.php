@@ -14,7 +14,7 @@
 
       const renderSkeleton = (i = 1) => {
         return `
-          <div class="col-12 col-md-4 itineraries-item">
+          <div class="col-12 col-md-6 col-lg-4 itineraries-item">
             <a href="javascript:void(0)" class="card text-decoration-none">
               <svg class="placeholder-wave card-img-top" width="100%" height="220" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -50,7 +50,7 @@
         if (data.length) {
           $.each(data, function(index, item) {
             const itineraryItem = $(`
-              <div class="col-12 col-md-4 itineraries-item">
+              <div class="col-12 col-md-6 col-lg-4 itineraries-item">
                 <a href="{{ route('itineraries.index') }}/${item.slug}" class="card text-decoration-none">
                   ${item.thumbnail ? `<img src="{{ asset('storage/thumbnail-itineraries/${item.thumbnail}') }}" class="card-img-top" alt="img">` : '<img src="https://placehold.co/600x400" class="card-img-top" alt="img">'}
                   <div class="card-body">
@@ -138,7 +138,7 @@
     <div class="container">
 
       <div class="itineraries-content">
-        <div class="row g-4 itineraries-list"></div>
+        <div class="row g-4 g-lg-5 itineraries-list"></div>
       </div>
 
     </div>

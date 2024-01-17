@@ -284,7 +284,7 @@
     <div class="container">
 
       <div class="section-header row justify-content-center">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
           <h2 class="text-center text-capitalize">places you may have never visited</h2>
           <p class="text-center lead mb-0">Explore the beauty of Badung that you may have never visited.</p>
         </div>
@@ -294,7 +294,7 @@
         <div class="row gy-3">
 
           @foreach ($places as $place)
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-6">
               <a href="{{ route('places.detail', ['place' => $place->slug]) }}"
                 class="card text-decoration-none rounded-3">
                 <div class="card-body">

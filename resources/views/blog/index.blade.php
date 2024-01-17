@@ -14,7 +14,7 @@
 
       const renderSkeleton = (i = 1) => {
         return `
-          <div class="col-12 col-sm-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card h-100 rounded-4" aria-hidden="true">
               <div class="card-body">
                 <svg class="placeholder-wave card-img-top rounded-4 mb-2" width="100%" height="220"
@@ -51,7 +51,7 @@
         if (data.length) {
           $.each(data, function(index, item) {
             const placeItem = $(`
-              <div class="col-md-4 post-item">
+              <div class="col-12 col-md-6 col-lg-4 post-item">
                 <div class="card h-100 rounded-4">
                   <div class="card-body w-100 d-flex flex-column">
                     ${item.picture ? `<img src="{{ asset('storage/posts/${item.picture}') }}" class="img-fluid rounded-4" alt="img">` : '<img src="https://placehold.co/600x400" class="img-fluid rounded-4" alt="img">'}
