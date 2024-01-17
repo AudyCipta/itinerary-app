@@ -294,7 +294,7 @@
         <div class="row gy-3">
 
           @foreach ($places as $place)
-            <div class="col-12 col-sm-6 col-md-6">
+            <div class="col-12 col-sm-6 col-md-3">
               <a href="{{ route('places.detail', ['place' => $place->slug]) }}"
                 class="card text-decoration-none rounded-3">
                 <div class="card-body">

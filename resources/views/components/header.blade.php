@@ -5,8 +5,8 @@
         <img src="/img/logo.png" alt="{{ env('APP_NAME') }}" width="27">
       </a>
 
-      <div class="d-flex column-gap-2">
-        <div class="d-flex d-lg-none column-gap-2">
+      <div class="d-flex align-items-center column-gap-2">
+        <div class="d-flex d-lg-none align-items-center column-gap-2">
           @guest
             @if (!request()->routeIs('login'))
               <a href="{{ route('login') }}" class="btn btn-second rounded-pill px-3">Login</a>
