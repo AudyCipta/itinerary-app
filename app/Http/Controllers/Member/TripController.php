@@ -20,7 +20,7 @@ class TripController extends Controller
 {
     public function index(): View
     {
-        $itineraryBook = ItineraryBook::all();
+        $itineraryBook = ItineraryBook::where('user_id', auth()->user()->id)->get();
 
         return view('members.trips.index', compact('itineraryBook'));
     }
