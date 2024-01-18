@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('address')->nullable();
             $table->text('map')->nullable();
+            $table->float('rating');
             $table->timestamps();
             $table->softDeletes();
 
