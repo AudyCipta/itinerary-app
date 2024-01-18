@@ -219,8 +219,22 @@ class TripController extends Controller
 
     public function addPlace(Request $request): RedirectResponse
     {
-        ItineraryBookPlace::create($request->all());
+        if ($this->isScheduled($request->itinerary_book_id, $request->day_to, $request->time)) {
+            return back()->with('error', 'Place already added');
+        }
 
+        ItineraryBookPlace::create($request->all());
         return back()->with('success', 'Place saved successfuly');
+    }
+
+    public function isScheduled($itineraryBookId, $dayTo, $time)
+    {
+        $check = ItineraryBookPlace::where([
+            'itinerary_book_id' => $itineraryBookId,
+            'time' => $time,
+            'day_to' => $dayTo,
+        ])->count();
+
+        return $check > 0 ? true : false;
     }
 }
