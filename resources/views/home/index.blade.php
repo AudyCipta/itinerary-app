@@ -178,7 +178,16 @@
           success: function(response) {
             setTimeout(function() {
               placeList.empty();
-              response.data.sort((a, b) => b.rating - a.rating);
+              response.data.sort((a, b) => {
+                const ratingComparison = b.rating - a.rating;
+
+                if (ratingComparison === 0) {
+                  return a.name.localeCompare(b.name);
+                }
+
+                return ratingComparison;
+              });
+
               if (response.data.length) {
                 $.each(response.data, function(index, item) {
                   const placeItem = $(`
