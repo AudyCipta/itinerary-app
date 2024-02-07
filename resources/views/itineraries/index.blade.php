@@ -52,7 +52,7 @@
             const itineraryItem = $(`
               <div class="col-12 col-md-6 col-lg-4 itineraries-item">
                 <a href="{{ route('itineraries.index') }}/${item.slug}" class="card text-decoration-none">
-                  ${item.thumbnail ? `<img src="{{ asset('storage/thumbnail-itineraries/${item.thumbnail}') }}" class="card-img-top" alt="img">` : '<img src="https://placehold.co/600x400" class="card-img-top" alt="img">'}
+                  ${item.thumbnail ? `<img src="{{ asset('storage/thumbnail-itineraries/${item.thumbnail}') }}" class="card-img-top" alt="img">` : '<img src="https://placehold.co/600x400?text=Photo+is+not+available" class="card-img-top" alt="img">'}
                   <div class="card-body">
                     <h3 class="card-title text-truncate">${item.name}</h3>
                     <hr>

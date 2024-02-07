@@ -189,7 +189,8 @@
                           <img src="{{ asset('storage/places/' . $item->place->placeImages[0]->picture) }}"
                             class="img-fluid w-full rounded-3" alt="places">
                         @else
-                          <img src="https://placehold.co/600x400" class="img-fluid rounded-3" alt="img">
+                          <img src="https://placehold.co/600x400?text=Photo+is+not+available"
+                            class="img-fluid rounded-3" alt="img">
                         @endif
                       </div>
                       <div class="col-md-8 d-flex flex-column justify-content-between">

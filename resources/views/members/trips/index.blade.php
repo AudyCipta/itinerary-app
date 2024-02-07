@@ -71,7 +71,8 @@
                     <img src="{{ asset('storage/thumbnail-itinerary-books/' . $itinerary->thumbnail) }}"
                       class="card-img-top" alt="places">
                   @else
-                    <img src="https://placehold.co/600x400" class="card-img-top" alt="places">
+                    <img src="https://placehold.co/600x400?text=Photo+is+not+available" class="card-img-top"
+                      alt="places">
                   @endif
                   <div class="card-body">
                     <h3 class="card-title text-truncate">{{ $itinerary->name }}</h3>

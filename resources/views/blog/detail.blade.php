@@ -33,7 +33,8 @@
           <p>{{ $post->subtitle }}</p>
         </div>
 
-        <img src="{{ $post->picture ? asset('storage/posts/' . $post->picture) : 'https://placehold.co/600x400' }}"
+        <img
+          src="{{ $post->picture ? asset('storage/posts/' . $post->picture) : 'https://placehold.co/600x400?text=Photo+is+not+available' }}"
           alt="img" class="img-fluid w-100 rounded-3">
 
         {!! $post->description !!}
